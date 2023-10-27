@@ -35,3 +35,7 @@ void handle_mouse() {
 
     // iasiudiasubdfboszafuhgs
 }
+
+void exit_game() {
+
+}
