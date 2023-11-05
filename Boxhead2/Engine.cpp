@@ -15,6 +15,10 @@
 int SCREEN_POSITION_X = 30;
 int SCREEN_POSITION_Y = 30;
 
+
+
+bool handle_events(ALLEGRO_EVENT event);
+
 void init() {
 	// initiation 
 	ALLEGRO_DISPLAY* display = NULL;
@@ -45,23 +49,35 @@ void init() {
 
 	al_register_event_source(event_queue, al_get_display_event_source(display));
 	al_register_event_source(event_queue, al_get_keyboard_event_source());
+
+
 	/*
 		 MAIN LOOP
 	*/
 
+
+	bool running = true;
 	al_flip_display();
-	while (true) {
+	while (running) {
 		ALLEGRO_EVENT event;
 		al_wait_for_event(event_queue, &event);
 		
 
-		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
-			break;
-		}
+		running = handle_events(event);
 
 	}
 
 
 
 	al_destroy_display(display);
+}
+
+bool handle_events(ALLEGRO_EVENT event) {
+	handle_keyboard(event);
+
+	if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+		return false;
+	}
+
+	return true;
 }
