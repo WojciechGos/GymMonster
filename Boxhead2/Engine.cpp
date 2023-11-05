@@ -70,6 +70,7 @@ void init() {
 	/*
 		 MAIN LOOP
 	*/
+
 	bool running = true;
 	al_flip_display();
 
