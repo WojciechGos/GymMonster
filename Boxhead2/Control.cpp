@@ -29,3 +29,13 @@ void handle_keyboard(ALLEGRO_EVENT events) {
         }
     }
 }
+
+void handle_mouse() {
+
+
+    // iasiudiasubdfboszafuhgs
+}
+
+void exit_game() {
+
+}
