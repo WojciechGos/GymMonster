@@ -58,3 +58,12 @@ void render_enemy(Movement* movement) {
 	al_draw_bitmap(enemy, movement->getX(), movement->getY(), 0);
 
 }
+
+
+Movement* spawn_enemies(int number) {
+
+	for (int i = 0; i < number; ++i) {
+
+	}
+
+}

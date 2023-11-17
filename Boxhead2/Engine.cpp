@@ -45,7 +45,6 @@ void init() {
 		INITIALIZING VARIABLES
 	*/
 	ALLEGRO_TIMER* timer = NULL;
-
 	ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
 	timer = al_create_timer(1. / (float)FPS);
 
@@ -101,12 +100,20 @@ void init() {
 		al_wait_for_event(event_queue, &event);
 		
 		al_clear_to_color(al_map_rgb(0, 0, 0));
+
+		/*
+			EVENT HANDLERS
+		*/ 
 		handle_keyboard(event, &player_movement);
-		running = handle_events(event);
+		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+			running = false;
+		}
 
 
 
-
+		/*
+			DRAW
+		*/
 		for (int i = 0; i < enemy_count; ++i) {
 			update_enemy_position(&enemy_movement[i], &player_movement);
 			render_enemy(&enemy_movement[i]);
@@ -122,17 +129,9 @@ void init() {
 
 	}
 
-
-
 	al_destroy_display(display);
+	al_destroy_timer(timer);
+	al_destroy_event_queue(event_queue);
+
 }
 
-bool handle_events(ALLEGRO_EVENT event) {
-
-
-	if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
-		return false;
-	}
-
-	return true;
-}

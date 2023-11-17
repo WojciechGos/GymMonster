@@ -9,7 +9,7 @@
 
 
 
-#define MOVE 10
+#define MOVE 5
 
 
 Movement::Movement() {
@@ -60,37 +60,21 @@ int Movement::getDirection() {
 /*
     Function handle_keyboard is responsible for player movement.
 */
-void handle_keyboard(ALLEGRO_EVENT events, Movement *movement) {
+void handle_keyboard(ALLEGRO_EVENT event, Movement *movement) {
 
-    if (events.type == ALLEGRO_EVENT_KEY_CHAR) {
-        switch (events.keyboard.keycode) {
-
-        case ALLEGRO_KEY_D:
-            movement->setX(movement->getX() + MOVE);
-            break;
-
-
-        case ALLEGRO_KEY_A:
-            movement->setX(movement->getX() - MOVE);
-            break;
-
-
-        case ALLEGRO_KEY_W:
-            movement->setY(movement->getY() - MOVE);
-            break;
+    ALLEGRO_KEYBOARD_STATE keyState;
+    
+    if (event.type == ALLEGRO_EVENT_TIMER) {
+        al_get_keyboard_state(&keyState);
         
-
-        case ALLEGRO_KEY_S:
+        if(al_key_down(&keyState, ALLEGRO_KEY_D))
+            movement->setX(movement->getX() + MOVE);
+        if (al_key_down(&keyState, ALLEGRO_KEY_A))
+            movement->setX(movement->getX() - MOVE);
+        if (al_key_down(&keyState, ALLEGRO_KEY_W))
+            movement->setY(movement->getY() - MOVE);
+        if (al_key_down(&keyState, ALLEGRO_KEY_S))
             movement->setY(movement->getY() + MOVE);
-            std::cout << "S" << std::endl;
-            break;
-
-
-        case ALLEGRO_KEY_SPACE:
-            std::cout << "SPACE" << std::endl;
-            break;
-
-        }
     }
 }
 
