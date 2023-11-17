@@ -19,15 +19,20 @@ Movement::Movement() {
     this->direction = 0;
 }
 
+Movement::Movement(float x, float y) {
+    this->x = x;
+    this->y = y;
+}
+
 //Movement Movement::update(Movement movement) {
 //
 //}
 
-void Movement::setX(int x) {
+void Movement::setX(float x) {
     this->x = x;
     std::cout << x << std::endl;
 }
-void Movement::setY(int y) {
+void Movement::setY(float y) {
     this->y = y;
     std::cout << this->y << std::endl;
 }

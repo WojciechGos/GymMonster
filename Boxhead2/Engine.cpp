@@ -10,11 +10,14 @@
 #include "Control.h"
 #include "Interface.h"
 #include "Player.h"
+#include "Enemy.h"
 
 #include <iostream>
 
 #define screenWidth 1800
 #define screenHeight 900
+
+#define FPS 60.0
 
 int SCREEN_POSITION_X = 30;
 int SCREEN_POSITION_Y = 30;
@@ -42,7 +45,9 @@ void init() {
 		INITIALIZING VARIABLES
 	*/
 	ALLEGRO_TIMER* timer = NULL;
+
 	ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
+	timer = al_create_timer(1. / (float)FPS);
 
 
 	//Player player = Player();
@@ -58,14 +63,31 @@ void init() {
 	al_set_window_title(display, "Boxhead2");
 
 	
+	/*
+		REGISTER EVENTS
+	*/
 	al_register_event_source(event_queue, al_get_display_event_source(display));
 	al_register_event_source(event_queue, al_get_keyboard_event_source());
+	al_register_event_source(event_queue, al_get_timer_event_source(timer));
+	al_start_timer(timer);
 
 
 
+	// Player create
+	Movement player_movement(INITIAL_PLAYER_POSITION_X, INITIAL_PLAYER_POSITION_Y);
+
+	// Create initial enemies
+	int enemy_count = INITIAL_ENEMY_NUMBER;
+
+	Movement enemy_movement[INITIAL_ENEMY_NUMBER];
+
+	for (int i = 0; i < INITIAL_ENEMY_NUMBER; ++i) {
+		enemy_movement[i].setX(INITIAL_ENEMY_POSITION_X);
+		enemy_movement[i].setY(INITIAL_ENEMY_POSITION_Y);
+	}
 
 
-	Movement movement;
+
 
 	/*
 		 MAIN LOOP
@@ -78,12 +100,19 @@ void init() {
 		ALLEGRO_EVENT event;
 		al_wait_for_event(event_queue, &event);
 		
-
-		handle_keyboard(event, &movement);
+		al_clear_to_color(al_map_rgb(0, 0, 0));
+		handle_keyboard(event, &player_movement);
 		running = handle_events(event);
 
 
-		render_player(&movement);
+
+
+		for (int i = 0; i < enemy_count; ++i) {
+			update_enemy_position(&enemy_movement[i], &player_movement);
+			render_enemy(&enemy_movement[i]);
+		}
+		render_player(&player_movement);
+
 
 		al_flip_display();
 		//timer = al_create_timer(2. / (float)1.);

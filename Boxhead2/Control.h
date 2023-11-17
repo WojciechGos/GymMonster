@@ -5,12 +5,13 @@
 
 class Movement {
 private:
-	int x, y, direction, state;
+	float x, y;
+	int direction, state;
 public:
 	Movement();
-	//Movement update(Movement movement);
-	void setX(int x);
-	void setY(int y);
+	Movement(float x, float y);
+	void setX(float x);
+	void setY(float y);
 	void setState(int state);
 	void setDirection(int direction);
 
