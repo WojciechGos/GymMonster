@@ -61,9 +61,14 @@ void render_enemy(Movement* movement) {
 
 
 Movement* spawn_enemies(int number) {
+	
+	Movement* enemies_position = new Movement[number];
 
 	for (int i = 0; i < number; ++i) {
 
 	}
+	
+
+	return enemies_position;
 
 }
