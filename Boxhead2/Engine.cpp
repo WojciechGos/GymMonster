@@ -92,6 +92,7 @@ void init() {
 		 MAIN LOOP
 	*/
 
+
 	bool running = true;
 	al_flip_display();
 
@@ -99,7 +100,9 @@ void init() {
 		ALLEGRO_EVENT event;
 		al_wait_for_event(event_queue, &event);
 		
-		al_clear_to_color(al_map_rgb(0, 0, 0));
+        drawMap();
+        drawLifeBar();
+      
 
 		/*
 			EVENT HANDLERS

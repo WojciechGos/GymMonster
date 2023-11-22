@@ -8,5 +8,6 @@
 
 void render_player(Movement *movement);
 void render_shot(Movement* movement);
+void drawLifeBar();
 
 #endif
