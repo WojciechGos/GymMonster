@@ -7,8 +7,18 @@
 #define INITIAL_ENEMY_POSITION_X 850
 #define INITIAL_ENEMY_POSITION_Y 50
 
-void update_enemy_position(Movement* enemy_position, Movement* player_position);
-void render_enemy(Movement* movement);
-Movement* spawn_enemies(int number);
+class Enemy {
+public:
+
+    Enemy();
+    Enemy(int x, int y);
+    void updatePosition(Movement* playerPosition);
+    void render();
+    static Enemy* spawnEnemies(int number);
+
+private:
+    Movement position;
+};
 
 #endif
+

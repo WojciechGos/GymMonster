@@ -8,8 +8,12 @@
 
 #include "Control.h"
 
+Player::Player(int x, int y) {
+    position.setX(x);
+    position.setY(y);
+}
 
-void render_player(Movement *movement) {
+void Player::render() {
 	ALLEGRO_BITMAP* player = al_load_bitmap("player.png");
 
 
@@ -20,7 +24,7 @@ void render_player(Movement *movement) {
 	//al_clear_to_color(al_map_rgb(0, 0, 0));
 	
 	//al_draw_bitmap_region(player, movement->getX(), movement->getY(), 100, 100, 100, 100, 0);
-	al_draw_bitmap(player, movement->getX(), movement->getY(), 0);
+	al_draw_bitmap(player, position.getX(), position.getY(), 0);
 
 }
 
@@ -28,7 +32,7 @@ void render_shot(Movement* movement) {
 
 }
 
-void drawLifeBar()
+void Player::drawLifeBar()
 {
 
     ALLEGRO_COLOR bgColor = al_map_rgb(255, 255, 255);
@@ -42,7 +46,7 @@ void drawLifeBar()
 
         al_draw_rectangle(100, 20, 700, 50, borderColor, 2);
         //pasek zycia
-        if (lifePoints > 0)
+    if (lifePoints > 0)
         al_draw_filled_rectangle(100, 20, 100 * lifePoints + 100, 50, lifeColor);
 
         //if player == oponent lifePoints -=1;

@@ -8,10 +8,6 @@
 */
 
 
-
-#define MOVE 5
-
-
 Movement::Movement() {
     this->x = 0;
     this->y = 0;
@@ -56,33 +52,6 @@ int Movement::getDirection() {
     return this->direction;
 }
 
-
-/*
-    Function handle_keyboard is responsible for player movement.
-*/
-void handle_keyboard(ALLEGRO_EVENT event, Movement *movement) {
-
-    ALLEGRO_KEYBOARD_STATE keyState;
-    
-    if (event.type == ALLEGRO_EVENT_TIMER) {
-        al_get_keyboard_state(&keyState);
-        
-        if(al_key_down(&keyState, ALLEGRO_KEY_D))
-            movement->setX(movement->getX() + MOVE);
-        if (al_key_down(&keyState, ALLEGRO_KEY_A))
-            movement->setX(movement->getX() - MOVE);
-        if (al_key_down(&keyState, ALLEGRO_KEY_W))
-            movement->setY(movement->getY() - MOVE);
-        if (al_key_down(&keyState, ALLEGRO_KEY_S))
-            movement->setY(movement->getY() + MOVE);
-    }
-}
-
-void handle_mouse() {
-
-
-    // iasiudiasubdfboszafuhgs
-}
 
 void exit_game() {
 

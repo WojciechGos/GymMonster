@@ -7,8 +7,16 @@
 
 #define ENEMY_SPEED 2.0f
 
+Enemy::Enemy(int x, int y) {
+	position.setX(x);
+	position.setY(y);
+}
 
-void update_enemy_position(Movement* enemy_position, Movement* player_position) {
+Enemy::Enemy() {
+
+}
+
+void Enemy::updatePosition(Movement* player_position) {
 
 	float dx = player_position->getX();
 	float dy = player_position->getY();
@@ -20,33 +28,32 @@ void update_enemy_position(Movement* enemy_position, Movement* player_position) 
 		dy /= length;
 	}
 
-
 	// Update enemy position
-
 	float move_x = 0;
 	float move_y = 0;
-	if (enemy_position->getX() < player_position->getX())
+
+	if (position.getX() < player_position->getX())
 		move_x = dx * ENEMY_SPEED;
 	else
 		move_x = -1 * dx * ENEMY_SPEED;
 
-	if (enemy_position->getY() < player_position->getY())
+	if (position.getY() < player_position->getY())
 		move_y = dy * ENEMY_SPEED;
 	else
 		move_y = -1 * dy * ENEMY_SPEED;
 
 
-	enemy_position->setX(enemy_position->getX() +move_x);
-	enemy_position->setY(enemy_position->getY() + move_y);
+	position.setX(position.getX() + move_x);
+	position.setY(position.getY() + move_y);
 
 	//enemy_position->setY(enemy_position->getY() - (dy * speed));
-	std::cout << "player_x: " << player_position->getX() << " player_y: " << player_position->getY() << std::endl;
-	std::cout << "dx: " << dx << " dy: " << dy << std::endl;
-	std::cout << "enemy_x: " << enemy_position->getX() << " enemy_y: " << enemy_position->getY() << std::endl;
+	//std::cout << "player_x: " << player_position->getX() << " player_y: " << player_position->getY() << std::endl;
+	//std::cout << "dx: " << dx << " dy: " << dy << std::endl;
+	//std::cout << "enemy_x: " << position.getX() << " enemy_y: " << position.getY() << std::endl;
 }
 
 
-void render_enemy(Movement* movement) {
+void Enemy::render() {
 	ALLEGRO_BITMAP* enemy = al_load_bitmap("zombie.png");
 
 
@@ -55,20 +62,21 @@ void render_enemy(Movement* movement) {
 	}
 
 	//al_clear_to_color(al_map_rgb(0, 0, 0));,
-	al_draw_bitmap(enemy, movement->getX(), movement->getY(), 0);
+	al_draw_bitmap(enemy, position.getX(), position.getY(), 0);
 
 }
 
 
-Movement* spawn_enemies(int number) {
+Enemy* Enemy::spawnEnemies(int number) {
 	
-	Movement* enemies_position = new Movement[number];
+	//Movement* enemies_position = new Movement[number];
+	Enemy* enemies = new Enemy[number];
 
 	for (int i = 0; i < number; ++i) {
 
 	}
 	
 
-	return enemies_position;
+	return enemies;
 
 }

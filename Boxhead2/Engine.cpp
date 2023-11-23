@@ -19,6 +19,8 @@
 
 #define FPS 60.0
 
+#define MOVE 5
+
 int SCREEN_POSITION_X = 30;
 int SCREEN_POSITION_Y = 30;
 
@@ -57,7 +59,6 @@ void Engine::run() {
 	//Player player = Player();
 
 
-
 	/*
 		SETTING WINDOWS PARAMETERS
 	*/
@@ -75,29 +76,19 @@ void Engine::run() {
 	al_register_event_source(event_queue, al_get_timer_event_source(timer));
 	al_start_timer(timer);
 
-
-
 	// Player create
-	Movement player_movement(INITIAL_PLAYER_POSITION_X, INITIAL_PLAYER_POSITION_Y);
+	Player player(INITIAL_PLAYER_POSITION_X, INITIAL_PLAYER_POSITION_Y);
+
 
 	// Create initial enemies
 	int enemy_count = INITIAL_ENEMY_NUMBER;
 
-	Movement enemy_movement[INITIAL_ENEMY_NUMBER];
-
-	for (int i = 0; i < INITIAL_ENEMY_NUMBER; ++i) {
-		enemy_movement[i].setX(INITIAL_ENEMY_POSITION_X);
-		enemy_movement[i].setY(INITIAL_ENEMY_POSITION_Y);
-	}
-
-
+	Enemy* enemies = Enemy::spawnEnemies(INITIAL_ENEMY_NUMBER);
 
 
 	/*
 		 MAIN LOOP
 	*/
-
-
 	bool running = true;
 	al_flip_display();
 
@@ -106,41 +97,62 @@ void Engine::run() {
 		al_wait_for_event(event_queue, &event);
 
 		drawMap();
-		drawLifeBar();
+		player.drawLifeBar();
 
 
 		/*
 			EVENT HANDLERS
 		*/
-		handle_keyboard(event, &player_movement);
+		handle_keyboard(event, &player.position);
 		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
 			running = false;
 		}
-
-
 
 		/*
 			DRAW
 		*/
 		for (int i = 0; i < enemy_count; ++i) {
-			update_enemy_position(&enemy_movement[i], &player_movement);
-			render_enemy(&enemy_movement[i]);
+			enemies[i].updatePosition(&player.position);
+			enemies[i].render();
 		}
-		render_player(&player_movement);
-
+		player.render();
 
 		al_flip_display();
-		//timer = al_create_timer(2. / (float)1.);
-		//al_register_event_source(event_queue, al_get_timer_event_source(timer));
-		//al_start_timer(timer);
-		//
 
 	}
-
+	delete[] enemies;
 	al_destroy_display(display);
 	al_destroy_timer(timer);
 	al_destroy_event_queue(event_queue);
 }
 
+
+
+/*
+	Function handle_keyboard is responsible for player movement.
+*/
+void Engine::handle_keyboard(ALLEGRO_EVENT event, Movement* movement) {
+
+	ALLEGRO_KEYBOARD_STATE keyState;
+
+	if (event.type == ALLEGRO_EVENT_TIMER) {
+		al_get_keyboard_state(&keyState);
+
+		if (al_key_down(&keyState, ALLEGRO_KEY_D))
+			movement->setX(movement->getX() + MOVE);
+		if (al_key_down(&keyState, ALLEGRO_KEY_A))
+			movement->setX(movement->getX() - MOVE);
+		if (al_key_down(&keyState, ALLEGRO_KEY_W))
+			movement->setY(movement->getY() - MOVE);
+		if (al_key_down(&keyState, ALLEGRO_KEY_S))
+			movement->setY(movement->getY() + MOVE);
+	}
+}
+
+void Engine::handle_mouse() {
+
+
+	// iasiudiasubdfboszafuhgs
+}
 
 

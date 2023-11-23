@@ -21,8 +21,6 @@ public:
 	int getDirection();
 };
 
-void handle_keyboard(ALLEGRO_EVENT events, Movement *movement);
 
-void handle_mouse();
 
 #endif
