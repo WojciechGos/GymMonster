@@ -26,11 +26,9 @@ Movement::Movement(float x, float y) {
 
 void Movement::setX(float x) {
     this->x = x;
-    std::cout << x << std::endl;
 }
 void Movement::setY(float y) {
     this->y = y;
-    std::cout << this->y << std::endl;
 }
 void Movement::setState(int state) {
     this->state = state;
