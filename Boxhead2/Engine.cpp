@@ -24,16 +24,17 @@ int SCREEN_POSITION_Y = 30;
 
 
 
+#include "Engine.h"
 
-bool handle_events(ALLEGRO_EVENT event);
+Engine::Engine() {
+	
+}
 
-void init() {
-
+void Engine::init() {
 
 	/*
 		INITIALIZATION AND INSTALATION
 	*/
-	ALLEGRO_DISPLAY* display = NULL;
 	al_init();
 	al_install_keyboard();
 	al_init_image_addon();
@@ -41,13 +42,17 @@ void init() {
 	al_init_ttf_addon();
 	al_init_primitives_addon();
 
+	
+}
+
+void Engine::run() {
 	/*
 		INITIALIZING VARIABLES
 	*/
 	ALLEGRO_TIMER* timer = NULL;
 	ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
 	timer = al_create_timer(1. / (float)FPS);
-
+	ALLEGRO_DISPLAY* display = NULL;
 
 	//Player player = Player();
 
@@ -61,7 +66,7 @@ void init() {
 	al_set_window_position(display, SCREEN_POSITION_X, SCREEN_POSITION_Y);
 	al_set_window_title(display, "Boxhead2");
 
-	
+
 	/*
 		REGISTER EVENTS
 	*/
@@ -99,14 +104,14 @@ void init() {
 	while (running) {
 		ALLEGRO_EVENT event;
 		al_wait_for_event(event_queue, &event);
-		
-        drawMap();
-        drawLifeBar();
-      
+
+		drawMap();
+		drawLifeBar();
+
 
 		/*
 			EVENT HANDLERS
-		*/ 
+		*/
 		handle_keyboard(event, &player_movement);
 		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
 			running = false;
@@ -135,6 +140,7 @@ void init() {
 	al_destroy_display(display);
 	al_destroy_timer(timer);
 	al_destroy_event_queue(event_queue);
-
 }
+
+
 

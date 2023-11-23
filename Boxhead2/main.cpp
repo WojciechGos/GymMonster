@@ -3,8 +3,9 @@
 
 int main(int argc, char* argv[]) {
 
+	Engine engine;
 	
-	init();
-
+	engine.init();
+	engine.run();
 	return 0;
 }
