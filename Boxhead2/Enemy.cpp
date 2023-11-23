@@ -46,10 +46,6 @@ void Enemy::updatePosition(Movement* player_position) {
 	position.setX(position.getX() + move_x);
 	position.setY(position.getY() + move_y);
 
-	//enemy_position->setY(enemy_position->getY() - (dy * speed));
-	//std::cout << "player_x: " << player_position->getX() << " player_y: " << player_position->getY() << std::endl;
-	//std::cout << "dx: " << dx << " dy: " << dy << std::endl;
-	//std::cout << "enemy_x: " << position.getX() << " enemy_y: " << position.getY() << std::endl;
 }
 
 
@@ -69,14 +65,12 @@ void Enemy::render() {
 
 Enemy* Enemy::spawnEnemies(int number) {
 	
-	//Movement* enemies_position = new Movement[number];
 	Enemy* enemies = new Enemy[number];
-
+	
 	for (int i = 0; i < number; ++i) {
-
+		enemies[i].position.setX(INITIAL_ENEMY_POSITION_X);
+		enemies[i].position.setY(INITIAL_ENEMY_POSITION_Y);
 	}
 	
-
 	return enemies;
-
 }

@@ -3,9 +3,9 @@
 
 #include "Control.h"
 
-#define INITIAL_ENEMY_NUMBER 1
+#define INITIAL_ENEMY_NUMBER 3
 #define INITIAL_ENEMY_POSITION_X 850
-#define INITIAL_ENEMY_POSITION_Y 50
+#define INITIAL_ENEMY_POSITION_Y 0
 
 class Enemy {
 public:

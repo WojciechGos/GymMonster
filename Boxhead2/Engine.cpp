@@ -52,8 +52,11 @@ void Engine::run() {
 		INITIALIZING VARIABLES
 	*/
 	ALLEGRO_TIMER* timer = NULL;
-	ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
+	ALLEGRO_TIMER* enemy_timer = NULL;
 	timer = al_create_timer(1. / (float)FPS);
+	enemy_timer = al_create_timer(1.0);
+	ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
+
 	ALLEGRO_DISPLAY* display = NULL;
 
 	//Player player = Player();
@@ -107,7 +110,11 @@ void Engine::run() {
 		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
 			running = false;
 		}
-
+		if (event.type == ALLEGRO_EVENT_TIMER) {
+			if (event.timer.source == enemy_timer) {
+				std::cout << "SPAWN" << std::endl;
+			}
+		}
 		/*
 			DRAW
 		*/

@@ -52,7 +52,3 @@ int Movement::getDirection() {
     return this->direction;
 }
 
-
-void exit_game() {
-
-}
