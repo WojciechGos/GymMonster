@@ -142,26 +142,29 @@ void Engine::handle_keyboard(ALLEGRO_EVENT event, Movement* movement) {
 	if (event.type == ALLEGRO_EVENT_TIMER) {
 		al_get_keyboard_state(&keyState);
 
+		movement->setActive(true);
 		if (al_key_down(&keyState, ALLEGRO_KEY_D))
 		{
 			movement->setX(movement->getX() + MOVE);
-			movement->setDirection(2);
+			movement->setDirection(64);
 		}
-		if (al_key_down(&keyState, ALLEGRO_KEY_A))
+		else if (al_key_down(&keyState, ALLEGRO_KEY_A))
 		{
 			movement->setX(movement->getX() - MOVE);
-			movement->setDirection(1);
+			movement->setDirection(32);
 		}
-		if (al_key_down(&keyState, ALLEGRO_KEY_W))
+		else if (al_key_down(&keyState, ALLEGRO_KEY_W))
 		{
 			movement->setY(movement->getY() - MOVE);
-			movement->setDirection(3);
+			movement->setDirection(96);
 		}
-		if (al_key_down(&keyState, ALLEGRO_KEY_S))
+		else if (al_key_down(&keyState, ALLEGRO_KEY_S))
 		{
 			movement->setY(movement->getY() + MOVE);
 			movement->setDirection(0);
 		}
+		else
+			movement->setActive(false);
 	}
 }
 

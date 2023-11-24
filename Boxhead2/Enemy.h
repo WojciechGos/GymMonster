@@ -11,10 +11,16 @@ public:
     Enemy(int x, int y);
     void updatePosition(Movement* playerPosition);
     void render(ALLEGRO_EVENT event, Movement* movement);
+    void setState(int state);
+    void setDirection(int direction);
     static Enemy spawnEnemy();
+
+    int getState();
+    int getDirection();
 
 private:
     Movement position;
+    int direction, state;
 };
 
 #endif
