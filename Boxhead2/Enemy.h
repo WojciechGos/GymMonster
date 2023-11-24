@@ -3,8 +3,6 @@
 
 #include "Control.h"
 
-#define INITIAL_ENEMY_NUMBER 3
-
 
 class Enemy {
 public:

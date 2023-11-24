@@ -10,7 +10,7 @@ class Gameplay {
 
 private:	
 	int round = 0;
-	int enemyNumberInRound = 5;
+	int enemyNumberInRound = 1;
 	int enemyNumberAlive = 0;
 	int enemyNumberSpawned = 0;
 	bool ifNewRoundStarted = false;

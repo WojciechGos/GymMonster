@@ -63,13 +63,7 @@ void Engine::run() {
 	// Player create
 	Player player(INITIAL_PLAYER_POSITION_X, INITIAL_PLAYER_POSITION_Y);
 
-
-	// Create initial enemies
-	int enemy_count = INITIAL_ENEMY_NUMBER;
-
-	//Enemy* enemies = Enemy::spawnEnemy();
 	Gameplay gameplay;
-
 
 
 	/*
