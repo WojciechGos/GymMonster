@@ -5,7 +5,6 @@
 #include <allegro5/allegro_native_dialog.h>
 #include <allegro5/allegro_image.h>
 
-
 #include "Engine.h"
 #include "Control.h"
 #include "Interface.h"
@@ -107,7 +106,7 @@ void Engine::run() {
 		/*
 			EVENT HANDLERS
 		*/
-		handle_keyboard(event, &player.position);
+		handle_keyboard(event, &player, &gameplay);
 		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
 			running = false;
 		}
@@ -135,33 +134,46 @@ void Engine::run() {
 /*
 	Function handle_keyboard is responsible for player movement.
 */
-void Engine::handle_keyboard(ALLEGRO_EVENT event, Movement* movement) {
+void Engine::handle_keyboard(ALLEGRO_EVENT event, Player* player, Gameplay* gameplay) {
 
 	ALLEGRO_KEYBOARD_STATE keyState;
+	if (event.type == ALLEGRO_EVENT_KEY_DOWN) {
+		if (event.keyboard.keycode == ALLEGRO_KEY_SPACE) {
+
+				std::cout << "FIRE" << std::endl;
+				player->shot(gameplay);
+			
+		}
+	}
 
 	if (event.type == ALLEGRO_EVENT_TIMER) {
 		al_get_keyboard_state(&keyState);
 
 		if (al_key_down(&keyState, ALLEGRO_KEY_D))
 		{
-			movement->setX(movement->getX() + MOVE);
-			movement->setDirection(2);
+			player->position.setX(player->position.getX() + MOVE);
+			player->position.setDirection(2);
 		}
 		if (al_key_down(&keyState, ALLEGRO_KEY_A))
 		{
-			movement->setX(movement->getX() - MOVE);
-			movement->setDirection(1);
+			player->position.setX(player->position.getX() - MOVE);
+			player->position.setDirection(1);
 		}
 		if (al_key_down(&keyState, ALLEGRO_KEY_W))
 		{
-			movement->setY(movement->getY() - MOVE);
-			movement->setDirection(3);
+			player->position.setY(player->position.getY() - MOVE);
+			player->position.setDirection(3);
 		}
 		if (al_key_down(&keyState, ALLEGRO_KEY_S))
 		{
-			movement->setY(movement->getY() + MOVE);
-			movement->setDirection(0);
+			player->position.setY(player->position.getY() + MOVE);
+			player->position.setDirection(0);
 		}
+		/*if (al_key_down(&keyState, ALLEGRO_KEY_SPACE))
+		{
+			std::cout << "FIRE" << std::endl;
+			player->shot(gameplay);
+		}*/
 	}
 }
 

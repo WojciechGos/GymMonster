@@ -3,6 +3,9 @@
 
 #include <allegro5/allegro.h>
 #include "Control.h"
+#include "Player.h"
+#include "Gameplay.h"
+
 class Engine {
 public:
     Engine();
@@ -13,7 +16,7 @@ public:
 private:
 
 
-    void handle_keyboard(ALLEGRO_EVENT event, Movement* movement);
+    void handle_keyboard(ALLEGRO_EVENT event, Player* player, Gameplay *gameplay);
 
     void handle_mouse();
 

@@ -12,7 +12,7 @@ public:
     void updatePosition(Movement* playerPosition);
     void render(ALLEGRO_EVENT event, Movement* movement);
     static Enemy spawnEnemy();
-
+    Movement* getPosition();
 private:
     Movement position;
 };

@@ -3,6 +3,11 @@
 #ifndef Control_h
 #define Control_h
 
+#define DOWN 0
+#define LEFT 32
+#define RIGHT 64
+#define UP 96
+
 class Movement {
 private:
 	float x, y;

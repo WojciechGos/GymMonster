@@ -60,8 +60,37 @@ void Player::render(ALLEGRO_EVENT events, Movement* movement) {
 
 }
 
-void render_shot(Movement* movement) {
+void Player::shot(Gameplay* gameplay) {
+	std::cout << "size: " << gameplay->enemies.size() << std::endl;
+	for (auto enemy : gameplay->enemies) {
+		std::cout << "enemy_x: " << enemy.getPosition()->getX() << " enemy_y: " << enemy.getPosition()->getY() << std::endl;
+		
+		if (position.getDirection() == UP) {
+			std::cout << "UP" << std::endl;
+			if (enemy.getPosition()->getY() > position.getY() ) {
+				std::cout << "UP" << std::endl;
+			}
+		}
+		else if (position.getDirection() == DOWN) {
+			std::cout << "DOWN" << std::endl;
+			if (enemy.getPosition()->getY() < position.getY()) {
+				std::cout << "DOWN" << std::endl;
+			}
 
+		}
+		else if (position.getDirection() == LEFT) {
+			std::cout << "LEFT" << std::endl;
+			if (enemy.getPosition()->getX() < position.getX()) {
+				std::cout << "LEFT" << std::endl;
+			}
+		}
+		else if (position.getDirection() == RIGHT) {
+			std::cout << "RIGHT" << std::endl;
+			if (enemy.getPosition()->getX() < position.getX()) {
+				std::cout << "RIGHT" << std::endl;
+			}
+		}
+	}
 }
 
 void Player::drawLifeBar()
