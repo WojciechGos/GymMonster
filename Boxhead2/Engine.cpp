@@ -149,31 +149,29 @@ void Engine::handle_keyboard(ALLEGRO_EVENT event, Player* player, Gameplay* game
 	if (event.type == ALLEGRO_EVENT_TIMER) {
 		al_get_keyboard_state(&keyState);
 
+		movement->setActive(true);
 		if (al_key_down(&keyState, ALLEGRO_KEY_D))
 		{
-			player->position.setX(player->position.getX() + MOVE);
-			player->position.setDirection(2);
+			movement->setX(movement->getX() + MOVE);
+			movement->setDirection(64);
 		}
-		if (al_key_down(&keyState, ALLEGRO_KEY_A))
+		else if (al_key_down(&keyState, ALLEGRO_KEY_A))
 		{
-			player->position.setX(player->position.getX() - MOVE);
-			player->position.setDirection(1);
+			movement->setX(movement->getX() - MOVE);
+			movement->setDirection(32);
 		}
-		if (al_key_down(&keyState, ALLEGRO_KEY_W))
+		else if (al_key_down(&keyState, ALLEGRO_KEY_W))
 		{
-			player->position.setY(player->position.getY() - MOVE);
-			player->position.setDirection(3);
+			movement->setY(movement->getY() - MOVE);
+			movement->setDirection(96);
 		}
-		if (al_key_down(&keyState, ALLEGRO_KEY_S))
+		else if (al_key_down(&keyState, ALLEGRO_KEY_S))
 		{
 			player->position.setY(player->position.getY() + MOVE);
 			player->position.setDirection(0);
 		}
-		/*if (al_key_down(&keyState, ALLEGRO_KEY_SPACE))
-		{
-			std::cout << "FIRE" << std::endl;
-			player->shot(gameplay);
-		}*/
+		else
+			movement->setActive(false);
 	}
 }
 

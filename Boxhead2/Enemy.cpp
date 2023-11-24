@@ -16,7 +16,21 @@ Enemy::Enemy(int x, int y) {
 }
 
 Enemy::Enemy() {
+	this->state = 0;
+	this->direction = 0;
+}
 
+void Enemy::setState(int state) {
+	this->state = state;
+}
+void Enemy::setDirection(int direction) {
+	this->direction = direction;
+}
+int Enemy::getState() {
+	return this->state;
+}
+int Enemy::getDirection() {
+	return this->direction;
 }
 
 Movement* Enemy::getPosition() {
@@ -49,36 +63,35 @@ void Enemy::updatePosition(Movement* player_position) {
 	else
 		move_y = -1 * std::ceil(dy * ENEMY_SPEED);
 
-	//std::cout << "move_x: " << move_x << " move_y: " << move_y << std::endl;
-	//std::cout << "x: " << position.getX() << " y: " << position.getY() << std::endl;
-	//std::cout << "player_x: " << player_position->getX() << " player_y: " << player_position->getY() << std::endl;
-
-	if (position.getX() < player_position->getX())
+	std::cout << "move_x: " << move_x << " move_y: " << move_y << std::endl;
+	std::cout << "x: " << position.getX() << " y: " << position.getY() << std::endl;
+	std::cout << "player_x: " << player_position->getX() << " player_y: " << player_position->getY() << std::endl;
+	
+	position.setX(position.getX() + move_x);
+	position.setY(position.getY() + move_y);
+	
+	if (position.getX() > player_position->getX())
 	{
-		if (position.getY() > player_position->getY())
+		if (position.getY() < player_position->getY())
 		{
-			position.setDirection(0);
+			setDirection(0);
 		}
 		else
 		{
-			position.setDirection(1);
+			setDirection(32);
 		}
 	}
 	else if (position.getX() < player_position->getX())
 	{
 		if (position.getY() > player_position->getY())
 		{
-			position.setDirection(2);
+			setDirection(96);
 		}
 		else
 		{
-			position.setDirection(3);
+			setDirection(64);
 		}
 	}
-
-	position.setX(position.getX() + move_x);
-	position.setY(position.getY() + move_y);
-
 }
 
 
@@ -90,39 +103,15 @@ void Enemy::render(ALLEGRO_EVENT events, Movement* movement) {
 		std::cout << "enemy init error" << std::endl;
 	}
 
-	bool draw = true, active = false;
-	int dir = 0, posx = 32;
-
 	if (events.type == ALLEGRO_EVENT_TIMER)
 	{
-		active = true;
-		if (movement->getDirection() == 0)
-			dir = 0;
-		else if (movement->getDirection() == 1)
-			dir = 32;
-		else if (movement->getDirection() == 2)
-			dir = 64;
-		else if (movement->getDirection() == 3)
-			dir = 96;
-		else
-			active = false;
-
-		if (active)
-			posx += 32;
-		else
-			posx = 32;
-		if (posx >= 64)
-			posx = 0;
-		draw = true;
-	}
-	else {}
-
-
-	if (draw)
-	{
-		al_draw_bitmap_region(enemy, posx, dir, 32, 32, position.getX(), position.getY(), NULL);
+		if (true)
+			setState(getState() + 32);
+		if (getState() >= 96)
+			setState(0);
 	}
 
+	al_draw_bitmap_region(enemy, getState(), getDirection(), 32, 32, position.getX(), position.getY(), NULL);
 }
 
 

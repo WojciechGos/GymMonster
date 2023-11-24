@@ -13,6 +13,7 @@ Movement::Movement() {
     this->y = 0;
     this->state = 0;
     this->direction = 0;
+    this->active = false;
 }
 
 Movement::Movement(float x, float y) {
@@ -36,6 +37,9 @@ void Movement::setState(int state) {
 void Movement::setDirection(int direction) {
     this->direction = direction;
 }
+void Movement::setActive(bool active) {
+    this->active = active;
+}
 
 int Movement::getX() {
     return this->x;
@@ -48,5 +52,8 @@ int Movement::getState() {
 }
 int Movement::getDirection() {
     return this->direction;
+}
+bool Movement::getActive() {
+    return this->active;
 }
 

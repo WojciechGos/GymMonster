@@ -12,6 +12,7 @@ class Movement {
 private:
 	float x, y;
 	int direction, state;
+	bool active;
 public:
 	Movement();
 	Movement(float x, float y);
@@ -19,11 +20,13 @@ public:
 	void setY(float y);
 	void setState(int state);
 	void setDirection(int direction);
+	void setActive(bool active);
 
 	int getX();
 	int getY();
 	int getState();
 	int getDirection();
+	bool getActive();
 };
 
 
