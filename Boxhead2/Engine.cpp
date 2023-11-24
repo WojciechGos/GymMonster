@@ -123,7 +123,7 @@ void Engine::run() {
 		*/
 		for (int i = 0; i < gameplay.enemies.size(); ++i) {
 			gameplay.enemies[i].updatePosition(&player.position);
-			gameplay.enemies[i].render();
+			gameplay.enemies[i].render(event, &player.position);
 		}
 		player.render(event, &player.position);
 

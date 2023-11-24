@@ -21,36 +21,41 @@ void Player::render(ALLEGRO_EVENT events, Movement* movement) {
 		std::cout << "player init error" << std::endl;
 	}
 
+	enum Direction {down, left, right, up};
 	bool draw = true, active = false;
-	int dir = 0, posx = 32;
+	int dir = down, posX = 32;
 
 	if (events.type == ALLEGRO_EVENT_TIMER)
 	{
 		active = true;
+
 		if (movement->getDirection() == 0)
-			dir = 0;
+			dir = down;
 		else if (movement->getDirection() == 1)
-			dir = 33;
+			dir = left;
 		else if (movement->getDirection() == 2)
-			dir = 65;
+			dir = right;
 		else if (movement->getDirection() == 3)
-			dir = 97;
+			dir = up;
 		else
 			active = false;
-		draw = true;
+		
 		if (active)
-			posx = 64;
+			posX += 32;
 		else
-			posx = 32;
-		if (posx >= 64)
-			posx = 0;
-	}
-	else {}
+			posX = 32;
 
+		if (posX >= 96)
+			posX = 0;
+		
+		draw = true;
+	}
 
 	if (draw)
 	{
-		al_draw_bitmap_region(player, posx, dir, 32, 32, movement->getX(), movement->getY(), NULL);
+		al_draw_bitmap_region(player, posX, dir * 32, 32, 32, movement->getX(), movement->getY(), NULL);
+		al_flip_display();
+		//al_clear_to_color(al_map_rgb(0, 0, 0));
 	}
 
 }

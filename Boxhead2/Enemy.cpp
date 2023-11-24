@@ -45,6 +45,28 @@ void Enemy::updatePosition(Movement* player_position) {
 	else
 		move_y = -1 * dy * ENEMY_SPEED;
 
+	if (position.getX() < player_position->getX())
+	{
+		if (position.getY() > player_position->getY())
+		{
+			position.setDirection(0);
+		}
+		else
+		{
+			position.setDirection(1);
+		}
+	}
+	else if (position.getX() < player_position->getX())
+	{
+		if (position.getY() > player_position->getY())
+		{
+			position.setDirection(2);
+		}
+		else
+		{
+			position.setDirection(3);
+		}
+	}
 
 	position.setX(position.getX() + move_x);
 	position.setY(position.getY() + move_y);
@@ -52,7 +74,7 @@ void Enemy::updatePosition(Movement* player_position) {
 }
 
 
-void Enemy::render() {
+void Enemy::render(ALLEGRO_EVENT events, Movement* movement) {
 	ALLEGRO_BITMAP* enemy = al_load_bitmap("zombie.png");
 
 
@@ -60,8 +82,38 @@ void Enemy::render() {
 		std::cout << "enemy init error" << std::endl;
 	}
 
-	//al_clear_to_color(al_map_rgb(0, 0, 0));,
-	al_draw_bitmap(enemy, position.getX(), position.getY(), 0);
+	bool draw = true, active = false;
+	int dir = 0, posx = 32;
+
+	if (events.type == ALLEGRO_EVENT_TIMER)
+	{
+		active = true;
+		if (movement->getDirection() == 0)
+			dir = 0;
+		else if (movement->getDirection() == 1)
+			dir = 32;
+		else if (movement->getDirection() == 2)
+			dir = 64;
+		else if (movement->getDirection() == 3)
+			dir = 96;
+		else
+			active = false;
+
+		if (active)
+			posx += 32;
+		else
+			posx = 32;
+		if (posx >= 64)
+			posx = 0;
+		draw = true;
+	}
+	else {}
+
+
+	if (draw)
+	{
+		al_draw_bitmap_region(enemy, posx, dir, 32, 32, position.getX(), position.getY(), NULL);
+	}
 
 }
 
