@@ -38,6 +38,10 @@ void Gameplay::run(ALLEGRO_EVENT event, ALLEGRO_TIMER* enemy_timer) {
 	}
 }
 
+int Gameplay::getEnemyNumber() {
+	return (int)enemies.size();
+}
+
 void Gameplay::spawnEnemy() {
 
 		enemyNumberSpawned++;

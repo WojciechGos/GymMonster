@@ -3,7 +3,7 @@
 #include <iostream>
 #include <allegro5/allegro5.h>
 #include <allegro5/allegro_image.h>
-
+#include <cmath>
 
 #define ENEMY_SPEED 2.0f
 
@@ -24,7 +24,7 @@ void Enemy::updatePosition(Movement* player_position) {
 	float dx = player_position->getX();
 	float dy = player_position->getY();
 
-	float length = sqrt(dx * dx + dy * dy);
+	float length = std::ceil(sqrt(dx * dx + dy * dy));
 
 	if (length != 0) {
 		dx /= length;
@@ -36,14 +36,18 @@ void Enemy::updatePosition(Movement* player_position) {
 	float move_y = 0;
 
 	if (position.getX() < player_position->getX())
-		move_x = dx * ENEMY_SPEED;
+		move_x = std::ceil(dx * ENEMY_SPEED);
 	else
-		move_x = -1 * dx * ENEMY_SPEED;
+		move_x = -1 * std::ceil(dx * ENEMY_SPEED);
 
 	if (position.getY() < player_position->getY())
-		move_y = dy * ENEMY_SPEED;
+		move_y = std::ceil(dy * ENEMY_SPEED);
 	else
-		move_y = -1 * dy * ENEMY_SPEED;
+		move_y = -1 * std::ceil(dy * ENEMY_SPEED);
+
+	std::cout << "move_x: " << move_x << " move_y: " << move_y << std::endl;
+	std::cout << "x: " << position.getX() << " y: " << position.getY() << std::endl;
+	std::cout << "player_x: " << player_position->getX() << " player_y: " << player_position->getY() << std::endl;
 
 
 	position.setX(position.getX() + move_x);
