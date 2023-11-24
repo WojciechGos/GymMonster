@@ -7,6 +7,9 @@
 
 #define ENEMY_SPEED 2.0f
 
+#define INITIAL_ENEMY_POSITION_X 850
+#define INITIAL_ENEMY_POSITION_Y 0
+
 Enemy::Enemy(int x, int y) {
 	position.setX(x);
 	position.setY(y);
@@ -63,14 +66,7 @@ void Enemy::render() {
 }
 
 
-Enemy* Enemy::spawnEnemies(int number) {
-	
-	Enemy* enemies = new Enemy[number];
-	
-	for (int i = 0; i < number; ++i) {
-		enemies[i].position.setX(INITIAL_ENEMY_POSITION_X);
-		enemies[i].position.setY(INITIAL_ENEMY_POSITION_Y);
-	}
-	
-	return enemies;
+Enemy Enemy::spawnEnemy() {
+	Enemy enemy(INITIAL_ENEMY_POSITION_X, INITIAL_ENEMY_POSITION_Y);
+	return enemy;
 }

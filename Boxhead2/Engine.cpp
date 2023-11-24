@@ -11,6 +11,7 @@
 #include "Interface.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Gameplay.h"
 
 #include <iostream>
 
@@ -59,7 +60,16 @@ void Engine::run() {
 
 	ALLEGRO_DISPLAY* display = NULL;
 
-	//Player player = Player();
+	// Player create
+	Player player(INITIAL_PLAYER_POSITION_X, INITIAL_PLAYER_POSITION_Y);
+
+
+	// Create initial enemies
+	int enemy_count = INITIAL_ENEMY_NUMBER;
+
+	//Enemy* enemies = Enemy::spawnEnemy();
+	Gameplay gameplay;
+
 
 
 	/*
@@ -81,14 +91,9 @@ void Engine::run() {
 	al_start_timer(timer);
 	al_start_timer(enemy_timer);
 
-	// Player create
-	Player player(INITIAL_PLAYER_POSITION_X, INITIAL_PLAYER_POSITION_Y);
 
 
-	// Create initial enemies
-	int enemy_count = INITIAL_ENEMY_NUMBER;
-
-	Enemy* enemies = Enemy::spawnEnemies(INITIAL_ENEMY_NUMBER);
+	
 
 
 	/*
@@ -112,24 +117,20 @@ void Engine::run() {
 		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
 			running = false;
 		}
-		if (event.type == ALLEGRO_EVENT_TIMER) {
-			if (event.timer.source == enemy_timer) {
-				std::cout << "SPAWN" << std::endl;
-			}
-		}
+		gameplay.run(event, enemy_timer);
 		/*
 			DRAW
 		*/
-		for (int i = 0; i < enemy_count; ++i) {
-			enemies[i].updatePosition(&player.position);
-			enemies[i].render();
+		for (int i = 0; i < gameplay.enemies.size(); ++i) {
+			gameplay.enemies[i].updatePosition(&player.position);
+			gameplay.enemies[i].render();
 		}
 		player.render();
 
 		al_flip_display();
 
 	}
-	delete[] enemies;
+
 	al_destroy_display(display);
 	al_destroy_timer(timer);
 	al_destroy_event_queue(event_queue);
