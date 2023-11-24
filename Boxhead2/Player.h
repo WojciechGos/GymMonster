@@ -14,7 +14,7 @@ public:
     Movement position;
     Player(int x, int y);
 
-    void render();
+    void render(ALLEGRO_EVENT event, Movement* movement);
     void shot();
     void drawLifeBar();
 };

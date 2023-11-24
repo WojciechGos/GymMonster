@@ -13,7 +13,7 @@ Player::Player(int x, int y) {
     position.setY(y);
 }
 
-void Player::render() {
+void Player::render(ALLEGRO_EVENT events, Movement* movement) {
 	ALLEGRO_BITMAP* player = al_load_bitmap("player.png");
 
 
@@ -21,10 +21,37 @@ void Player::render() {
 		std::cout << "player init error" << std::endl;
 	}
 
-	//al_clear_to_color(al_map_rgb(0, 0, 0));
-	
-	//al_draw_bitmap_region(player, movement->getX(), movement->getY(), 100, 100, 100, 100, 0);
-	al_draw_bitmap(player, position.getX(), position.getY(), 0);
+	bool draw = true, active = false;
+	int dir = 0, posx = 32;
+
+	if (events.type == ALLEGRO_EVENT_TIMER)
+	{
+		active = true;
+		if (movement->getDirection() == 0)
+			dir = 0;
+		else if (movement->getDirection() == 1)
+			dir = 33;
+		else if (movement->getDirection() == 2)
+			dir = 65;
+		else if (movement->getDirection() == 3)
+			dir = 97;
+		else
+			active = false;
+		draw = true;
+		if (active)
+			posx = 64;
+		else
+			posx = 32;
+		if (posx >= 64)
+			posx = 0;
+	}
+	else {}
+
+
+	if (draw)
+	{
+		al_draw_bitmap_region(player, posx, dir, 32, 32, movement->getX(), movement->getY(), NULL);
+	}
 
 }
 
