@@ -5,7 +5,7 @@
 #include <allegro5/allegro_image.h>
 #include <cmath>
 
-#define ENEMY_SPEED 2.0f
+#define ENEMY_SPEED 1.0f
 
 #define INITIAL_ENEMY_POSITION_X 850
 #define INITIAL_ENEMY_POSITION_Y 0

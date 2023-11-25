@@ -119,7 +119,7 @@ void Engine::run() {
 			gameplay.enemies[i].render(event, &player.position);
 		}
 		player.render(event);
-
+		player.pointsCounter();
 		al_flip_display();
 
 	}

@@ -10,6 +10,7 @@
 class Player {
 private:
     int hp = 100;
+    void renderShot();
 public:
     Movement position;
     Player(int x, int y);
@@ -17,6 +18,8 @@ public:
     void render(ALLEGRO_EVENT event);
     void shot(Gameplay* gameplay);
     void drawLifeBar();
+    void pointsCounter();
+
 };
 
 
