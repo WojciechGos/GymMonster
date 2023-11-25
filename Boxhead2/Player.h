@@ -11,6 +11,7 @@ class Player {
 private:
     int hp = 100;
     void renderShot();
+
 public:
     Movement position;
     Player(int x, int y);

@@ -42,26 +42,28 @@ void Enemy::updatePosition(Movement* player_position) {
 	float dx = player_position->getX();
 	float dy = player_position->getY();
 
-	float length = std::ceil(sqrt(dx * dx + dy * dy));
-
-	if (length != 0) {
-		dx /= length;
-		dy /= length;
-	}
-
 	// Update enemy position
 	float move_x = 0;
 	float move_y = 0;
 
-	if (position.getX() < player_position->getX())
-		move_x = std::ceil(dx * ENEMY_SPEED);
-	else
-		move_x = -1 * std::ceil(dx * ENEMY_SPEED);
+	//float length = std::ceil(sqrt(dx * dx + dy * dy));
 
-	if (position.getY() < player_position->getY())
-		move_y = std::ceil(dy * ENEMY_SPEED);
-	else
-		move_y = -1 * std::ceil(dy * ENEMY_SPEED);
+	//if (length != 0) {
+	//	dx /= length;
+	//	dy /= length;
+	//}
+
+
+
+	//if (position.getX() < player_position->getX())
+	//	move_x = std::ceil(dx * ENEMY_SPEED);
+	//else
+	//	move_x = -1 * std::ceil(dx * ENEMY_SPEED);
+
+	//if (position.getY() < player_position->getY())
+	//	move_y = std::ceil(dy * ENEMY_SPEED);
+	//else
+	//	move_y = -1 * std::ceil(dy * ENEMY_SPEED);
 
 	//std::cout << "move_x: " << move_x << " move_y: " << move_y << std::endl;
 	//std::cout << "x: " << position.getX() << " y: " << position.getY() << std::endl;

@@ -50,24 +50,40 @@ void Player::render(ALLEGRO_EVENT events) {
 */
 void Player::shot(Gameplay* gameplay) {
 	renderShot();
+
+	float field_of_fire_y1 = 0, field_of_fire_y2 = 0;
+	float field_of_fire_x1 = 0, field_of_fire_x2 = 0;
+	float enemy_y = 0, enemy_x = 0;
 	std::cout << "size: " << gameplay->enemies.size() << std::endl;
 	for (auto enemy : gameplay->enemies) {
-		std::cout << "enemy_x: " << enemy.getPosition()->getX() << " enemy_y: " << enemy.getPosition()->getY() << std::endl;
+
+		enemy_x = enemy.getPosition()->getX();
+		enemy_y = enemy.getPosition()->getY();
+		std::cout << "enemy_x: " << enemy_x << " enemy_y: " << enemy_y << std::endl;
 		std::cout << "player_x: " << position.getX() << " player_y: " << position.getY() << std::endl;
+	
+		
+		field_of_fire_y1 = position.getY() + 2*SPRITE_SHIFT - SPRITE_DIMENSION;
+		field_of_fire_y2 = position.getY() + 2 * SPRITE_SHIFT;
+		
+		field_of_fire_x1 = position.getX() + SPRITE_SHIFT - SPRITE_DIMENSION;
+		field_of_fire_x2 = position.getX() + SPRITE_SHIFT;
+
+
 		if (position.getDirection() == UP) {
 			std::cout << "UP" << std::endl;
-			if (enemy.getPosition()->getY() < position.getY() ) {
+			if (enemy_y < position.getY() ) {
 
 				// check if enemy is in field fire in X axis
-				if( position.getX() >= enemy.getPosition()->getX() && enemy.getPosition()->getX() <= position.getX() + SPRITE_DIMENSION)
+				if(field_of_fire_x1 <= enemy_x && enemy_x <= field_of_fire_x2)
 					std::cout << "BANG" << std::endl;
 			}
 		}
 		else if (position.getDirection() == DOWN) {
 			std::cout << "DOWN" << std::endl;
-			if (enemy.getPosition()->getY() > position.getY()) {
+			if (enemy_y > position.getY()) {
 				// check if enemy is in field fire in X axis
-				if (position.getX() > enemy.getPosition()->getX() && enemy.getPosition()->getX() < position.getX() + SPRITE_DIMENSION)
+				if (field_of_fire_x1 <= enemy_x && enemy_x <= field_of_fire_x2)
 					std::cout << "BANG" << std::endl;
 
 			}
@@ -75,21 +91,19 @@ void Player::shot(Gameplay* gameplay) {
 		}
 		else if (position.getDirection() == LEFT) {
 			std::cout << "LEFT" << std::endl;
-			if (enemy.getPosition()->getX() < position.getX()) {
+			if (enemy_x < position.getX()) {
 				std::cout << "field of fire y1: " << position.getY() << " y2: " << position.getY() + SPRITE_DIMENSION << std::endl;
 				// check if enemy is in field fire in Y axis
-				if (position.getY() <= enemy.getPosition()->getY() + (SPRITE_DIMENSION / 2.0) &&
-					enemy.getPosition()->getY() >= (position.getY() + SPRITE_DIMENSION)) {
-
+				if (enemy_y >= field_of_fire_y1 && enemy_y <= field_of_fire_y2) {
 					std::cout << "BANG" << std::endl;
 				}
 			}
 		}
 		else if (position.getDirection() == RIGHT) {
 			std::cout << "RIGHT" << std::endl;
-			if (enemy.getPosition()->getX() > position.getX()) {
+			if (enemy_x > position.getX()) {
 				// check if enemy is in field fire in Y axis
-				if (position.getY() <= enemy.getPosition()->getY() && enemy.getPosition()->getY() >= (position.getY() + SPRITE_DIMENSION))
+				if (enemy_y >= field_of_fire_y1 && enemy_y <= field_of_fire_y2)
 					std::cout << "BANG" << std::endl;
 			}
 		}
