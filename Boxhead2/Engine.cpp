@@ -118,7 +118,7 @@ void Engine::run() {
 			gameplay.enemies[i].updatePosition(&player.position);
 			gameplay.enemies[i].render(event, &player.position);
 		}
-		player.render(event, &player.position);
+		player.render(event);
 
 		al_flip_display();
 
@@ -149,21 +149,21 @@ void Engine::handle_keyboard(ALLEGRO_EVENT event, Player* player, Gameplay* game
 	if (event.type == ALLEGRO_EVENT_TIMER) {
 		al_get_keyboard_state(&keyState);
 
-		movement->setActive(true);
+		player->position.setActive(true);
 		if (al_key_down(&keyState, ALLEGRO_KEY_D))
 		{
-			movement->setX(movement->getX() + MOVE);
-			movement->setDirection(64);
+			player->position.setX(player->position.getX() + MOVE);
+			player->position.setDirection(64);
 		}
 		else if (al_key_down(&keyState, ALLEGRO_KEY_A))
 		{
-			movement->setX(movement->getX() - MOVE);
-			movement->setDirection(32);
+			player->position.setX(player->position.getX() - MOVE);
+			player->position.setDirection(32);
 		}
 		else if (al_key_down(&keyState, ALLEGRO_KEY_W))
 		{
-			movement->setY(movement->getY() - MOVE);
-			movement->setDirection(96);
+			player->position.setY(player->position.getY() - MOVE);
+			player->position.setDirection(96);
 		}
 		else if (al_key_down(&keyState, ALLEGRO_KEY_S))
 		{
@@ -171,7 +171,7 @@ void Engine::handle_keyboard(ALLEGRO_EVENT event, Player* player, Gameplay* game
 			player->position.setDirection(0);
 		}
 		else
-			movement->setActive(false);
+			player->position.setActive(false);
 	}
 }
 

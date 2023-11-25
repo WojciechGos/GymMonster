@@ -13,7 +13,7 @@ Player::Player(int x, int y) {
     position.setY(y);
 }
 
-void Player::render(ALLEGRO_EVENT events, Movement* movement) {
+void Player::render(ALLEGRO_EVENT events) {
 	ALLEGRO_BITMAP* player = al_load_bitmap("player.png");
 
 	if (!player) {
@@ -22,16 +22,16 @@ void Player::render(ALLEGRO_EVENT events, Movement* movement) {
 
 	if (events.type == ALLEGRO_EVENT_TIMER)
 	{
-		if (movement->getActive())
-			movement->setState(movement->getState()+32);
+		if (position.getActive())
+			position.setState(position.getState()+32);
 		else
-			movement->setState(32);
+			position.setState(32);
 
-		if (movement->getState() >= 96)
-			movement->setState(0);
+		if (position.getState() >= 96)
+			position.setState(0);
 	}
 
-	al_draw_bitmap_region(player, movement->getState(), movement->getDirection(), 32, 32, movement->getX(), movement->getY(), NULL);
+	al_draw_bitmap_region(player, position.getState(), position.getDirection(), 32, 32, position.getX(), position.getY(), NULL);
 	//al_flip_display();
 	//al_clear_to_color(al_map_rgb(0, 0, 0));
 }

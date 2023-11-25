@@ -14,7 +14,7 @@ public:
     void setState(int state);
     void setDirection(int direction);
     static Enemy spawnEnemy();
-
+    Movement* getPosition();
     int getState();
     int getDirection();
 
