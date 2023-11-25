@@ -11,6 +11,7 @@ class Player {
 private:
     int hp = 100;
     void renderShot();
+    ALLEGRO_BITMAP* player;
 
 public:
     Movement position;

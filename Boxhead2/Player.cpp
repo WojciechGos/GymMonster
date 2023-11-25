@@ -16,12 +16,13 @@
 
 
 Player::Player(int x, int y) {
+	player = al_load_bitmap("player.png");
     position.setX(x);
     position.setY(y);
 }
 
 void Player::render(ALLEGRO_EVENT events) {
-	ALLEGRO_BITMAP* player = al_load_bitmap("player.png");
+
 
 	if (!player) {
 		std::cout << "player init error" << std::endl;
@@ -54,13 +55,17 @@ void Player::shot(Gameplay* gameplay) {
 	float field_of_fire_y1 = 0, field_of_fire_y2 = 0;
 	float field_of_fire_x1 = 0, field_of_fire_x2 = 0;
 	float enemy_y = 0, enemy_x = 0;
-	std::cout << "size: " << gameplay->enemies.size() << std::endl;
-	for (auto enemy : gameplay->enemies) {
 
-		enemy_x = enemy.getPosition()->getX();
-		enemy_y = enemy.getPosition()->getY();
-		std::cout << "enemy_x: " << enemy_x << " enemy_y: " << enemy_y << std::endl;
-		std::cout << "player_x: " << position.getX() << " player_y: " << position.getY() << std::endl;
+	bool isSomeoneShoted = false;
+	int index = 0;
+	std::cout << "size: " << gameplay->enemies.size() << std::endl;
+
+	for(int i=0; i<gameplay->getEnemyNumber(); ++i){
+		
+		enemy_x = gameplay->enemies[i].getPosition()->getX();
+		enemy_y = gameplay->enemies[i].getPosition()->getY();
+		//std::cout << "enemy_x: " << enemy_x << " enemy_y: " << enemy_y << std::endl;
+		//std::cout << "player_x: " << position.getX() << " player_y: " << position.getY() << std::endl;
 	
 		
 		field_of_fire_y1 = position.getY() + 2*SPRITE_SHIFT - SPRITE_DIMENSION;
@@ -71,43 +76,49 @@ void Player::shot(Gameplay* gameplay) {
 
 
 		if (position.getDirection() == UP) {
-			std::cout << "UP" << std::endl;
+			//std::cout << "UP" << std::endl;
 			if (enemy_y < position.getY() ) {
 
 				// check if enemy is in field fire in X axis
-				if(field_of_fire_x1 <= enemy_x && enemy_x <= field_of_fire_x2)
-					std::cout << "BANG" << std::endl;
+				if (field_of_fire_x1 <= enemy_x && enemy_x <= field_of_fire_x2) {
+					isSomeoneShoted = true;
+				}
 			}
 		}
 		else if (position.getDirection() == DOWN) {
-			std::cout << "DOWN" << std::endl;
+			//std::cout << "DOWN" << std::endl;
 			if (enemy_y > position.getY()) {
 				// check if enemy is in field fire in X axis
-				if (field_of_fire_x1 <= enemy_x && enemy_x <= field_of_fire_x2)
-					std::cout << "BANG" << std::endl;
+				if (field_of_fire_x1 <= enemy_x && enemy_x <= field_of_fire_x2) {
+
+					isSomeoneShoted = true;
+				}
 
 			}
 
 		}
 		else if (position.getDirection() == LEFT) {
-			std::cout << "LEFT" << std::endl;
+			//std::cout << "LEFT" << std::endl;
 			if (enemy_x < position.getX()) {
-				std::cout << "field of fire y1: " << position.getY() << " y2: " << position.getY() + SPRITE_DIMENSION << std::endl;
 				// check if enemy is in field fire in Y axis
 				if (enemy_y >= field_of_fire_y1 && enemy_y <= field_of_fire_y2) {
-					std::cout << "BANG" << std::endl;
+					isSomeoneShoted = true;
 				}
 			}
 		}
 		else if (position.getDirection() == RIGHT) {
-			std::cout << "RIGHT" << std::endl;
+			//std::cout << "RIGHT" << std::endl;
 			if (enemy_x > position.getX()) {
 				// check if enemy is in field fire in Y axis
-				if (enemy_y >= field_of_fire_y1 && enemy_y <= field_of_fire_y2)
-					std::cout << "BANG" << std::endl;
+				if (enemy_y >= field_of_fire_y1 && enemy_y <= field_of_fire_y2) {
+
+					isSomeoneShoted = true;
+				}
 			}
 		}
 	}
+	if(isSomeoneShoted)
+		gameplay->killEnemy(index);
 }
 
 void Player::drawLifeBar()

@@ -2,8 +2,12 @@
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
+#include <cmath>
 
-void drawMap()
+#define M_PI 3.14159265358979323846
+#define RADIUS 15
+
+void Interface::drawMap()
 {
     al_clear_to_color(al_map_rgb(0, 0, 0));
 
@@ -69,6 +73,39 @@ void drawMap()
     }
 }
 
+
+void Interface::blood(int x0, int y0)
+{
+    for (double alpha = 0; alpha <= M_PI / 2; alpha += 0.01) {
+        int x = static_cast<int>(x0 + RADIUS * std::cos(alpha));
+        int y = static_cast<int>(y0 - RADIUS * std::sin(alpha));
+
+        al_draw_pixel(x, y, al_map_rgb(255, 0, 0));
+
+        al_draw_pixel(x0 - (x - x0), y, al_map_rgb(255, 0, 0));
+        al_draw_pixel(x, y0 + (y0 - y), al_map_rgb(255, 0, 0));
+        al_draw_pixel(x0 - (x - x0), y0 + (y0 - y), al_map_rgb(255, 0, 0));
+    }
+
+    al_draw_filled_circle(x0, y0, RADIUS, al_map_rgb(255, 0, 0));
+}
+
+
+void Interface::barrel(int x0, int y0, int RX, int RY)
+{
+    for (double alpha = 0; alpha < 2 * M_PI; alpha += 0.01) {
+        int x = x0 + RX * cos(alpha);
+        int y = y0 + RY * sin(alpha);
+
+        al_draw_pixel(x, y, al_map_rgb(0, 0, 0));
+        al_draw_pixel(x, y - 50, al_map_rgb(0, 0, 0));
+    }
+
+    al_draw_filled_ellipse(x0, y0 - 2.5, RX, RY, al_map_rgb(255, 255, 255));
+    al_draw_filled_ellipse(x0, y0 - 50, RX, RY, al_map_rgb(255, 255, 255));
+
+    al_draw_filled_rectangle(720, 550, 880, 600, al_map_rgb(255, 255, 255));
+}
 /*
 	Interface file contains all classes related with drawing graphic.
 */

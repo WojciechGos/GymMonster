@@ -2,6 +2,7 @@
 #include "Gameplay.h"
 #include <iostream>
 #include <allegro5/allegro.h>
+#include "Interface.h"
 
 Gameplay::Gameplay(){
 
@@ -55,3 +56,8 @@ bool Gameplay::ifAllEnemiesAreDead() {
 	return false;
 }
 
+void Gameplay::killEnemy(int index) {
+	enemies[index].setIsAlive(false);
+	enemyNumberAlive--;
+	std::cout << "BANG" << std::endl;
+}

@@ -99,7 +99,7 @@ void Engine::run() {
 		ALLEGRO_EVENT event;
 		al_wait_for_event(event_queue, &event);
 
-		drawMap();
+		Interface::drawMap();
 		player.drawLifeBar();
 
 
@@ -116,7 +116,7 @@ void Engine::run() {
 		*/
 		for (int i = 0; i < gameplay.enemies.size(); ++i) {
 			gameplay.enemies[i].updatePosition(&player.position);
-			gameplay.enemies[i].render(event, &player.position);
+			gameplay.enemies[i].render(event);
 		}
 		player.render(event);
 		player.pointsCounter();

@@ -21,11 +21,13 @@ private:
 	void startRound();
 	void spawnEnemy();
 
+
 public:
 	Gameplay();
 	std::vector<Enemy> enemies;
 	int getEnemyNumber();
 	void run(ALLEGRO_EVENT event, ALLEGRO_TIMER* enemy_timer);
+	void killEnemy(int index);
 };
 
 
