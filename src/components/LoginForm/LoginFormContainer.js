@@ -2,6 +2,7 @@ import LoginForm from "./LoginForm"
 
 const LoginFormContainer = ({ navigation }) => {
     const auth = () => {
+        
         navigation.navigate('Home')
     }
 

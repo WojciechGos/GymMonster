@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
 import Login from "@screens/Authenticate/Login"
 import Home from '@screens/Home/Home'
+import TrainingCreator from "../screens/TrainingCreator/TrainingCreator"
 
 const Stack = createNativeStackNavigator()
 
@@ -17,11 +18,11 @@ export default function StackNavigation() {
                 component={Login}
                 options={optionScreen}
             />
-            {/* <Stack.Screen
-                name="Register"
-                component={Register}
+            <Stack.Screen
+                name="TrainingCreator"
+                component={TrainingCreator}
                 options={optionScreen}
-            /> */}
+            />
             <Stack.Screen
                 name="Home"
                 component={Home}
