@@ -1,10 +1,15 @@
 import { View } from "react-native"
 import { Text } from "react-native-paper"
 import TrainingCreatorContext from "./TrainingCreatorContext"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 
 const TrainingDisplay = () => {
-    const { excercises } = useContext(TrainingCreatorContext)
+    const { excercises, getFromStorage } = useContext(TrainingCreatorContext)
+
+    useEffect(()=>{
+        getFromStorage()
+    },[])
+
     return (
         <View>
             {

@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     },
     primaryButton: {
         backgroundColor: colors.primary,
-        color: colors.text,
+        color: "#DFDFDF",
         marginVertical: 10,
         height: 60,
         alignItems: "center",
