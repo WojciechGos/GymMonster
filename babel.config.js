@@ -9,7 +9,8 @@ module.exports = function(api) {
           alias: {
             src:'./src',
             '@public':'./public',
-            '@assets':'./src/assets'
+            '@assets':'./src/assets',
+            '@screens':'./src/screens'
           }
         }
       ]

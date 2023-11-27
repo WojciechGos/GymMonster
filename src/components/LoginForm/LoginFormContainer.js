@@ -1,8 +1,10 @@
-import LoginForm from "./LoginForm";
-import { NavigationContainer } from "@react-navigation/native"
+import LoginForm from "./LoginForm"
 
+const LoginFormContainer = ({ navigation }) => {
+    const auth = () => {
+        navigation.navigate('Home')
+    }
 
-const LoginFormContainer = () => {
-    return <LoginForm />
+    return <LoginForm auth={auth} />
 }
 export default LoginFormContainer

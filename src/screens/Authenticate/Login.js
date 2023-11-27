@@ -2,10 +2,10 @@ import LoginFormContainer from "../../components/LoginForm/LoginFormContainer"
 import { View } from "react-native"
 import styles from "./style"
 
-const Login = () => {
+const Login = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <LoginFormContainer />
+            <LoginFormContainer navigation={navigation} />
         </View>
     )
 }

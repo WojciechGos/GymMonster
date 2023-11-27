@@ -8,5 +8,11 @@ const styles = StyleSheet.create({
         color:colors.text,
         padding: 10
     },
+    primaryButton :{
+        backgroundColor: colors.primary,
+        color: colors.text,
+        marginVertical:10,
+        height:60,
+    }
 })
 export default styles
