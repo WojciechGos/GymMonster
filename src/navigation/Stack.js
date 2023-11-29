@@ -3,7 +3,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import Login from "@screens/Authenticate/Login"
 import ForgotPassword from '@screens/Authenticate/ForgotPassword'
 import Home from '@screens/Home/Home'
-// import Register from '@screens/Register/Register'
+import Register from '@screens/Authenticate/Register'
+
 
 
 const Stack = createNativeStackNavigator()
@@ -20,11 +21,11 @@ export default function StackNavigation() {
                 component={Login}
                 options={optionScreen}
             />
-            {/* <Stack.Screen
+            <Stack.Screen
                 name="Register"
                 component={Register}
                 options={optionScreen}
-            /> */}
+            />
             <Stack.Screen
                 name="ForgotPassword"
                 component={ForgotPassword}
