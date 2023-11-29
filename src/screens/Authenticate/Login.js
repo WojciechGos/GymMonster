@@ -1,6 +1,6 @@
-import LoginFormContainer from "../../components/LoginForm/LoginFormContainer"
+import LoginFormContainer from "@components/LoginForm/LoginFormContainer"
 import { View } from "react-native"
-import styles from "./style"
+import styles from "@assets/style"
 
 const Login = ({navigation}) => {
     return (
