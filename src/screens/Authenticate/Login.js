@@ -1,6 +1,6 @@
 import LoginFormContainer from "@components/LoginForm/LoginFormContainer"
 import { View } from "react-native"
-import styles from "@assets/style"
+import styles from "@assets/styles"
 
 const Login = ({navigation}) => {
     return (

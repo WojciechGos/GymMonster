@@ -1,4 +1,4 @@
-import EnterNewPasswordFormContainer from "../../components/EnterNewPasswordForm/EnterNewPasswordFormContainer"
+import EnterNewPasswordFormContainer from "@components/EnterNewPasswordForm/EnterNewPasswordFormContainer"
 import { View } from "react-native"
 import styles from "./style"
 
