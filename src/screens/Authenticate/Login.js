@@ -1,10 +1,13 @@
-import { Image } from "react-native"
+import LoginFormContainer from "@components/LoginForm/LoginFormContainer"
 import { View } from "react-native"
-const Login = () => {
+import styles from "@assets/styles"
+
+const Login = ({navigation}) => {
     return (
-        <View>
-            <Image source={require('../../assets/images/main-logo.png')}/>
+        <View style={styles.container}>
+            <LoginFormContainer navigation={navigation} />
         </View>
     )
 }
 export default Login
+
