@@ -7,7 +7,7 @@ import HomeIncommingTrainingContainer from "@components/HomeIncomingTraining/Hom
 
 const Home = ()=>{
     return (
-        <View style={styles.container}>
+        <View style={styles.containerNoCenter}>
             <Text variant="displayLarge"> Home</Text>
             <PedometerContainer/>
             <CalendarContainer/>

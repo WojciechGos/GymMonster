@@ -3,7 +3,7 @@ import styles from '@assets/styles'
 
 const ForgotPasswordForm = ()=>{
     return (
-        <Text variant='displayLarge'>
+        <Text variant='displayLarge' style={styles.textButton}>
             ForgotPasswordForm
         </Text>
     )

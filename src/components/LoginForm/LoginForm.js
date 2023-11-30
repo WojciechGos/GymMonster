@@ -1,28 +1,57 @@
 import {Image, View, Pressable } from "react-native"
 import logo from "@public/main-logo.png"
-import { TextInput, Text, Button } from "react-native-paper"
+import { TextInput, Text } from "react-native-paper"
 import styles from "@assets/styles"
+import colors from "@assets/colors"
+import {Button} from "@ui"
+
 const LoginForm = ({ authenticate, goToRegister, goToForgorPassword }) => {
     return (
         <View>
             <Image source={logo} />
-            <TextInput label="Login" style={styles.textInputForm} />
-            <Pressable style={styles.primaryButton} onPress={() => authenticate()}>
-                <Text>
-                    Login
+            
+            <View >
+                <Text style={styles.h3} >
+                    Email
                 </Text>
-            </Pressable>
-            <Pressable style={styles.primaryButton} onPress={() => goToRegister()}>
-                <Text>
-                    register
-                </Text>
-            </Pressable>
-            <Pressable  style={styles.primaryButton} onPress={() => goToForgorPassword()}>
-                <Text>
-                    ForgotPassword
-                </Text>
-            </Pressable>
+                <TextInput 
+                    style={styles.textInputForm} 
+                    placeholder="Wprowadź Email" 
+                    textColor={colors.text} 
+                    activeUnderlineColor={colors.primary}
+                />
+            </View>
 
+            <View >
+                <Text style={styles.h3} >
+                    Haslo
+                </Text>
+                <TextInput 
+                    style={styles.textInputForm} 
+                    placeholder="Wprowadź hasło" 
+                    textColor={colors.text} 
+                    secureTextEntry={true}
+                    activeUnderlineColor={colors.primary} />
+            </View>
+
+            <View style={styles.loginForgotPasswordWrapper}>
+                <Button name='Zaloguj' handler={authenticate}/>
+
+                <Pressable onPress={() => goToForgorPassword()}>
+                    <Text style={styles.text}>
+                        Zapomniałem hasło
+                    </Text>
+                </Pressable>
+            </View>
+
+            <View style={styles.centerContent}>
+                <Text style={styles.text}>
+                    lub
+                </Text>
+            </View>
+
+            <Button name='Zarejestruj' handler={goToRegister}/>
+            
         </View>
     )
 }
