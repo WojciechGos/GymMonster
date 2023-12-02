@@ -3,7 +3,7 @@ import styles from "@utils/styles"
 
 const TrainingPlan = ()=>{
     return (
-        <Text variant='displayLarge'>
+        <Text variant='displayLarge' style={styles.h3}>
             TrainingPlan
         </Text>
     )
