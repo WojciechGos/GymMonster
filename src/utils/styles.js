@@ -2,14 +2,19 @@ import { StyleSheet } from "react-native"
 import colors from "./colors"
 
 const styles = StyleSheet.create({
+    containerDefaultBackground: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
     container: {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: colors.background,
     },
-    containerNoCenter:{
-        flex:1,
+    containerNoCenter: {
+        flex: 1,
         backgroundColor: colors.background,
     },
     textInputForm: {
@@ -22,9 +27,9 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 10,
     },
-    textButton : {
+    textButton: {
         color: colors.text,
-        fontSize: 20
+        fontSize: 20,
     },
     primaryButton: {
         backgroundColor: colors.primary,
@@ -36,34 +41,42 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 5,
     },
-    textInfo:{
+    textInfo: {
         fontSize: 20,
-        color: colors.text
+        color: colors.text,
     },
-    text : {
-        color: colors.text
+    text: {
+        color: colors.text,
     },
     loginForgotPasswordWrapper: {
         marginVertical: 20,
-        flexDirection: 'row',
+        flexDirection: "row",
         justifyContent: "space-between",
-        alignItems: 'center'
+        alignItems: "center",
     },
     centerContent: {
-        flexDirection: 'row',
+        flexDirection: "row",
         justifyContent: "center",
-        marginVertical:20
+        marginVertical: 20,
     },
     h3: {
-        fontSize:20,
-        color: colors.text
+        fontSize: 20,
+        color: colors.text,
     },
-    headerWrapper:{
+    h4: {
+        fontSize: 15,
+        color: colors.text,
+    },
+    headerWrapper: {
         flex: 1,
-        width:'100%',
-        backgroundColor:colors.secondary
-    }
-
-
+        width: "100%",
+        backgroundColor: colors.secondary,
+    },
+    trainingListContentWrapper: {
+        marginHorizontal: 20,
+    },
+    accordion: {
+        backgroundColor: colors.primary,
+    },
 })
 export default styles
