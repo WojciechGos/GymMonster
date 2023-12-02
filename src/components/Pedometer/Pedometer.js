@@ -1,7 +1,7 @@
 import { View } from "react-native"
 import { Text } from "react-native-paper"
-import styles from '@assets/styles'
-import {Header} from '@ui'
+import styles from "@utils/styles"
+import Header from "@components/Header/Header"
 
 const Pedometer = ()=>{
     return (
