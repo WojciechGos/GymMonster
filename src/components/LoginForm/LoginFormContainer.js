@@ -2,7 +2,7 @@ import LoginForm from "./LoginForm"
 
 const LoginFormContainer = ({ navigation }) => {
     const authenticate = () => {
-        navigation.navigate('Home')
+        navigation.navigate('HomeStack')
     }
     const goToRegister = ()=>{
         navigation.navigate('Register')
