@@ -78,5 +78,9 @@ const styles = StyleSheet.create({
     accordion: {
         backgroundColor: colors.primary,
     },
+    drawerStyle: {
+        backgroundColor: colors.background,
+        color: colors.text
+    },
 })
 export default styles
