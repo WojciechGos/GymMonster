@@ -4,7 +4,7 @@ import Login from "@screens/Authenticate/Login"
 import ForgotPassword from '@screens/Authenticate/ForgotPassword'
 import Home from '@screens/Home/Home'
 import Register from '@screens/Authenticate/Register'
-
+import DrawerStack from "./Drawer"
 
 
 const Stack = createNativeStackNavigator()
@@ -32,8 +32,8 @@ export default function StackNavigation() {
                 options={optionScreen}
             />
             <Stack.Screen
-                name="Home"
-                component={Home}
+                name="HomeStack"
+                component={DrawerStack}
                 options={optionScreen}
             />
         </Stack.Navigator>

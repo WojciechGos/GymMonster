@@ -7,7 +7,7 @@ const Pedometer = ()=>{
     return (
         <View>
             <Header title='Liczba kroków'/>
-            <Text >
+            <Text style={styles.h3}>
                 Pedometer
             </Text>
         </View>
