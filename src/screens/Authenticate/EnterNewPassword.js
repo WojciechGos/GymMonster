@@ -1,6 +1,6 @@
 import EnterNewPasswordFormContainer from "@components/EnterNewPasswordForm/EnterNewPasswordFormContainer"
 import { View } from "react-native"
-import styles from "./style"
+import styles from "@utils/styles"
 
 const  EnterNewPassword = ({navigation}) => {
     return (

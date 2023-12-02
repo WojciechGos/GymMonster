@@ -1,6 +1,5 @@
 import { Text } from "react-native-paper"
-import styles from '@assets/styles'
-
+import styles from "@utils/styles"
 const EnterNewPasswordForm = ()=>{
     return (
         <Text variant='displayLarge'>

@@ -1,6 +1,6 @@
 import { Text } from "react-native-paper"
 import { View } from "react-native"
-import styles from "@assets/styles"
+import styles from "@utils/styles"
 
 const Header = ({title, link})=>{
 
