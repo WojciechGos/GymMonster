@@ -1,14 +1,13 @@
 import { Text } from "react-native-paper"
 import { View } from "react-native"
 import styles from "@utils/styles"
+import TrainingPlanAccordionContainer from "@components/TrainingPlanAccordion/TrainingPlanAccordionContainer"
 
 
 const TrainingPlan = () => {
     return (
         <View style={styles.containerNoCenter}>
-            <Text>
-                TrainingPlan
-            </Text>
+            <TrainingPlanAccordionContainer />
         </View>
     )
 }
