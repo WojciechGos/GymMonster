@@ -76,7 +76,31 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     accordion: {
-        backgroundColor: colors.primary,
+        backgroundColor: colors.secondary,
     },
+    drawerStyle: {
+        backgroundColor: colors.background,
+
+    },
+    drawerListItem: {
+        marginVertical:20
+    },
+    drawerWrapper: {
+        marginVertical: 50,
+        marginHorizontal:20
+    },
+    drawerHeader : {
+        backgroundColor: colors.primary,
+        height:80,
+        justifyContent: 'flex-end'
+    },
+    drawerLabel: {
+        color: colors.text
+    },
+    drawerHeaderIconWrapper:{
+        marginHorizontal:20,
+        marginVertical:10
+    }
+
 })
 export default styles
