@@ -59,6 +59,19 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginVertical: 20,
     },
+    pedometerWrapper:{
+        alignItems: "center",
+        justifyContent:"center",
+        height:150
+    },
+    h1:{
+        fontSize: 40,
+        color: colors.text,
+    },
+    h2:{
+        fontSize: 30,
+        color: colors.text,
+    },
     h3: {
         fontSize: 20,
         color: colors.text,
@@ -67,10 +80,15 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: colors.text,
     },
+    h5: {
+        fontSize: 10,
+        color: colors.text,
+    },
     headerWrapper: {
-        flex: 1,
-        width: "100%",
+        justifyContent:'center',
+        height:50,
         backgroundColor: colors.secondary,
+        paddingHorizontal:15
     },
     trainingListContentWrapper: {
         marginHorizontal: 20,
@@ -100,6 +118,21 @@ const styles = StyleSheet.create({
     drawerHeaderIconWrapper:{
         marginHorizontal:20,
         marginVertical:10
+    },
+    homeComponentWrapper:{
+        borderColor: colors.secondary,
+        borderWidth:1
+    },
+    progressWrapper:{
+        flexDirection: 'row',
+        alignItems:'center'
+    },
+    stonks: {
+        color: colors.green,
+        fontSize:15
+    },
+    notStonks: {
+
     }
 
 })
