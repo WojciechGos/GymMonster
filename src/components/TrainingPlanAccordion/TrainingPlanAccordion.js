@@ -25,6 +25,7 @@ const TrainingPlanAccordion = ({ expanded, handlePress, trainingData }) => {
                         {trainingSection.excercises.map((excercise) => (
                             <>
                                 <TrainingPlanAccordionItem
+                                    key={excercise.id}
                                     excerciseData={excercise}
                                 />
                                 <Divider />

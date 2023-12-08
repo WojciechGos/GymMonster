@@ -1,11 +1,26 @@
-import { Text } from "react-native-paper"
-import styles from "@utils/styles"
+import { View } from "react-native";
+import { Text } from "react-native-paper";
+import styles from "@utils/styles";
+import Header from "@components/Header/Header";
+import HomeIncomingTrainingExcercise from "./HomeIncomingTrainingExcercise";
 
-const HomeIncommingTraining = ()=>{
+const HomeIncommingTraining = ({trainingData})=>{
     return (
-        <Text variant='displayLarge'>
-            HomeIncommingTraining
-        </Text>
+        <View style={styles.homeComponentWrapper}>
+            <Header title='Nadchodzący trening'/>
+            <View style={styles.excercisesContainer} >
+                <Text style={[styles.h3, styles.excerciseTitle]}>
+                    {
+                        trainingData.name
+                    }:
+                </Text>
+                {
+                    trainingData.excercises.map(item=>(
+                        <HomeIncomingTrainingExcercise  key={item.id} excercise={item}/>
+                    ))
+                }
+            </View>
+        </View>
     )
 }
 

@@ -64,6 +64,9 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         height:150
     },
+    inCommingTrainingWrapper:{
+
+    },
     h1:{
         fontSize: 40,
         color: colors.text,
@@ -133,7 +136,20 @@ const styles = StyleSheet.create({
     },
     notStonks: {
 
+    },
+    excercisesContainer:{
+        marginVertical:20
+    },  
+    excerciseWrapper:{
+        flexDirection: 'row'
+    },
+    excerciseTextGaps: {
+        marginLeft: 30,
+        marginRight:10
+    },
+    excerciseTitle:{
+        marginLeft:10
     }
-
+    
 })
 export default styles
