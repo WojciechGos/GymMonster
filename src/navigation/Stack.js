@@ -1,5 +1,4 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-
 import Login from "@screens/Authenticate/Login"
 import ForgotPassword from '@screens/Authenticate/ForgotPassword'
 import Home from '@screens/Home/Home'
