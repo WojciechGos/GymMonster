@@ -149,6 +149,13 @@ const styles = StyleSheet.create({
     },
     excerciseTitle:{
         marginLeft:10
+    },
+    drawerItemWrapper:{
+        flexDirection:'row',
+    },
+    iconWrapper:{
+        width:50,
+        justifyContent:'center'
     }
     
 })
