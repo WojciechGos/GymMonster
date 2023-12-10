@@ -176,7 +176,21 @@ const styles = StyleSheet.create({
     },
     excerciseTitle:{
         marginLeft:10
-    }
+    },
+    bigWriting: {
+        color: "#DFDFDF",
+        fontSize: 55
+    },
+    imageSize: {
+        width: 90,
+        height: 90
+    },
+    exercisesWriting: {
+        marginVertical: 10,
+        fontSize: 34,
+        color: colors.text,
+    },
+  
     
 })
 export default styles

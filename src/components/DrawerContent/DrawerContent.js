@@ -7,7 +7,9 @@ const CustomDrawer = ({navigateToScreen}) =>{
         <View style={styles.drawerWrapper}>
             <DrawerListItem title='Home' handler={navigateToScreen}/>
             <DrawerListItem title='Training Plan' handler={navigateToScreen}/>
-            <DrawerListItem title='Training Plan Creator' handler={navigateToScreen}/>
+            <DrawerListItem title='Training Plan Creator' handler={navigateToScreen} />
+            <DrawerListItem title='Exercise Atlas' handler={navigateToScreen} />
+            <DrawerListItem title='Exercise Back' handler={navigateToScreen} />
         </View>
     )
 
