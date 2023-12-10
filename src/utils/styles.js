@@ -156,7 +156,9 @@ const styles = StyleSheet.create({
     iconWrapper:{
         width:50,
         justifyContent:'center'
-    }
+    },
+
+
     
 })
 export default styles
