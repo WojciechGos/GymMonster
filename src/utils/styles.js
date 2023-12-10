@@ -191,6 +191,13 @@ const styles = StyleSheet.create({
         color: colors.text,
     },
   
+    drawerItemWrapper:{
+        flexDirection:'row',
+    },
+    iconWrapper:{
+        width:50,
+        justifyContent:'center'
+    }
     
 })
 export default styles
