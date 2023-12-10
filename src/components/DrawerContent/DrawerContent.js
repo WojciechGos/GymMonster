@@ -14,6 +14,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 const CustomDrawer = ({navigateToScreen}) =>{
     return (
         <View style={styles.drawerWrapper}>
+
             <DrawerListItem title='Strona Główna' link='Home' handler={navigateToScreen} icon={<Entypo name="home" size={24} color={colors.primary} />}/>
             <DrawerListItem title='Plan treningowy' link='Training Plan' handler={navigateToScreen} icon={<Ionicons name="md-calendar-sharp" size={24} color={colors.primary} />}/>
             <DrawerListItem title='Statystyki' link='Training Plan Creator' handler={navigateToScreen} icon={<Fontisto name="line-chart" size={24}  color={colors.primary}  />}/>
@@ -22,7 +23,9 @@ const CustomDrawer = ({navigateToScreen}) =>{
             <DrawerListItem title='Atlas ćwiczeń' link='Training Plan Creator' handler={navigateToScreen} icon={<FontAwesome name="folder" size={24}  color={colors.primary} />}/>
             <DrawerListItem title='Zapisz postęp' link='Training Plan Creator' handler={navigateToScreen} icon={<MaterialIcons name="add-a-photo" size={24} color={colors.primary} />}/>
             <DrawerListItem title='Zobacz postępy' link='Training Plan Creator' handler={navigateToScreen} icon={<Entypo name="back-in-time" size={24} color={colors.primary} />}/>
-        </View>   
+           //<DrawerListItem title='Exercise Atlas' handler={navigateToScreen} />
+           // <DrawerListItem title='Exercise Back' handler={navigateToScreen} />        
+</View>   
     )
 
 }
