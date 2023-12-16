@@ -15,7 +15,7 @@ const ExerciseChestForm = () => {
                         Wyciskanie na ławce płaskiej</Text>
                 </View>
             </Pressable>
-            <Text></Text>
+
 
             <Pressable on Press onPress={() => goToForgorPassword()}>
                 <View style={styles.spacing}>
@@ -24,7 +24,7 @@ const ExerciseChestForm = () => {
                         Wyciskanie na ławce ujemnej</Text>
                 </View>
             </Pressable>
-            <Text></Text>
+
 
             <Pressable on Press onPress={() => goToForgorPassword()}>
                 <View style={styles.spacing}>
@@ -33,7 +33,7 @@ const ExerciseChestForm = () => {
                         Wyciskanie na ławce dodatniej</Text>
                 </View>
             </Pressable>
-            <Text></Text>
+
 
             <Pressable on Press onPress={() => goToForgorPassword()}>
                 <View style={styles.spacing}>
@@ -42,7 +42,7 @@ const ExerciseChestForm = () => {
                         Rozpiętki</Text>
                 </View>
             </Pressable>
-            <Text></Text>
+
 
             <Pressable on Press onPress={() => goToForgorPassword()}>
                 <View style={styles.spacing}>
@@ -51,7 +51,6 @@ const ExerciseChestForm = () => {
                         Pompki</Text>
                 </View>
             </Pressable>
-            <Text></Text>
 
             <Pressable on Press onPress={() => goToForgorPassword()}>
                 <View style={styles.spacing}>

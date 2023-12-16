@@ -23,8 +23,8 @@ const CustomDrawer = ({navigateToScreen}) =>{
             <DrawerListItem title='Atlas ćwiczeń' link='Training Plan Creator' handler={navigateToScreen} icon={<FontAwesome name="folder" size={24}  color={colors.primary} />}/>
             <DrawerListItem title='Zapisz postęp' link='Training Plan Creator' handler={navigateToScreen} icon={<MaterialIcons name="add-a-photo" size={24} color={colors.primary} />}/>
             <DrawerListItem title='Zobacz postępy' link='Training Plan Creator' handler={navigateToScreen} icon={<Entypo name="back-in-time" size={24} color={colors.primary} />}/>
-           //<DrawerListItem title='Exercise Atlas' handler={navigateToScreen} />
-           // <DrawerListItem title='Exercise Back' handler={navigateToScreen} />        
+           {/* //<DrawerListItem title='Exercise Atlas' handler={navigateToScreen} />
+           // <DrawerListItem title='Exercise Back' handler={navigateToScreen} />         */}
 </View>   
     )
 
