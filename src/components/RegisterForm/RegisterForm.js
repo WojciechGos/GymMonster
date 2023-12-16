@@ -1,4 +1,4 @@
-import { Image, View, Pressable} from "react-native"
+import { Image, View} from "react-native"
 import minilogo from "@public/mini-logo.png"
 import { TextInput, Text } from "react-native-paper"
 import styles from "@utils/styles"
@@ -12,7 +12,7 @@ const RegisterForm = ({ authenticate, goToLogin }) => {
 
             <View >
                 <Text></Text>
-                <Text></Text>
+              
                 <Text style={styles.h4} >
                     Imie
                 </Text>

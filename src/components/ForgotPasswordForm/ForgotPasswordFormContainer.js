@@ -1,13 +1,7 @@
 import ForgotPasswordForm from "./ForgotPasswordForm"
 
-const ForgotPasswordFormContainer = ({ navigation }) => {
-    const authenticate = () => {
-        navigation.navigate('HomeStack')
-    }
-    const props = {
-        authenticate: authenticate,
-       
-    }
+const ForgotPasswordFormContainer = () => {
+    
     return <ForgotPasswordForm {...props} />
 }
 
