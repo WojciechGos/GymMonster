@@ -197,7 +197,46 @@ const styles = StyleSheet.create({
     iconWrapper:{
         width:50,
         justifyContent:'center'
-    }
+    },
+    avievementWrapper:{
+        alignItems: 'center', 
+        margin: 24, 
+        flex: 1
+    },
+    achievementHead:{
+        marginTop: 7,
+        marginBottom: 3
+    },
+    achievementHeadText:{
+        color: 'white', 
+        fontSize: 24, 
+        fontWeight: '500', 
+        lineHeight: 40
+    },
+    achievementAchievementWrapper:{
+        alignItems: 'flex-start', 
+        flex: 1
+    },
+    achievementAchievement:{
+        flex: 1, 
+        flexDirection: 'row'
+    },
+    achievementIconWrapper:{
+        marginRight: 20
+    },
+    achievementAchievementStatus:{
+        flexDirection: 'column'
+    },
+    achievementFirstText:{
+        color: 'white',
+        fontSize: 24,
+        fontWeight: '500'
+    },
+    achievementSecondText:{
+        color: 'white',
+        fontSize: 12,
+        fontWeight: '500'
+    },
     
 })
 export default styles

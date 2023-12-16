@@ -1,0 +1,252 @@
+[33mcommit cc3bfffdaa155c0edc95a3991defb6a195f71c73[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 97df6c8 a1fd7ce
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sun Dec 10 17:58:22 2023 +0100
+
+    Merge pull request #11 from WojciechGos/Jan
+    
+    add: exercises atlas and back screen
+
+[33mcommit a1fd7ce30e4fab725e539d0f201e6141cc9f718b[m
+Merge: fa65de9 97df6c8
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sun Dec 10 17:58:10 2023 +0100
+
+    Merge branch 'master' into Jan
+
+[33mcommit fa65de972e83c9cfe8e434e4a4d2534a5fba1ccc[m
+Author: Jan Grochowski <101705669+jgrochowski02@users.noreply.github.com>
+Date:   Sun Dec 10 17:54:58 2023 +0100
+
+    add: exercises atlas and back screen
+
+[33mcommit 97df6c896f1f865f4fa01e12318c60ec7a79971c[m
+Merge: 520bed4 50f23b0
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sun Dec 10 17:48:09 2023 +0100
+
+    Merge pull request #10 from WojciechGos/test/merge
+    
+    Test/merge
+
+[33mcommit 50f23b0db945817285fef4320bd84f9add5bd064[m[33m ([m[1;31morigin/test/merge[m[33m)[m
+Merge: 520bed4 6511ffb
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sun Dec 10 17:38:03 2023 +0100
+
+    Merge pull request #9 from WojciechGos/Jan
+    
+    Jan
+
+[33mcommit 520bed49d0e3c2284f74b931712d038e9daa2d6a[m
+Merge: e1d9ff1 7d1e244
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sat Dec 9 16:05:19 2023 +0100
+
+    Merge pull request #8 from WojciechGos/fix/drawerStyle
+    
+    add: icons
+
+[33mcommit 7d1e244b3d1d97b7a6a9d163f17c57decfe9d1da[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Sat Dec 9 16:04:25 2023 +0100
+
+    add: icons
+
+[33mcommit 6511ffbfe98f096595230aed4f04fc7878f292c3[m
+Author: Jan Grochowski <101705669+jgrochowski02@users.noreply.github.com>
+Date:   Sat Dec 9 15:28:46 2023 +0100
+
+    add: forgot password screen
+
+[33mcommit 938cc22c4c1497e7794640359d66159a927d2e9c[m
+Author: Jan Grochowski <101705669+jgrochowski02@users.noreply.github.com>
+Date:   Sat Dec 9 15:15:08 2023 +0100
+
+    add: register screen
+
+[33mcommit 799ad6c4d2e3a34c46ceca6df850024240da4541[m
+Author: Jan Grochowski <101705669+jgrochowski02@users.noreply.github.com>
+Date:   Sat Dec 9 15:13:03 2023 +0100
+
+    Change: image folder
+
+[33mcommit e1d9ff10f6a7be9a58d92f85ad8124f45aa4a256[m
+Merge: 003554a a9033a9
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Fri Dec 8 16:04:57 2023 +0100
+
+    Merge branch 'feat/incommingTraining'
+    merge: feat/incommingTraining with feat/pedometer
+
+[33mcommit 003554aa322b9fa40295ea814dfae15682cd30ae[m
+Merge: cb8e516 ea4b766
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Fri Dec 8 15:56:20 2023 +0100
+
+    Merge pull request #7 from WojciechGos/feat/pedometer
+    
+    add: pedometer styles
+
+[33mcommit a9033a9c93d873afbd6b1480df6af1e99e7d754e[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Thu Dec 7 21:52:53 2023 +0100
+
+    add: display data from json file
+
+[33mcommit ea4b76630238bfe6d3eda8e0e29a30eb1b96c965[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Wed Dec 6 14:14:56 2023 +0100
+
+    add: pedometer styles
+
+[33mcommit cb8e516ba5facc00392c40fe354c477a47836342[m
+Merge: 59ab66e cfae4ba
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Wed Dec 6 13:04:17 2023 +0100
+
+    Merge pull request #6 from WojciechGos/chore/drawerStyle
+    
+    Chore/drawer style
+
+[33mcommit cfae4ba756d4a4564be6f41982e56099be58f183[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Wed Dec 6 13:03:41 2023 +0100
+
+    add: custom drawer and header
+
+[33mcommit 32cf41fc48afbc4ef438ee0ae75fe9cbee997e84[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Sat Dec 2 18:47:08 2023 +0100
+
+    change: background color
+
+[33mcommit 59ab66e2e94b80287083f91051a0078c5d09fe7d[m
+Merge: 30e92ad 5fc66d4
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sat Dec 2 18:13:29 2023 +0100
+
+    Merge pull request #5 from WojciechGos/feat/trainingPlan
+    
+    add: accordion with training plan
+
+[33mcommit 5fc66d4b519bc541f84727a2f48659825046c99b[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Sat Dec 2 18:13:02 2023 +0100
+
+    add: accordion with training plan
+
+[33mcommit 30e92ad9608e3ce8615cd4de3a2e88d4136d5687[m
+Merge: 3ce8362 fea813d
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sat Dec 2 13:56:45 2023 +0100
+
+    Merge pull request #4 from WojciechGos/feat/drawer
+    
+    add: drawer
+
+[33mcommit fea813ddf00b7e98a080dc000b34e853e4705eca[m
+Merge: edd2781 3ce8362
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sat Dec 2 13:56:35 2023 +0100
+
+    Merge branch 'master' into feat/drawer
+
+[33mcommit edd278111a881dcf8a02aeedf838bb14f45adf0c[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Sat Dec 2 13:52:27 2023 +0100
+
+    add: drawer
+
+[33mcommit 3ce83626fddcdeced8e94fde46426ac92d4da0a8[m
+Merge: 1b1b025 0fc5f79
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sat Dec 2 11:01:00 2023 +0100
+
+    Merge pull request #3 from WojciechGos/feat/TrainingPlan
+    
+    add: text style
+
+[33mcommit 0fc5f79f1989ce0e7f4502b4a4d6a9f3216dc634[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Sat Dec 2 10:59:24 2023 +0100
+
+    add: text style
+
+[33mcommit 1b1b025e1362d4241103ac34a7d7eb8342f238a4[m
+Merge: 6bb7eb7 17d267a
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Sat Dec 2 10:27:45 2023 +0100
+
+    Merge pull request #2 from WojciechGos/fix/folderStucture
+    
+    fix: folder structure
+
+[33mcommit 17d267a9dd27ae7d7671f3f4ca6e876ca17a54c8[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Sat Dec 2 10:24:22 2023 +0100
+
+    fix: folder structure
+
+[33mcommit 6bb7eb715708f371d3018d6815d200abe7667180[m
+Merge: 7ab1963 d190163
+Author: WojciechGos <36795978+WojciechGos@users.noreply.github.com>
+Date:   Thu Nov 30 15:36:34 2023 +0100
+
+    Merge pull request #1 from WojciechGos/feat/authenticate
+    
+    Feat/authenticate
+
+[33mcommit d190163b61af60b22c3aad383d6a2f302de67178[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Thu Nov 30 15:32:07 2023 +0100
+
+    add: login form styles
+
+[33mcommit c682bf9d8f9c7854849f1888a7ce63b612e897ba[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Wed Nov 29 12:33:24 2023 +0100
+
+    add: authenticate screens
+
+[33mcommit 96fae8cd9e11965ad4888299b05c1c9d3e8bd9da[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Wed Nov 29 12:00:03 2023 +0100
+
+    fix: module-resolver for components
+
+[33mcommit d020df23f4dc92698ca22763d6b4961c08f07f1e[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Wed Nov 29 11:33:46 2023 +0100
+
+    add: Register, Home and ForgotPassword
+
+[33mcommit aa9292396728129cb0cd2ed15059e42ff2e79986[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Mon Nov 27 21:35:07 2023 +0100
+
+    add: stack navigation
+
+[33mcommit ef0bee7da16a98e1ffced7b1b0c89141943c8e9e[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Mon Nov 27 20:43:32 2023 +0100
+
+    change: component structure
+
+[33mcommit 36ab95bbdfba5d9b90b94ca7c7308ffab4ffe318[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Mon Nov 27 20:43:18 2023 +0100
+
+    change: component structure
+
+[33mcommit 7ce1efcef5f6206304bff062c2d0699718efaf91[m
+Author: Wojtek <wojtekgg93@gmail.com>
+Date:   Mon Nov 27 20:42:23 2023 +0100
+
+    change: image folder
+
+[33mcommit 7ab196344f5aa08bf76681972ebfaa0dd32f982d[m
+Author: wojciech <wojtekgg93@gmail.com>
+Date:   Mon Nov 27 17:30:14 2023 +0100
+
+    init
