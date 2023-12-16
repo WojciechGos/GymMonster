@@ -1,13 +1,13 @@
 import { Text } from "react-native-paper"
 import { View } from "react-native"
 import styles from "@utils/styles"
+import StatisticContainer from "@components/Statistic/StatisticContainer"
 
-
-const Statictic = () => {
+const Statistic = () => {
     return (
         <View style={styles.containerNoCenter}>
-            <Text style={{color: 'white'}}>Statictic</Text>
+            <StatisticContainer />
         </View>
     )
 }
-export default Statictic
+export default Statistic
