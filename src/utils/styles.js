@@ -27,6 +27,16 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 10,
     },
+    textInputForm2: {
+        marginVertical: 5,
+        borderColor: colors.primary,
+        height: 20,
+        borderWidth: 2,
+        backgroundColor: colors.background,
+        color: colors.text,
+        borderRadius: 5,
+        padding: 10,
+    },
     textButton: {
         color: colors.text,
         fontSize: 20,
@@ -41,6 +51,16 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 5,
     },
+    buttonWithoutMargin: {
+        backgroundColor: colors.primary,
+        color: "#DFDFDF",
+        marginVertical: 0,
+        height: 60,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 15,
+        borderRadius: 5,
+    },
     textInfo: {
         fontSize: 20,
         color: colors.text,
@@ -48,8 +68,15 @@ const styles = StyleSheet.create({
     text: {
         color: colors.text,
     },
+  
     loginForgotPasswordWrapper: {
         marginVertical: 20,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
+    spacing: {
+        marginVertical: 5,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",

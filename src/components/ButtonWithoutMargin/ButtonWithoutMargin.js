@@ -1,10 +1,10 @@
 import { Pressable } from "react-native"
 import { Text } from "react-native-paper"
 import styles from "@utils/styles"
-const Button = ({name, handler})=>{
+const ButtonWithoutMargin = ({ name, handler }) => {
 
     return (
-        <Pressable style={styles.primaryButton} onPress={() => handler()}>
+        <Pressable style={styles.buttonWithoutMargin} onPress={() => handler()}>
             <Text style={styles.textButton}>
                 {name}
             </Text>
@@ -13,4 +13,4 @@ const Button = ({name, handler})=>{
 }
 
 
-export default Button
+export default ButtonWithoutMargin

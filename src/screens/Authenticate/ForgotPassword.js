@@ -2,10 +2,10 @@ import ForgotPasswordFormContainer from "@components/ForgotPasswordForm/ForgotPa
 import styles from "@utils/styles"
 import { View } from "react-native"
 
-const ForgorPassword = () => {
+const ForgorPassword = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <ForgotPasswordFormContainer/>
+            <ForgotPasswordFormContainer navigation={navigation} />
         </View>
     )
 }
