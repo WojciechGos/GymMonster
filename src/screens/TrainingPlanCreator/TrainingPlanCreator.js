@@ -5,7 +5,7 @@ import TrainingCreatorFormContainer from "@components/TrainingCreatorForm/Traini
 
 const TrainingPlanCreator = () => {
     return (
-        <View style={styles.container}>
+        <View style={styles.containerNoCenter}>
             <TrainingCreatorFormContainer />
         </View>
     )

@@ -1,7 +1,15 @@
 import TrainingCreatorForm from "./TrainingCreatorForm"
 
 const TrainingCreatorFormContainer = ()=>{
-    return <TrainingCreatorForm/>
+
+    const saveTraining = ()=>{
+
+    }
+
+    const props = {
+        saveTraining: saveTraining,
+    }
+    return <TrainingCreatorForm {...props}/>
 }
 
 export default TrainingCreatorFormContainer

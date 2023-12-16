@@ -17,7 +17,7 @@ const TrainingPlanAccordion = ({ expanded, handlePress, trainingData }) => {
                         style={styles.accordion}
                         titleStyle={styles.h3}
                         icon={({ expanded }) => (
-                            <Text style={{ color: colors.text }}>
+                            <Text style={styles.h4}>
                                 {expanded ? "▼" : "▶"}
                             </Text>
                         )}

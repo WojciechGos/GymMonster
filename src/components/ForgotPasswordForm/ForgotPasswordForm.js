@@ -2,7 +2,7 @@ import { Image, View, Pressable } from "react-native"
 import logo from "@public/main-logo.png"
 import { TextInput, Text } from "react-native-paper"
 import styles from "@utils/styles"
-import colors from "@utils/styles"
+import colors from "@utils/colors"
 import Button from "@components/Button/Button"
 
 const ForgotPasswordForm = ({ authenticate })=>{
@@ -10,8 +10,6 @@ const ForgotPasswordForm = ({ authenticate })=>{
 
         <View>
         <Image source ={logo} />
-
-        
 
         <View >
             <Text style={styles.h3} >
