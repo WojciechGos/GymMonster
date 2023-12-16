@@ -157,7 +157,15 @@ const styles = StyleSheet.create({
         width:50,
         justifyContent:'center'
     },
+    calendar:{
+        // color:colors.text 
+    },
+    day:{
 
+    },
+    emptyMessage:{
+        height:150
+    }
 
     
 })
