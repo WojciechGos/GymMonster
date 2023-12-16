@@ -115,7 +115,9 @@ const styles = StyleSheet.create({
         color: colors.text,
     },
     headerWrapper: {
-        justifyContent:'center',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent: 'space-between',
         height:50,
         backgroundColor: colors.secondary,
         paddingHorizontal:15
@@ -198,6 +200,29 @@ const styles = StyleSheet.create({
         width:50,
         justifyContent:'center'
     },
+    calendar:{
+        // color:colors.text 
+    },
+    day:{
+
+    },
+    emptyMessage:{
+        height:150
+    },
+    dateStyle:{
+        marginLeft:10,
+        marginBottom:10
+    },
+    marginRight:{
+        marginRight:5
+    },
+    startTrainingWrapper:{
+        height:60,
+        backgroundColor: colors.tertiary,
+        marginBottom: 10,
+        justifyContent:'center',
+        alignItems:'center',
+    },
     avievementWrapper:{
         alignItems: 'center', 
         margin: 24, 
@@ -237,6 +262,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: '500'
     },
+    
     
 })
 export default styles
