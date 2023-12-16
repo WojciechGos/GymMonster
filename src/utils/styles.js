@@ -27,6 +27,16 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 10,
     },
+    textInputForm2: {
+        marginVertical: 5,
+        borderColor: colors.primary,
+        height: 20,
+        borderWidth: 2,
+        backgroundColor: colors.background,
+        color: colors.text,
+        borderRadius: 5,
+        padding: 10,
+    },
     textButton: {
         color: colors.text,
         fontSize: 20,
@@ -41,6 +51,16 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 5,
     },
+    buttonWithoutMargin: {
+        backgroundColor: colors.primary,
+        color: "#DFDFDF",
+        marginVertical: 0,
+        height: 60,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 15,
+        borderRadius: 5,
+    },
     textInfo: {
         fontSize: 20,
         color: colors.text,
@@ -48,8 +68,15 @@ const styles = StyleSheet.create({
     text: {
         color: colors.text,
     },
+  
     loginForgotPasswordWrapper: {
         marginVertical: 20,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
+    spacing: {
+        marginVertical: 5,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
@@ -152,6 +179,20 @@ const styles = StyleSheet.create({
     excerciseTitle:{
         marginLeft:10
     },
+    bigWriting: {
+        color: "#DFDFDF",
+        fontSize: 55
+    },
+    imageSize: {
+        width: 90,
+        height: 90
+    },
+    exercisesWriting: {
+        marginVertical: 10,
+        fontSize: 34,
+        color: colors.text,
+    },
+  
     drawerItemWrapper:{
         flexDirection:'row',
     },
@@ -181,7 +222,46 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent:'center',
         alignItems:'center',
-    }
+    },
+    avievementWrapper:{
+        alignItems: 'center', 
+        margin: 24, 
+        flex: 1
+    },
+    achievementHead:{
+        marginTop: 7,
+        marginBottom: 3
+    },
+    achievementHeadText:{
+        color: 'white', 
+        fontSize: 24, 
+        fontWeight: '500', 
+        lineHeight: 40
+    },
+    achievementAchievementWrapper:{
+        alignItems: 'flex-start', 
+        flex: 1
+    },
+    achievementAchievement:{
+        flex: 1, 
+        flexDirection: 'row'
+    },
+    achievementIconWrapper:{
+        marginRight: 20
+    },
+    achievementAchievementStatus:{
+        flexDirection: 'column'
+    },
+    achievementFirstText:{
+        color: 'white',
+        fontSize: 24,
+        fontWeight: '500'
+    },
+    achievementSecondText:{
+        color: 'white',
+        fontSize: 12,
+        fontWeight: '500'
+    },
     
     
 })

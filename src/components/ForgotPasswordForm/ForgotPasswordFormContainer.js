@@ -1,8 +1,8 @@
 import ForgotPasswordForm from "./ForgotPasswordForm"
 
-const ForgotPasswordFormContainer = ()=>{
-    return ( <ForgotPasswordForm/>
-    )
+const ForgotPasswordFormContainer = () => {
+    
+    return <ForgotPasswordForm {...props} />
 }
 
 export default ForgotPasswordFormContainer
