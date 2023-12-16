@@ -23,6 +23,7 @@ const CalendarDataDisplayContainer = ({ selectedDay }) => {
 
   const props = {
     trainingData: training,
+    selectedDay: selectedDay
   };
 
   return <CalendarDataDisplay {...props} />;

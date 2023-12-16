@@ -8,18 +8,18 @@ const DisplayTrainingContainer = ({ trainingData, date }) => {
   console.log(trainingData);
   console.log("empty?");
   return (
-    <View>
-      {typeof trainingData !== "undefined" ? (
-        typeof trainingData.excercises !== "undefined" ? (
-          <DisplayTraining trainingData={trainingData} />
-        ) : (
-          <DisplayNoTraining />
-        )
-      ) : (
-        <DisplayNoTraining />
-      )}
-    </View>
-  );
+      <View>
+          {typeof trainingData !== "undefined" ? (
+              typeof trainingData.excercises !== "undefined" ? (
+                  <DisplayTraining trainingData={trainingData} date={date}/>
+              ) : (
+                  <DisplayNoTraining date={date} />
+              )
+          ) : (
+              <DisplayNoTraining date={date} />
+          )}
+      </View>
+  )
 };
 
 export default DisplayTrainingContainer;

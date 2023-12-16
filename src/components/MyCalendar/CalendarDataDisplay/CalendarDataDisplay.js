@@ -7,7 +7,7 @@ const CalendarDataDisplay = ({trainingData, selectedDay})=>{
     return (
         <View style={styles.homeComponentWrapper}>
             <Text style={styles.h2}>
-                <DisplayTrainingContainer trainingData={trainingData}/>
+                <DisplayTrainingContainer trainingData={trainingData} date={selectedDay}/>
             </Text>
         </View>
     )
