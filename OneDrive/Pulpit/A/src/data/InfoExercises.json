@@ -1,0 +1,188 @@
+{
+    "back": [
+      {
+        "name": "Ściąganie wyciągu poziomego",
+        "video": "@public/ABS-icon.png",
+        "description": "Usiadź obok wyciągu i postaw stopy pod nim. Złap drążek i powolnym ruchem przyciągnij go do brzucha. Następnie wróć do pozycji startowej."
+      },
+      {
+        "name": "Ściąganie wyciągu gornego",
+        "video": "@public/ABS-icon.png",
+        "description": "Usiadź pod wyciągiem i zablokuj kolana. Złap drążek i powolnym ruchem przyciągnij go do klatki. Następnie wróć do pozycji startowej."
+        
+      },
+    
+      {
+        "name": "Podciąganie na drążku",
+        "video": "https://www.youtube.com/watch?v=094EyLsz7VM",
+        "description": "Złap drążek nadchwytem, dłonie powinny być rozstawione na szerokość barków. Następnie unieś nogi nad ziemie i podciągnij się do momentu dotknięcia drążka brodą. Wróć do pozycji startowej nie dotykając ziemii nogami."
+      },
+      {
+        "name": "Wiosłowanie",
+        "video": "https://www.youtube.com/watch?v=094EyLsz7VM",
+        "description": "Złap sztangę oburącz przed sobą. Pochyl się z prostymi plecami tak, aby sztanga dotykała kolan. Podciągnij sztangę do pępka, następnie wróć sztangą do wysokości kolan."
+      },
+      {
+        "name": "Martwy ciąg",
+        "video": "https://www.youtube.com/watch?v=094EyLsz7VM",
+        "description": "Stań obok leżącej na ziemii sztangi. Złap ją w pochyleniu tłowia i wyprostuj się trzymając sztangę oburącz na szerokość barków. Pamiętaj o prostych plecach. Następnie odłóż sztangę na ziemie. "
+      },
+      {
+        "name": "Wiosłowanie kettlem",
+        "video": "https://www.youtube.com/watch?v=094EyLsz7VM",
+        "description": "Złap kettla jednorącz. Oprzyj się o ławkę podpierając się o ziemie tą samą nogą, którą strone będziesz ćwiczył. Podciągnij kettla do góry, tak aby kettel dotknął biodra. Następnie wróć do pozycji wyjściowej."
+      }
+      
+    ],
+   
+   "chest": [
+    {
+      "name": "Wyciskanie na ławce płaskiej",
+      "description": "Połóż się na płaskiej ławce, tak aby sztanga była na wysokości oczu. Złap gryf oburącz rozstawiając ręce na szerokości barków. Powolnym ruchem przyciągnij gryf do mostka, następnie energicznym ruchem wyprostuj ręce."
+    },
+    {
+    "name": "Wyciskanie na ławce ujemnej",
+    "description": "Połóż się na ujemnej ławce, tak aby sztanga była na wysokości oczu. Kąt ławki powinien wynosić około 30 stponi. Złap gryf oburącz rozstawiając ręce na szerokości barków. Powolnym ruchem przyciągnij gryf do mostka, następnie energicznym ruchem wyprostuj ręce."
+    },
+  {
+    "name": "Wyciskanie na ławce dodatniej",
+    "description": "Połóż się na dodatniej ławce, tak aby sztanga była na wysokości oczu. Kąt ławki powinien wynosić około 30 stponi. Złap gryf oburącz rozstawiając ręce na szerokości barków. Powolnym ruchem przyciągnij gryf do mostka, następnie energicznym ruchem wyprostuj ręce."
+  },
+  {
+    "name": "Rozpiętki",
+    "description": "Połóż się z hantlami na ławce dodatniej ułożonej pod kątem 15-30 stopni. Początkowo należy trzymać hantle przed sobą na lekko zgiętych łokciach. Zginaj łokcie i opuszczaj hantle na boki, zbliżając je do poziomu klatki. Następnie wróć energicznym ruchem do pozycji wyjściowej."
+  },
+  {
+    "name": "Pompki",
+    "description": "Zrób podpór przodem na wyprostowanych łokciach. Powolnym ruchem schodź ku dołowi tak aby zbliżyć się klatką do ziemii. Następnie energicznym ruchem powróć do podporu przodem."
+  },
+  {
+    "name": "Dipy",
+    "description": "Złap się poręczy nadchwytem. Ugnij nogi w kolanach oraz pochyl się lekko do przodu. Zginaj łokcie, opuszczając ciało w dół, aż ramiona utworzą kąt 90 stopni. Następnie wypchnij ciało do góry, prostując ramiona."
+  }
+    ],
+    "shoulder": [
+      {
+        "name": "Wyciskanie żołnierskie",
+        "description": "Stań w lekkim rozkroku trzymając sztangę pod szyją. Gryf powinien być trzymany na szerokości barków. Dynamicznym ruchem wyprostuj ręce nad głową trzymając sztangę. Wróć do pozycji wyjściowej."
+      },
+      {
+          "name": "Unoszenie ramienia przed siebie z hantlą",
+          "description": "Trzymając hantel obok biodra stań w lekkim rozkroku. Energicznym ruchem podnieś ręke na wysokość głowy mając lekko zgięty łokieć. Następnie powróć do pozycji wyjściowej."
+      },
+      {
+            "name": "Wznosy sztangi do brody",
+            "description": "Stojąc w lekkim rozkroku trzymaj sztangę nadchwytem na wysokości bioder. Dynamicznym ruchem przyciągnij gryf do brody. Następnie wróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Wyciskanie hantli nad głowę",
+        "description": "Siedząc trzymaj hantle przed barkami. Dynamicznym ruchem podnieś ręce równocześnie nad głowę do pełnego wyprostu w łokciu. Następnie wróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Wznosy hantli bokiem",
+        "description": "Stojąc trzymaj hantle wzdłuż tłowia. Pewnym ruchem na lekko ugiętych łokciach podnieś hantle na wysokość głowy. Następnie powolnym ruchem wróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Odwodzenie ramion w tył na wyciągu",
+        "description": "W lekkim rozkroku złap warkocz wychodzący z wyciągu górnego. Trzymając go nadchwytem przed oczami dynamicznym ruchem ściągnij łopatki do siebie prowadząc ręce i stawy barkowe do tyłu. Następnie wróć do pozycji wyjściowej."
+      }
+    ],
+    "arm":[
+      {
+        "name": "Przyciąganie wyciągu dolnego",
+        "description": "Stań przed wyciągiem dolnym, do którego jest podpięta mały gryf. Złap go podchwytem. Powolnym ruhcem zginaj ręce w stawie łokciowym."
+      },
+      {
+        "name":"Uginanie rąk z hantlami",
+        "description": "Stojąc w lekkim rozkroku trzymaj hantle wzdłuż ciała. Pewnym ruchem uginaj ręce w łokciach tak, aby było czuć biceps. Wróć do pozycji wyjściowej"
+      },
+      {
+        "name":"Uginanie rąk z hantlami na ławce",
+        "description": "Trzymaj hantle obok bioder leżąc na ławce dodatniej pod kątem 60-75 stopni. Równocześnie uginaj ręce w stawach łokciowych. Wróć do pozycji wyjściowej."
+      },
+      {
+        "name":"Prostowanie ramion na wyciągu górnym",
+        "description": "Złap warkocz przypięty do wyciągu górnego. Trzymając nieruchomo łokcie prostuj ręce w stawach łokciowych. Powinno poruszać się tylko przedramie. Wróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Wyciskanie za głową",
+        "description": "Trzymajać hantlę oburącz za głową usiądź na krześle o kącie 90stopni. Pewnym ruchem wyprosuj ręce w łokciach trzymając łokcie blisko głowy. Wróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Pompki na poręczach",
+        "description": "Złap poręcze nadchwytem. Oderwij nogi od ziemi zginając je w kolanach. Prowadź ciało ku dołowi zginając łokcie do kąta 90 stopni. Następnie wypchnij ciało prostując łokcie." 
+      }
+    ],
+    "abs":[
+      {
+        "name": "Allahy",
+        "description": "Połóż się na brzuchu z podkulonymi kolanami trzymając końcówkę wyciągu górnego. Następnie wyprostuj plecy unosząc się do góry i powróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Brzuszki klasyczne",
+        "description": "Połóż się na plecach z nogami ugiętymi w kolanach. Podnieś barki a rękami dotknij kolan. Nie odrywaj lędźwi od ziemii. Następnie powróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Russin twist",
+        "description": "Ustaw się w pozycji do brzuszków trzymając obciążenie oburącz na miednicy. Dotykaj obciążeniem podłoże raz obok jednego biodra, raz obok drugiego. Obręcz barkowa powinna być nieruchoma."
+      },
+      {
+        "name": "Plank",
+        "description": "Ułóż ciało w podporze przodem na przedramieniach. Trzymaj nieruchomo ciało spinając pośladki oraz uda."
+      },
+      {
+        "name": "Rowerek",
+        "description": "Połóż się na plecach i zegnij nogi w kolanach. Następnie machaj nogami imitując jazdę na rowerze. Ćwiczenie rób określoną ilość sekund."
+      },
+      {
+        "name": "Scyzoryki",
+        "description": "Połóż się na plecach. Jednocześnie podnieś jak najwyzej wyprostowane nogi i ręce. Spróbuj dotknąć stopami dłonie. Następnie połóż wszystkie kończyny."
+      },
+      {
+        "name": "Nożyce",
+        "description": "Połóż się na plecach. Podnoś naprzemiennie nogi pionowo do góry. Nogi powinny nie dotykać ziemii. Miednica i lędźwie powinny nie odrywać się od podłoża."
+      }
+    ],
+    "legs": [
+      {
+        "name": "Przysiady ze sztangą",
+        "description": "Stań w lekkim rozkroku trzymając sztangę na barkach. Ugnij nogi do kąta 70-90 stopni. Pamiętaj o prowadzeniu kolan na zewnątrz i prostych plecach. Wróć do pozycji wyjściowej."
+      },
+      {
+        "name": "Przysiady bułgarskie",
+        "description": "Stań przed ławką poziomą. Nogę zakroczną połóż na podwyższeniu. Rób przysiady jednonóż trzymając jedną nogę na podwyższeniu za ciałem."
+      },
+      {
+        "name": "Martwy ciąg jednonóz",
+        "description": "Stojąc złap obciążenie oburącz. Pochylaj ciało do przodu jednocześnie prowadząc jedną nogę za siebie. Wróć do pozycji wyjściowej. "
+      },
+      {
+        "name": "Wykroki",
+        "description": "Stój trzymając obciążenie w rękach. Następnie zrób krok do przodu a kolanem drugiej nogi dotknij ziemii. Następnie złącz nogi stojąc."
+      },
+      {
+        "name": "Wspięcia na palce",
+        "description": "Wejdź na podwyższenie tak, aby tylnia połowa stopy była w powietrzu. Wspinaj się na palce dynamicznym ruchem a schodź powolnym."
+      },
+      {
+        "name": "Uginanie nóg na maszynie",
+        "description": "Usiądź na maszynie. Wybierz odpowiedni ciężar. Trzymając nieruchomo ciało pracuj tylko nogami. uginaj nogi w kolanie ćwicząc mięśnie ud."
+      }
+    ]
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+  }
+  
