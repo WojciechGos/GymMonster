@@ -284,10 +284,30 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 10,
     },
-    functionWrapper:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-        width: 100
-    }
+    functionWrapper: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: 100,
+    },
+    rectangle: {
+        justifyContent: "flex-start",
+        backgroundColor: "#aa1b18",
+        padding: 10,
+        width: 400,
+    },
+    textCenter: {
+        fontSize: 30,
+        color: colors.text,
+        textAlign: "center",
+    },
+    smallHeader: {
+        justifyContent: "flex-start",
+        textAlign: "center",
+        backgroundColor: "#aa1b18",
+        padding: 10,
+        width: 400,
+        fontSize: 30,
+        color: colors.text,
+    },
 })
 export default styles

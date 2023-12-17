@@ -3,8 +3,8 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { TextInput, Text, Button } from "react-native-paper"
 import styles from "@utils/styles"
 import colors from "@utils/styles"
-import ButtonWithoutMargin from "../ButtonWithoutMargin/ButtonWithoutMargin"
-import ButtonWithCam from "../ButtonWithCam/ButtonWithCam";
+import ButtonWithoutMargin from "@components/ButtonWithoutMargin/ButtonWithoutMargin"
+import ButtonWithCam from "@components/ButtonWithCam/ButtonWithCam";
 
 const ProgressForm = ({goToProgress}) => {
     return (
