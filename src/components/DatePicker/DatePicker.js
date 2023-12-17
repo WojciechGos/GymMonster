@@ -50,12 +50,6 @@ const DatePicker = ({ handleDayPress, selectedDays }) => {
                 }}
                 markedDates={selectedDays}
             />
-            <Text>Selected Days:</Text>
-            {Object.keys(selectedDays).map((date) => (
-                <Text style={styles.h3} key={date}>
-                    {date}
-                </Text>
-            ))}
         </View>
     )
 }

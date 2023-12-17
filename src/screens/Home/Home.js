@@ -7,13 +7,13 @@ import HomeIncommingTrainingContainer from "@components/HomeIncomingTraining/Hom
 import HomeSaveProgressContainer from "@components/HomeSaveProgress/HomeSaveProgressContainer"
 
 
-const Home = ()=>{
+const Home = ({navigation})=>{
     return (
         <ScrollView style={styles.containerNoCenter}>
-            <PedometerContainer/>
-            <HomeIncommingTrainingContainer/>
-            <HomeSaveProgressContainer/>
-            <MyCalendarContainer/>
+            <PedometerContainer navigation={navigation} />
+            <HomeIncommingTrainingContainer />
+            <HomeSaveProgressContainer />
+            <MyCalendarContainer />
         </ScrollView>
     )
 }

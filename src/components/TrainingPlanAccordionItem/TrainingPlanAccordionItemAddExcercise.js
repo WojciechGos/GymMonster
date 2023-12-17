@@ -8,6 +8,7 @@ import { View } from "react-native"
 const TrainingPlanAccordionItemAddExcercise = () => {
     return (
         <List.Item
+            key={0}
             left={() => (
                 <View style={styles.trainingListContentWrapper}>
                     <Text style={styles.h4}>Dodaj ćwiczenie</Text>
