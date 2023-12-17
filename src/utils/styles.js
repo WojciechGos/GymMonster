@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     text: {
         color: colors.text,
     },
-  
+
     loginForgotPasswordWrapper: {
         marginVertical: 20,
         flexDirection: "row",
@@ -86,19 +86,17 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginVertical: 20,
     },
-    pedometerWrapper:{
+    pedometerWrapper: {
         alignItems: "center",
-        justifyContent:"center",
-        height:150
+        justifyContent: "center",
+        height: 150,
     },
-    inCommingTrainingWrapper:{
-
-    },
-    h1:{
+    inCommingTrainingWrapper: {},
+    h1: {
         fontSize: 40,
         color: colors.text,
     },
-    h2:{
+    h2: {
         fontSize: 30,
         color: colors.text,
     },
@@ -115,12 +113,12 @@ const styles = StyleSheet.create({
         color: colors.text,
     },
     headerWrapper: {
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent: 'space-between',
-        height:50,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        height: 50,
         backgroundColor: colors.secondary,
-        paddingHorizontal:15
+        paddingHorizontal: 15,
     },
     trainingListContentWrapper: {
         marginHorizontal: 20,
@@ -130,139 +128,166 @@ const styles = StyleSheet.create({
     },
     drawerStyle: {
         backgroundColor: colors.background,
-
     },
     drawerListItem: {
-        marginVertical:20
+        marginVertical: 20,
     },
     drawerWrapper: {
         marginVertical: 50,
-        marginHorizontal:20
+        marginHorizontal: 20,
     },
-    drawerHeader : {
+    drawerHeader: {
         backgroundColor: colors.primary,
-        height:80,
-        justifyContent: 'flex-end'
+        height: 80,
+        justifyContent: "flex-end",
     },
     drawerLabel: {
-        color: colors.text
+        color: colors.text,
     },
-    drawerHeaderIconWrapper:{
-        marginHorizontal:20,
-        marginVertical:10
+    drawerHeaderIconWrapper: {
+        marginHorizontal: 20,
+        marginVertical: 10,
     },
-    homeComponentWrapper:{
+    homeComponentWrapper: {
         borderColor: colors.secondary,
-        borderWidth:1
+        borderWidth: 1,
     },
-    progressWrapper:{
-        flexDirection: 'row',
-        alignItems:'center'
+    progressWrapper: {
+        flexDirection: "row",
+        alignItems: "center",
     },
     stonks: {
         color: colors.green,
-        fontSize:15
+        fontSize: 15,
     },
-    notStonks: {
-
+    notStonks: {},
+    excercisesContainer: {
+        marginVertical: 20,
     },
-    excercisesContainer:{
-        marginVertical:20
-    },  
-    excerciseWrapper:{
-        flexDirection: 'row'
+    excerciseWrapper: {
+        flexDirection: "row",
     },
     excerciseTextGaps: {
         marginLeft: 30,
-        marginRight:10
+        marginRight: 10,
     },
-    excerciseTitle:{
-        marginLeft:10
+    excerciseTitle: {
+        marginLeft: 10,
     },
     bigWriting: {
         color: "#DFDFDF",
-        fontSize: 55
+        fontSize: 55,
     },
     imageSize: {
         width: 90,
-        height: 90
+        height: 90,
     },
     exercisesWriting: {
         marginVertical: 10,
         fontSize: 34,
         color: colors.text,
     },
-  
-    drawerItemWrapper:{
-        flexDirection:'row',
-    },
-    iconWrapper:{
-        width:50,
-        justifyContent:'center'
-    },
-    calendar:{
-        // color:colors.text 
-    },
-    day:{
 
+    drawerItemWrapper: {
+        flexDirection: "row",
     },
-    emptyMessage:{
-        height:150
+    iconWrapper: {
+        width: 50,
+        justifyContent: "center",
     },
-    dateStyle:{
-        marginLeft:10,
-        marginBottom:10
+    calendar: {
+        // color:colors.text
     },
-    marginRight:{
-        marginRight:5
+    day: {},
+    emptyMessage: {
+        height: 150,
     },
-    startTrainingWrapper:{
-        height:60,
+    dateStyle: {
+        marginLeft: 10,
+        marginBottom: 10,
+    },
+    marginRight: {
+        marginRight: 5,
+    },
+    startTrainingWrapper: {
+        height: 60,
         backgroundColor: colors.tertiary,
         marginBottom: 10,
-        justifyContent:'center',
-        alignItems:'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
-    avievementWrapper:{
-        alignItems: 'center', 
-        margin: 24, 
-        flex: 1
+    avievementWrapper: {
+        alignItems: "center",
+        margin: 24,
+        flex: 1,
     },
-    achievementHead:{
+    achievementHead: {
         marginTop: 7,
-        marginBottom: 3
+        marginBottom: 3,
     },
-    achievementHeadText:{
-        color: 'white', 
-        fontSize: 24, 
-        fontWeight: '500', 
-        lineHeight: 40
-    },
-    achievementAchievementWrapper:{
-        alignItems: 'flex-start', 
-        flex: 1
-    },
-    achievementAchievement:{
-        flex: 1, 
-        flexDirection: 'row'
-    },
-    achievementIconWrapper:{
-        marginRight: 20
-    },
-    achievementAchievementStatus:{
-        flexDirection: 'column'
-    },
-    achievementFirstText:{
-        color: 'white',
+    achievementHeadText: {
+        color: "white",
         fontSize: 24,
-        fontWeight: '500'
+        fontWeight: "500",
+        lineHeight: 40,
     },
-    achievementSecondText:{
-        color: 'white',
+    achievementAchievementWrapper: {
+        alignItems: "flex-start",
+        flex: 1,
+    },
+    achievementAchievement: {
+        flex: 1,
+        flexDirection: "row",
+    },
+    achievementIconWrapper: {
+        marginRight: 20,
+    },
+    achievementAchievementStatus: {
+        flexDirection: "column",
+    },
+    achievementFirstText: {
+        color: "white",
+        fontSize: 24,
+        fontWeight: "500",
+    },
+    achievementSecondText: {
+        color: "white",
         fontSize: 12,
-        fontWeight: '500'
+        fontWeight: "500",
     },
-    
-    
+    mr_1: {
+        marginRight: 5,
+    },
+    mr_2: {
+        marginRight: 10,
+    },
+    ml_1: {
+        marginLeft: 5,
+    },
+    ml_2: {
+        marginLeft: 10,
+    },
+    mb_3: {
+        marginBottom: 15,
+    },
+    excerciseListContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    editExcerciseParameterForm: {
+        marginVertical: 5,
+        borderColor: colors.primary,
+        height: 20,
+        borderWidth: 2,
+        backgroundColor: colors.background,
+        color: colors.text,
+        borderRadius: 5,
+        padding: 10,
+    },
+    functionWrapper:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        width: 100
+    }
 })
 export default styles
