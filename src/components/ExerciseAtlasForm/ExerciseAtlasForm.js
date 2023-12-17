@@ -9,83 +9,68 @@ import { Text } from "react-native-paper"
 import styles from "@utils/styles"
 import WhiteLine from "../WhiteLine/WhiteLine"
 
-const ExerciseAtlasForm = () => {
+const ExerciseAtlasForm = ({
+    goToExerciseBack,
+    goToExerciseChest,
+    goToExerciseShoulder,
+    goToExerciseArm,
+    goToExerciseAbs,
+    goToExerciseLegs,
+}) => {
     return (
         <View>
-
-            <Pressable on Press onPress={() => goToForgorPassword()}>
-                  <View style={styles.spacing}>
-
-                        <Image source={back}
-                            style={styles.imageSize} />
-                        <Text style={styles.bigWriting}>
-                            Plecy</Text>
-                   </View>
-            </Pressable>
-            <WhiteLine />
-
-            <Pressable on Press onPress={() => goToForgorPassword()}>
+            <Pressable on Press onPress={() => goToExerciseBack()}>
                 <View style={styles.spacing}>
-
-                    <Image source={chest}
-                        style={styles.imageSize} />
-
-                    <Text style={styles.bigWriting}>
-                        Klatka</Text>
+                    <Image source={back} style={styles.imageSize} />
+                    <Text style={styles.bigWriting}>Plecy</Text>
                 </View>
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToForgorPassword()}>
+            <Pressable on Press onPress={() => goToExerciseChest()}>
                 <View style={styles.spacing}>
+                    <Image source={chest} style={styles.imageSize} />
 
-                    <Image source={shoulder}
-                        style={styles.imageSize} />
-
-                    <Text style={styles.bigWriting}>
-                        Barki</Text>
+                    <Text style={styles.bigWriting}>Klatka</Text>
                 </View>
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToForgorPassword()}>
+            <Pressable on Press onPress={() => goToExerciseShoulder()}>
                 <View style={styles.spacing}>
+                    <Image source={shoulder} style={styles.imageSize} />
 
-                    <Image source={arm}
-                        style={styles.imageSize} />
+                    <Text style={styles.bigWriting}>Barki</Text>
+                </View>
+            </Pressable>
+            <WhiteLine />
+            <Pressable on Press onPress={() => goToExerciseArm()}>
+                <View style={styles.spacing}>
+                    <Image source={arm} style={styles.imageSize} />
 
-                    <Text style={styles.bigWriting}>
-                        Ręce</Text>
+                    <Text style={styles.bigWriting}>Ręce</Text>
                 </View>
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToForgorPassword()}>
+            <Pressable on Press onPress={() => goToExerciseAbs()}>
                 <View style={styles.spacing}>
+                    <Image source={abs} style={styles.imageSize} />
 
-                    <Image source={abs}
-                        style={styles.imageSize} />
-
-                    <Text style={styles.bigWriting}>
-                        Brzcuh</Text>
+                    <Text style={styles.bigWriting}>Brzcuh</Text>
                 </View>
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToForgorPassword()}>
+            <Pressable on Press onPress={() => goToExerciseLegs()}>
                 <View style={styles.spacing}>
+                    <Image source={legs} style={styles.imageSize} />
 
-                    <Image source={legs}
-                        style={styles.imageSize} />
-
-                    <Text style={styles.bigWriting}>
-                        Nogi</Text>
+                    <Text style={styles.bigWriting}>Nogi</Text>
                 </View>
             </Pressable>
             <WhiteLine />
-
         </View>
-
     )
 }
 

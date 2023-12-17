@@ -69,7 +69,7 @@ const CustomDrawer = ({ navigateToScreen }) => {
             />
             <DrawerListItem
                 title="Atlas ćwiczeń"
-                link="Training Plan Creator"
+                link="Exercise Atlas"
                 handler={navigateToScreen}
                 icon={
                     <FontAwesome
