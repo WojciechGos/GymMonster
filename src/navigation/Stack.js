@@ -3,6 +3,7 @@ import Login from "@screens/Authenticate/Login"
 import ForgotPassword from '@screens/Authenticate/ForgotPassword'
 import Home from '@screens/Home/Home'
 import Register from '@screens/Authenticate/Register'
+import Training from "@screens/Training/Training"
 import CustomDrawer from "./Drawer"
 
 
@@ -33,6 +34,11 @@ export default function StackNavigation() {
             <Stack.Screen
                 name="HomeStack"
                 component={CustomDrawer}
+                options={optionScreen}
+            />
+            <Stack.Screen
+                name="Training"
+                component={Training}
                 options={optionScreen}
             />
 

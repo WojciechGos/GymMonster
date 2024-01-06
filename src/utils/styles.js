@@ -309,5 +309,11 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: colors.text,
     },
+    trainingHeader: {
+        alignItems: "center",
+        justifyContent: "center",
+        height: 47,
+        backgroundColor: "#aa1b18",
+    }
 })
 export default styles
