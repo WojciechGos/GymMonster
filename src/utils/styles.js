@@ -314,6 +314,52 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         height: 47,
         backgroundColor: "#aa1b18",
+    },
+    trainingSeries: {
+        paddingVertical: 27,
+        paddingLeft: 20,
+    },
+    trainingSeria: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    seriaText: {
+        width: 87,
+        height: 32,
+        color: colors.text,
+        fontSize: 20,
+        marginRight: 21,
+    },
+    textInputForm3: {
+        marginVertical: 5,
+        marginRight: 21,
+        borderColor: colors.primary,
+        height: 32,
+        width: 112,
+        borderWidth: 2,
+        backgroundColor: colors.background,
+        color: colors.text,
+        borderRadius: 5,
+        paddingHorizontal: 10,
+    },
+    zapiszTraining: {
+        backgroundColor: colors.primary,
+        paddingVertical: 4,
+        paddingHorizontal: 15,
+        borderRadius: 5,
+        marginBottom: 93,
+        marginRight: 11,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    zapiszText: {
+        fontSize: 14,
+        color: colors.text,
+        lineHeight: 22,
+    },
+    zapiszTrainingView: {
+        alignItems: "flex-end",
     }
 })
 export default styles
