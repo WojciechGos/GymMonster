@@ -3,7 +3,7 @@ import trainingData from '@data/trainingData'
 
 const HomeIncomingTrainingContainer = ({navigation})=>{
     const navigateToTrainingStart = ()=>{
-        // navigation.navigate("Register")
+        navigation.navigate('Training')
         console.log('start training session')
     }
     const props = {
