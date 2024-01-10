@@ -9,17 +9,10 @@ import { Text } from "react-native-paper"
 import styles from "@utils/styles"
 import WhiteLine from "../WhiteLine/WhiteLine"
 
-const ExerciseAtlasForm = ({
-    goToExerciseBack,
-    goToExerciseChest,
-    goToExerciseShoulder,
-    goToExerciseArm,
-    goToExerciseAbs,
-    goToExerciseLegs,
-}) => {
+const AtlasList = ({ goToExerciseList }) => {
     return (
         <View>
-            <Pressable on Press onPress={() => goToExerciseBack()}>
+            <Pressable on Press onPress={() => goToExerciseList('back')}>
                 <View style={styles.spacing}>
                     <Image source={back} style={styles.imageSize} />
                     <Text style={styles.bigWriting}>Plecy</Text>
@@ -27,7 +20,7 @@ const ExerciseAtlasForm = ({
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToExerciseChest()}>
+            <Pressable on Press onPress={() => goToExerciseList('chest')}>
                 <View style={styles.spacing}>
                     <Image source={chest} style={styles.imageSize} />
 
@@ -36,7 +29,7 @@ const ExerciseAtlasForm = ({
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToExerciseShoulder()}>
+            <Pressable on Press onPress={() => goToExerciseList('shoulders')}>
                 <View style={styles.spacing}>
                     <Image source={shoulder} style={styles.imageSize} />
 
@@ -44,7 +37,7 @@ const ExerciseAtlasForm = ({
                 </View>
             </Pressable>
             <WhiteLine />
-            <Pressable on Press onPress={() => goToExerciseArm()}>
+            <Pressable on Press onPress={() => goToExerciseList('arms')}>
                 <View style={styles.spacing}>
                     <Image source={arm} style={styles.imageSize} />
 
@@ -53,7 +46,7 @@ const ExerciseAtlasForm = ({
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToExerciseAbs()}>
+            <Pressable on Press onPress={() => goToExerciseList('abs')}>
                 <View style={styles.spacing}>
                     <Image source={abs} style={styles.imageSize} />
 
@@ -62,7 +55,7 @@ const ExerciseAtlasForm = ({
             </Pressable>
             <WhiteLine />
 
-            <Pressable on Press onPress={() => goToExerciseLegs()}>
+            <Pressable on Press onPress={() => goToExerciseList('legs')}>
                 <View style={styles.spacing}>
                     <Image source={legs} style={styles.imageSize} />
 
@@ -74,4 +67,4 @@ const ExerciseAtlasForm = ({
     )
 }
 
-export default ExerciseAtlasForm
+export default AtlasList
