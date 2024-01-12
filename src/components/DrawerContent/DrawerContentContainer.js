@@ -5,8 +5,13 @@ const DrawerContentContainer = ({navigation}) => {
         navigation.navigate(screenName);
     };
 
+    const navigateToStatistic = ()=>{
+        navigation.navigate("Atlas List", {intent: "Statistic"})
+    }
+
     const props = {
-        navigateToScreen:navigateToScreen
+        navigateToScreen:navigateToScreen,
+        navigateToStatistic: navigateToStatistic
     }
     
     return <DrawerContent {...props}/>

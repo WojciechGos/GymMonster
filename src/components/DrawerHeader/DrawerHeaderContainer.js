@@ -8,8 +8,22 @@ const DrawerHeaderContainer = ({navigation, route, options})=>{
     const props={
         toggleDrawer: toggleDrawer
     }
+    
+    return (
+    <>
+        {
+            options.hideHeader? (
+                <>
+                </>
+                ):
+                (
+                <DrawerHeader {...props}/>
 
-    return <DrawerHeader {...props}/>
+            )
+
+        }
+    </>
+    )
 }
 
 export default DrawerHeaderContainer

@@ -4,19 +4,19 @@ import colors from "@utils/colors"
 import { Text } from "react-native-paper"
 import { List } from "react-native-paper"
 import TrainingPlanAccordionItem from "@components/TrainingPlanAccordionItem/TrainingPlanAccordionItem"
-import TrainingPlanAccordionItemAddExcercise from "@components/TrainingPlanAccordionItem/TrainingPlanAccordionItemAddExcercise"
-const ExercisesList = ()=>{
+import TrainingPlanAccordionItemAddExcercise from "@components/TrainingPlanCreatorList/TrainingPlanAccordionItemAddExcercise"
+const ItemList = ({ addExcercise }) => {
     return (
         // <View>
         //     <Text style={styles.h2}>
-                
+
         //     </Text>
         // </View>
         <List.Section>
             {/* <TrainingPlanAccordionItem/> */}
-            <TrainingPlanAccordionItemAddExcercise/>
+            <TrainingPlanAccordionItemAddExcercise addExcercise={addExcercise}/>
         </List.Section>
     )
 }
 
-export default ExercisesList
+export default ItemList
