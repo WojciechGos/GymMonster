@@ -30,7 +30,7 @@ const ExcerciseListContainer = ({ navigation, route }) => {
     const goToIntent = (item) => {
         
         if(intent){
-
+            navigation.navigate(intent, {data: {item}})
         }else{
             navigation.navigate("Excercise Details", { item })
         }

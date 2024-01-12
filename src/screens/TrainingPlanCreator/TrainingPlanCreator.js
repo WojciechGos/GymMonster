@@ -3,10 +3,10 @@ import { View } from "react-native"
 import { Text } from "react-native-paper"
 import TrainingCreatorFormContainer from "@components/TrainingCreatorForm/TrainingCreatorFormContainer"
 
-const TrainingPlanCreator = () => {
+const TrainingPlanCreator = ({navigation, route}) => {
     return (
         <View style={styles.containerNoCenter}>
-            <TrainingCreatorFormContainer />
+            <TrainingCreatorFormContainer navigation={navigation} route={route} />
         </View>
     )
 }

@@ -5,10 +5,10 @@ import StatisticContainer from "@components/Statistic/StatisticContainer"
 import StatisticAccordionContainer from "../../components/StatisticAccordion/StatisticAccordionContainer"
 import StatisticChartContainer from "../../components/StatisticChart/StatisticChartContainer"
 
-const Statistic = () => {
+const Statistic = ({route}) => {
     return (
         <View style={styles.containerNoCenter}>
-            <StatisticAccordionContainer />
+            <StatisticAccordionContainer route={route} />
         </View>
     )
 }

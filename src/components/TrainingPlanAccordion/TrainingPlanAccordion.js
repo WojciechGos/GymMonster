@@ -2,7 +2,7 @@ import { View, ScrollView } from "react-native"
 import styles from "@utils/styles"
 import { List, Divider, useTheme } from "react-native-paper"
 import TrainingPlanAccordionItemContainer from "@components/TrainingPlanAccordionItem/TrainingPlanAccordionItemContainer"
-import TrainingPlanAccordionItemAddExcercise from "@components/TrainingPlanAccordionItem/TrainingPlanAccordionItemAddExcercise"
+import TrainingPlanAccordionItemAddExcercise from "@components/TrainingPlanCreatorList/TrainingPlanAccordionItemAddExcercise"
 import colors from "@utils/colors"
 import GotoTrainingCreatorIcon from "./GotoTrainingCreatorIcon"
 
