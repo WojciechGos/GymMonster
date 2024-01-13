@@ -8,10 +8,19 @@ const TrainingPlanAccordionContainer = () => {
     const [expanded, setExpanded] = useState(true)
     const handlePress = () => setExpanded(!expanded)
 
+    const updateExcercise = async ()=>{
+
+    }
+    const deleteExcercise = async ()=>{
+
+    }
+
     const props = {
         expanded: expanded,
         handlePress: handlePress,
-        trainingData: trainingData
+        trainingData: trainingData,
+        updateExcercise: updateExcercise,
+        deleteExcercise: deleteExcercise,
     }
     return <TrainingPlanAccordion {...props} />
 }

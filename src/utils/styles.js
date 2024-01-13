@@ -360,6 +360,9 @@ const styles = StyleSheet.create({
     },
     zapiszTrainingView: {
         alignItems: "flex-end",
+    },
+    editControlsWrapper :{
+        justifyContent:"space-between"
     }
 })
 export default styles

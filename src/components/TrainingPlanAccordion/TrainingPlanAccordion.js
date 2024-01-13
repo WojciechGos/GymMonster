@@ -6,7 +6,12 @@ import TrainingPlanAccordionItemAddExcercise from "@components/TrainingPlanCreat
 import colors from "@utils/colors"
 import GotoTrainingCreatorIcon from "./GotoTrainingCreatorIcon"
 
-const TrainingPlanAccordion = ({  handlePress, trainingData }) => {
+const TrainingPlanAccordion = ({
+    handlePress,
+    trainingData,
+    updateExcercise,
+    deleteExcercise,
+}) => {
     const theme = useTheme()
     return (
         <ScrollView>
@@ -18,18 +23,14 @@ const TrainingPlanAccordion = ({  handlePress, trainingData }) => {
                         style={styles.accordion}
                         theme={{ colors: { primary: "#DFDFDF" } }}
                         titleStyle={styles.h3}
-                        // icon={({ expanded }) => (
-                        //     <Text style={[{ color: "#DFDFDF" }]}>
-                        //         {expanded ? "▼" : "▶"}
-                        //     </Text>
-                        // )}
                     >
-                        {console.log(trainingSection)}
                         {trainingSection.excercises.map((excercise) => (
                             <>
                                 <TrainingPlanAccordionItemContainer
                                     key={excercise.id}
                                     excerciseData={excercise}
+                                    updateExcercise={updateExcercise}
+                                    deleteExcercise={deleteExcercise}
                                 />
                                 <Divider key={`${excercise.id}-divider`} />
                             </>

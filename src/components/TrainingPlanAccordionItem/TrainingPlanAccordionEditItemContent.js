@@ -3,11 +3,19 @@ import { TextInput, Text } from "react-native-paper"
 import styles from "@utils/styles"
 import colors from "@utils/colors"
 
-const TrainingPlanAccordionEditItemContent = ({ excerciseData }) => {
+const TrainingPlanAccordionEditItemContent = ({
+    excerciseData,
+    series,
+    setSeries,
+    reps,
+    setReps,
+    weight,
+    setWeight,
+}) => {
     return (
         <View>
             <View style={[styles.mb_3, styles.ml_2]}>
-                <Text style={styles.h3}>{excerciseData.name}</Text>
+                <Text style={styles.h3}>{excerciseData.title}</Text>
             </View>
             <View style={[styles.excerciseListContainer, styles.ml_2]}>
                 <TextInput
@@ -16,7 +24,8 @@ const TrainingPlanAccordionEditItemContent = ({ excerciseData }) => {
                     textColor={colors.text}
                     activeUnderlineColor={colors.primary}
                     keyboardType="numeric"
-                    value={excerciseData.series.toString()}
+                    value={series.toString()}
+                    onChangeText={setSeries}
                 />
                 <Text style={[styles.h4, styles.mr_2, styles.ml_1]}>Serie</Text>
             </View>
@@ -27,7 +36,8 @@ const TrainingPlanAccordionEditItemContent = ({ excerciseData }) => {
                     textColor={colors.text}
                     activeUnderlineColor={colors.primary}
                     keyboardType="numeric"
-                    value={excerciseData.reps.toString()}
+                    value={reps.toString()}
+                    onChangeText={setReps}
                 />
                 <Text style={[styles.h4, styles.mr_2, styles.ml_1]}>
                     Powtórzenia
@@ -40,7 +50,8 @@ const TrainingPlanAccordionEditItemContent = ({ excerciseData }) => {
                     textColor={colors.text}
                     activeUnderlineColor={colors.primary}
                     keyboardType="numeric"
-                    value={excerciseData.weight.toString()}
+                    value={weight.toString()}
+                    onChangeText={setWeight}
                 />
                 <Text style={[styles.h4, styles.mr_2, styles.ml_1]}>Kg</Text>
             </View>
