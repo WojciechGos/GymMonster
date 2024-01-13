@@ -2,20 +2,25 @@ import { Image, View} from "react-native"
 import minilogo from "@public/mini-logo.png"
 import { TextInput, Text } from "react-native-paper"
 import styles from "@utils/styles"
-import colors from "@utils/styles"
+import colors from "@utils/colors"
 import ButtonWithoutMargin from "../ButtonWithoutMargin/ButtonWithoutMargin"
 
-const RegisterForm = ({ authenticate, goToLogin }) => {
+const RegisterForm = ({
+    createAccount,
+    goToLogin,
+    email,
+    setEmail,
+    password,
+    setPassword,
+}) => {
     return (
         <View>
             <Image source={minilogo} />
 
-            <View >
+            <View>
                 <Text></Text>
-              
-                <Text style={styles.h4} >
-                    Imie
-                </Text>
+
+                <Text style={styles.h4}>Imie</Text>
                 <TextInput
                     style={styles.textInputForm2}
                     placeholder="Wprowadź Imie"
@@ -23,69 +28,64 @@ const RegisterForm = ({ authenticate, goToLogin }) => {
                     activeUnderlineColor={colors.primary}
                 />
             </View>
-            <View >
-                <Text style={styles.h4} >
-                    Nazwisko
-                </Text>
+            <View>
+                <Text style={styles.h4}>Nazwisko</Text>
                 <TextInput
                     style={styles.textInputForm2}
                     placeholder="Wprowadź nazwisko"
                     textColor={colors.text}
-                    secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
+                    activeUnderlineColor={colors.primary}
+                />
             </View>
 
-            <View >
-                <Text style={styles.h4} >
-                    Email
-                </Text>
+            <View>
+                <Text style={styles.h4}>Email</Text>
                 <TextInput
                     style={styles.textInputForm2}
                     placeholder="Wprowadź email"
                     textColor={colors.text}
-                    secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
+                    value={email}
+                    onChangeText={setEmail}
+                    activeUnderlineColor={colors.primary}
+                />
             </View>
 
-            <View >
-                <Text style={styles.h4} >
-                    Haslo
-                </Text>
+            <View>
+                <Text style={styles.h4}>Haslo</Text>
                 <TextInput
                     style={styles.textInputForm2}
                     placeholder="Wprowadź hasło"
                     textColor={colors.text}
                     secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
+                    value={password}
+                    onChangeText={setPassword}
+                    activeUnderlineColor={colors.primary}
+                />
             </View>
 
-            <View >
-                <Text style={styles.h4} >
-                    Haslo
-                </Text>
+            <View>
+                <Text style={styles.h4}>Powtórz haslo</Text>
                 <TextInput
                     style={styles.textInputForm2}
                     placeholder="Powtorz hasło"
                     textColor={colors.text}
                     secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
+                    activeUnderlineColor={colors.primary}
+                />
             </View>
 
             <View style={styles.spacing}>
-                <ButtonWithoutMargin name='Zarejestruj' handler={authenticate} />
-
+                <ButtonWithoutMargin
+                    name="Zarejestruj"
+                    handler={createAccount}
+                />
             </View>
 
             <View style={styles.centerContent}>
-                <Text style={styles.text}>
-                    lub
-                </Text>
+                <Text style={styles.text}>lub</Text>
             </View>
 
-
-            
-            <ButtonWithoutMargin name='Zaloguj' handler={goToLogin} />
-            
+            <ButtonWithoutMargin name="Zaloguj" handler={goToLogin} />
         </View>
     )
 }

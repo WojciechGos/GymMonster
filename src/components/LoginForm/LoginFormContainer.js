@@ -1,8 +1,24 @@
 import LoginForm from "./LoginForm"
+import { FIREBASE_AUTH } from "../../../firebaseConfig"
+import { useState } from "react"
+import {signInWithEmailAndPassword} from "firebase/auth"
 
 const LoginFormContainer = ({ navigation }) => {
-    const authenticate = () => {
-        navigation.navigate('HomeStack')
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const auth = FIREBASE_AUTH
+
+    const authenticate = async () => {
+
+        try {
+            const response = await signInWithEmailAndPassword(auth, email, password)
+            console.log(response)
+            navigation.navigate('HomeStack')
+        } catch (error) {
+            console.error(error)
+            alert('Sign in failed: ' + error.message)
+        }
+
     }
     const goToRegister = ()=>{
         navigation.navigate('Register')
@@ -14,8 +30,12 @@ const LoginFormContainer = ({ navigation }) => {
     }
     const props = {
         authenticate: authenticate,
-        goToRegister:goToRegister,
-        goToForgorPassword:goToForgorPassword
+        goToRegister: goToRegister,
+        goToForgorPassword: goToForgorPassword,
+        email: email,
+        setEmail: setEmail,
+        password: password,
+        setPassword: setPassword,
     }
     return <LoginForm {...props} />
 }
