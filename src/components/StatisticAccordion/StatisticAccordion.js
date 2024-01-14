@@ -1,37 +1,42 @@
 import React from 'react';
-import { Text, List, Divider, useTheme} from "react-native-paper"
+import { Text, List, Divider, useTheme } from "react-native-paper"
 import { View, ScrollView } from 'react-native';
 import styles from "@utils/styles";
 import colors from "@utils/colors"
 
-const StatisticAccordion = ({  handlePress, pedometerData }) => {
+const StatisticAccordion = ({ handlePress, data, route }) => {
     const theme = useTheme()
+    console.log('StatisticAccordion data', route.params?.data.item.name)
     return (
         <ScrollView>
             <List.Section key={0}>
-                {pedometerData.map((pedometerSection) => (
-                    <List.Accordion
-                    key={pedometerSection.id}
-                    title={pedometerSection.date}
-                    titleStyle={styles.h2}
-                    style={styles.accordion}
-                    theme={{ colors: { primary: "#DFDFDF" } }}
-                >
-                    {console.log(pedometerSection)}
-                    {}
-                    
-                    <View style={styles.drawerHeaderIconWrapper}>
-                        <Text style={styles.h4}>
-                            Ilość kroków: {pedometerSection.steps}
-                        </Text>
-                        <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-                            <Text style={styles.h4}>
-                                Dzien {pedometerSection.id}
-                            </Text>
-                        </View>
-                    </View>
-                </List.Accordion>
-                ))}
+                {data.map((historicData) => {
+                    if (historicData.name === route.params?.data.item.name) {
+                        return (
+                            <List.Accordion
+                                key={historicData.id}
+                                title={historicData.date}
+                                titleStyle={styles.h2}
+                                style={styles.accordion}
+                                theme={{ colors: { primary: "#DFDFDF" } }}
+                            >
+                                <View style={styles.drawerHeaderIconWrapper}>
+                                    <Text style={styles.h4}>
+                                        {route.params?.data.item.title}:
+                                    </Text>
+                                    {historicData.series.map((seria) => (
+                                        <Text style={styles.h4} key={seria.seria}>
+                                            Seria {seria.seria}: {seria.reps} {seria.weight === 0 ? null : `po ${seria.weight}kg`}
+                                        </Text>
+                                    ))}
+                                </View>
+                            </List.Accordion>
+                        );
+                    }
+                    else {
+                        return null;
+                    }
+                })}
             </List.Section>
         </ScrollView>
     )

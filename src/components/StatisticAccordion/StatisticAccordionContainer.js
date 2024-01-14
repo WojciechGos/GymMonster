@@ -1,6 +1,10 @@
 import StatisticAccordion from "./StatisticAccordion"
 import { useState } from "react"
-import pedometerData from '@data/pedometerData'
+import excercisesHistoryListData from "@data/excercisesHistoryListData" 
+
+const StatisticAccordionContainer = ({route}) => {
+    const data = route.params?.data
+    console.log('Moja data', data)
 
 const StatisticAccordionContainer = ()=>{
     const [expanded, setExpanded] = useState(true)
@@ -9,7 +13,8 @@ const StatisticAccordionContainer = ()=>{
     const props = {
         expanded: expanded,
         handlePress: handlePress,
-        pedometerData: pedometerData
+        data: excercisesHistoryListData,
+        route: route,
     }
     return <StatisticAccordion {...props} />
 }

@@ -1,0 +1,566 @@
+[
+    {
+      "id": 1,
+      "date": "2023-12-10",
+      "name": "Horizontal lift pull-up",
+      "series": [
+        {
+            "seria": 1,
+            "reps": 10,
+            "weight": 100
+        },
+        {
+            "seria": 2,
+            "reps": 8,
+            "weight": 100
+        },
+        {
+            "seria": 3,
+            "reps": 8,
+            "weight": 100
+        }
+      ]
+    },
+    {
+        "id": 2,
+        "date": "2023-08-22",
+        "name": "Bench press",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 10,
+            "weight": 120
+          },
+          {
+            "seria": 2,
+            "reps": 10,
+            "weight": 120
+          },
+          {
+            "seria": 3,
+            "reps": 8,
+            "weight": 120
+          },
+          {
+            "seria": 4,
+            "reps": 4,
+            "weight": 120
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "2023-06-15",
+        "name": "Deadlift",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 6,
+            "weight": 150
+          },
+          {
+            "seria": 2,
+            "reps": 6,
+            "weight": 130
+          },
+          {
+            "seria": 3,
+            "reps": 6,
+            "weight": 120
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "date": "2023-04-05",
+        "name": "Overhead barbell press",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 8,
+            "weight": 80
+          },
+          {
+            "seria": 2,
+            "reps": 6,
+            "weight": 80
+          },
+          {
+            "seria": 3,
+            "reps": 6,
+            "weight": 80
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "date": "2023-02-18",
+        "name": "Dumbbell curls",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "seria": 2,
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "seria": 3,
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "seria": 4,
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "date": "2022-12-30",
+        "name": "Leg curls",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 8,
+            "weight": 80
+          },
+          {
+            "seria": 2,
+            "reps": 8,
+            "weight": 80
+          },
+          {
+            "seria": 3,
+            "reps": 10,
+            "weight": 80
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "date": "2022-10-14",
+        "name": "Incline bench press",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 8,
+            "weight": 110
+          },
+          {
+            "seria": 2,
+            "reps": 8,
+            "weight": 100
+          },
+          {
+            "seria": 3,
+            "reps": 8,
+            "weight": 100
+          },
+          {
+            "seria": 4,
+            "reps": 7,
+            "weight": 100
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "date": "2022-08-07",
+        "name": "Lateral raises",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "seria": 2,
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "seria": 3,
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "date": "2022-06-02",
+        "name": "Tricep dips",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 15,
+            "weight": 25
+          },
+          {
+            "seria": 2,
+            "reps": 15,
+            "weight": 25
+          },
+          {
+            "seria": 3,
+            "reps": 15,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "date": "2022-04-23",
+        "name": "Squats",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 8,
+            "weight": 130
+          },
+          {
+            "seria": 2,
+            "reps": 8,
+            "weight": 120
+          },
+          {
+            "seria": 3,
+            "reps": 8,
+            "weight": 120
+          },
+          {
+            "seria": 4,
+            "reps": 8,
+            "weight": 120
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "date": "2022-02-12",
+        "name": "Pull-ups on a bar",
+        "series": [
+          {
+            "seria": 1,
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "seria": 2,
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "seria": 3,
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      },
+        {
+          "id": 12,
+          "date": "2021-12-05",
+          "name": "Dumbbell bench press",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 12,
+              "weight": 90
+            },
+            {
+              "seria": 2,
+              "reps": 12,
+              "weight": 95
+            },
+            {
+              "seria": 3,
+              "reps": 12,
+              "weight": 100
+            },
+            {
+              "seria": 4,
+              "reps": 12,
+              "weight": 105
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "date": "2021-09-26",
+          "name": "Hammer curls",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 12,
+              "weight": 20
+            },
+            {
+              "seria": 2,
+              "reps": 12,
+              "weight": 22
+            },
+            {
+              "seria": 3,
+              "reps": 12,
+              "weight": 24
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "date": "2021-07-18",
+          "name": "Push-ups",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 2,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 3,
+              "reps": 15,
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "date": "2021-05-10",
+          "name": "Woodchoppers",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 12,
+              "weight": 0
+            },
+            {
+              "seria": 2,
+              "reps": 12,
+              "weight": 0
+            },
+            {
+              "seria": 3,
+              "reps": 12,
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "date": "2021-03-02",
+          "name": "Leg raises",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 2,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 3,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 4,
+              "reps": 15,
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "date": "2020-12-25",
+          "name": "Overhead dumbbell press",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 10,
+              "weight": 60
+            },
+            {
+              "seria": 2,
+              "reps": 10,
+              "weight": 65
+            },
+            {
+              "seria": 3,
+              "reps": 10,
+              "weight": 70
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "date": "2020-10-17",
+          "name": "Tricep pushdown",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 12,
+              "weight": 40
+            },
+            {
+              "seria": 2,
+              "reps": 12,
+              "weight": 45
+            },
+            {
+              "seria": 3,
+              "reps": 12,
+              "weight": 50
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "date": "2020-08-09",
+          "name": "Crunches",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 20,
+              "weight": 0
+            },
+            {
+              "seria": 2,
+              "reps": 20,
+              "weight": 0
+            },
+            {
+              "seria": 3,
+              "reps": 20,
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "date": "2020-05-31",
+          "name": "Arnold press",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 10,
+              "weight": 50
+            },
+            {
+              "seria": 2,
+              "reps": 10,
+              "weight": 55
+            },
+            {
+              "seria": 3,
+              "reps": 10,
+              "weight": 60
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "date": "2020-03-22",
+          "name": "Mountain climbers",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 2,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 3,
+              "reps": 15,
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "date": "2019-12-15",
+          "name": "Kettlebell rowing",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 10,
+              "weight": 80
+            },
+            {
+              "seria": 2,
+              "reps": 10,
+              "weight": 85
+            },
+            {
+              "seria": 3,
+              "reps": 10,
+              "weight": 90
+            },
+            {
+              "seria": 4,
+              "reps": 10,
+              "weight": 95
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "date": "2019-09-05",
+          "name": "Leg extensions",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 12,
+              "weight": 70
+            },
+            {
+              "seria": 2,
+              "reps": 12,
+              "weight": 75
+            },
+            {
+              "seria": 3,
+              "reps": 12,
+              "weight": 80
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "date": "2019-06-27",
+          "name": "Russian twists",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 2,
+              "reps": 15,
+              "weight": 0
+            },
+            {
+              "seria": 3,
+              "reps": 15,
+              "weight": 0
+            }
+          ]
+        }
+  ]
+  
