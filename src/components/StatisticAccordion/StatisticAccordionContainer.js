@@ -6,10 +6,9 @@ const StatisticAccordionContainer = ({route}) => {
     const data = route.params?.data
     console.log('Moja data', data)
 
-const StatisticAccordionContainer = ()=>{
     const [expanded, setExpanded] = useState(true)
     const handlePress = () => setExpanded(!expanded)
-    
+
     const props = {
         expanded: expanded,
         handlePress: handlePress,

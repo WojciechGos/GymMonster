@@ -1,0 +1,326 @@
+[
+    {
+        "id": 1,
+        "title": "Ściąganie wyciągu poziomego",
+        "name": "Horizontal lift pull-up",
+        "partName": "back",
+        "partTitle": "Plecy",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 2,
+        "title": "Ściąganie wyciągu górnego",
+        "name": "Overhead lift pull",
+        "partName": "back",
+        "partTitle": "Plecy",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 3,
+        "title": "Wiosłowanie kettlem",
+        "name": "Kettlebell rowing",
+        "partName": "back",
+        "partTitle": "Plecy",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 4,
+        "title": "Wiosłowanie",
+        "name": "Rowing",
+        "partName": "back",
+        "partTitle": "Plecy",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 5,
+        "title": "Martwy ciąg",
+        "name": "Dead pull",
+        "partName": "back",
+        "partTitle": "Plecy",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 6,
+        "title": "Podciąganie na drążku",
+        "name": "Pull-ups on a bar",
+        "partName": "back",
+        "partTitle": "Plecy",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 7,
+        "title": "Wyciskanie sztangi na płasko",
+        "name": "Bench press",
+        "partName": "chest",
+        "partTitle": "Klatka",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 8,
+        "title": "Wyciskanie sztangi skos",
+        "name": "Incline bench press",
+        "partName": "chest",
+        "partTitle": "Klatka",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 9,
+        "title": "Rozpiętki",
+        "name": "Dumbbell flyes",
+        "partName": "chest",
+        "partTitle": "Klatka",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 10,
+        "title": "Pompki",
+        "name": "Push-ups",
+        "partName": "chest",
+        "partTitle": "Klatka",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 11,
+        "title": "Pullover",
+        "name": "Pullover",
+        "partName": "chest",
+        "partTitle": "Klatka",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 12,
+        "title": "Wyciskanie hantli na ławce poziomej",
+        "name": "Dumbbell bench press",
+        "partName": "chest",
+        "partTitle": "Klatka",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 13,
+        "title": "Wyciskanie sztangi nad głową",
+        "name": "Overhead barbell press",
+        "partName": "shoulders",
+        "partTitle": "Ramiona",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 14,
+        "title": "Unoszenie hantli bokiem",
+        "name": "Lateral raises",
+        "partName": "shoulders",
+        "partTitle": "Ramiona",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 15,
+        "title": "Face pulls",
+        "name": "Face pulls",
+        "partName": "shoulders",
+        "partTitle": "Ramiona",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 16,
+        "title": "Wyciskanie hantli nad głową",
+        "name": "Overhead dumbbell press",
+        "partName": "shoulders",
+        "partTitle": "Ramiona",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 17,
+        "title": "Rotacje ramion",
+        "name": "Shoulder rotations",
+        "partName": "shoulders",
+        "partTitle": "Ramiona",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 18,
+        "title": "Arnold press",
+        "name": "Arnold press",
+        "partName": "shoulders",
+        "partTitle": "Ramiona",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 19,
+        "title": "Uginanie ramion ze sztangą",
+        "name": "Barbell curls",
+        "partName": "arms",
+        "partTitle": "Ręce",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 20,
+        "title": "Uginanie ramion ze hantlami",
+        "name": "Dumbbell curls",
+        "partName": "arms",
+        "partTitle": "Ręce",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 21,
+        "title": "Wyciskanie sztangi łamaną",
+        "name": "Tricep pushdown",
+        "partName": "arms",
+        "partTitle": "Ręce",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 22,
+        "title": "Prostowniki",
+        "name": "Tricep dips",
+        "partName": "arms",
+        "partTitle": "Ręce",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 23,
+        "title": "Młotki",
+        "name": "Hammer curls",
+        "partName": "arms",
+        "partTitle": "Ręce",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 24,
+        "title": "Wyciskanie hantli jednorącz",
+        "name": "Single-arm dumbbell press",
+        "partName": "arms",
+        "partTitle": "Ręce",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 25,
+        "title": "Crunches",
+        "name": "Crunches",
+        "partName": "abs",
+        "partTitle": "Brzuch",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 26,
+        "title": "Plank",
+        "name": "Plank",
+        "partName": "abs",
+        "partTitle": "Brzuch",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 27,
+        "title": "Russian twists",
+        "name": "Russian twists",
+        "partName": "abs",
+        "partTitle": "Brzuch",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 28,
+        "title": "Leg raises",
+        "name": "Leg raises",
+        "partName": "abs",
+        "partTitle": "Brzuch",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 29,
+        "title": "Mountain climbers",
+        "name": "Mountain climbers",
+        "partName": "abs",
+        "partTitle": "Brzuch",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 30,
+        "title": "Woodchoppers",
+        "name": "Woodchoppers",
+        "partName": "abs",
+        "partTitle": "Brzuch",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 31,
+        "title": "Przysiady",
+        "name": "Squats",
+        "partName": "legs",
+        "partTitle": "Nogi",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 32,
+        "title": "Wykroki",
+        "name": "Lunges",
+        "partName": "legs",
+        "partTitle": "Nogi",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 33,
+        "title": "Martwy ciąg",
+        "name": "Deadlift",
+        "partName": "legs",
+        "partTitle": "Nogi",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 34,
+        "title": "Wspięcia na palce",
+        "name": "Calf raises",
+        "partName": "legs",
+        "partTitle": "Nogi",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 35,
+        "title": "Prostowanie nóg",
+        "name": "Leg extensions",
+        "partName": "legs",
+        "partTitle": "Nogi",
+        "description": "",
+        "url": ""
+    },
+    {
+        "id": 36,
+        "title": "Zginanie nóg",
+        "name": "Leg curls",
+        "partName": "legs",
+        "partTitle": "Nogi",
+        "description": "",
+        "url": ""
+    }
+]

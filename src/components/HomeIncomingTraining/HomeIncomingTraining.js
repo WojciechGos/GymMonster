@@ -2,7 +2,7 @@ import { View } from "react-native";
 import { Text } from "react-native-paper";
 import styles from "@utils/styles";
 import Header from "@components/Header/Header";
-// import HomeIncomingTrainingExcercise from "./HomeIncomingTrainingExcercise";
+import HomeIncomingTrainingExcercise from "./HomeIncomingTrainingExcercise";
 import DisplayTraining from "@components/DisplayTraining/DisplayTraining";
 import StartTraining from "./StartTraining";
 

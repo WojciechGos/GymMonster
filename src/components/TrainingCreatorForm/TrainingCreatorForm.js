@@ -4,8 +4,8 @@ import colors from "@utils/colors"
 import Button from "@components/Button/Button"
 import { Pressable, ScrollView } from "react-native"
 import DatePickerContainer from "@components/DatePicker/DatePickerContainer"
-import ExercisesListContainer from "@components/ExercisesList/ExercisesListContainer"
-const TrainingCreatorForm = ({saveTraining}) => {
+import ItemListContainer from "@components/ItemList/ItemListContainer"
+const TrainingCreatorForm = ({ saveTraining, addExcercise }) => {
     return (
         <ScrollView>
             <Text variant="displayLarge" style={styles.h2}>
@@ -20,7 +20,7 @@ const TrainingCreatorForm = ({saveTraining}) => {
             <Text variant="displayLarge" style={styles.h2}>
                 2. Wybierz ćwiczenia z atlasu
             </Text>
-            <ExercisesListContainer/>
+            <ItemListContainer addExcercise={addExcercise} />
             <Text variant="displayLarge" style={styles.h2}>
                 3. Wybierz termin treningu
             </Text>

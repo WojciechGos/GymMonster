@@ -3,9 +3,9 @@ import { Entypo } from "@expo/vector-icons"
 import { Text } from "react-native-paper"
 import styles from "@utils/styles"
 import colors from "@utils/colors"
-import { View } from "react-native"
+import { Pressable, View } from "react-native"
 
-const TrainingPlanAccordionItemAddExcercise = () => {
+const TrainingPlanAccordionItemAddExcercise = ({ addExcercise }) => {
     return (
         <List.Item
             key={0}
@@ -14,7 +14,11 @@ const TrainingPlanAccordionItemAddExcercise = () => {
                     <Text style={styles.h4}>Dodaj ćwiczenie</Text>
                 </View>
             )}
-            right={() => <Entypo name="plus" size={24} color={colors.text} />}
+            right={() => (
+                <Pressable onPress={() => addExcercise()}>
+                    <Entypo name="plus" size={24} color={colors.text} />
+                </Pressable>
+            )}
         />
     )
 }

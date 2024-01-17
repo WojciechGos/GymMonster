@@ -10,7 +10,7 @@ import { SimpleLineIcons } from "@expo/vector-icons"
 import { FontAwesome } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
 
-const CustomDrawer = ({ navigateToScreen }) => {
+const CustomDrawer = ({ navigateToScreen, navigateToStatistic }) => {
     return (
         <View style={styles.drawerWrapper}>
             <DrawerListItem
@@ -34,7 +34,7 @@ const CustomDrawer = ({ navigateToScreen }) => {
             <DrawerListItem
                 title="Statystyki"
                 link="Statistic"
-                handler={navigateToScreen}
+                handler={navigateToStatistic}
                 icon={
                     <Fontisto
                         name="line-chart"
@@ -69,7 +69,7 @@ const CustomDrawer = ({ navigateToScreen }) => {
             />
             <DrawerListItem
                 title="Atlas ćwiczeń"
-                link="Exercise Atlas"
+                link="Atlas List"
                 handler={navigateToScreen}
                 icon={
                     <FontAwesome

@@ -5,11 +5,11 @@ import StatisticContainer from "@components/Statistic/StatisticContainer"
 import StatisticAccordionContainer from "../../components/StatisticAccordion/StatisticAccordionContainer"
 import StatisticChartContainer from "../../components/StatisticChart/StatisticChartContainer"
 
-const Statistic = ({route}) => {
+const StatisticAccordion = ({ route }) => {
     return (
         <View style={styles.containerNoCenter}>
-            <StatisticAccordionContainer route={route} />
+            <StatisticAccordionContainer route={route}/>
         </View>
     )
 }
-export default Statistic
+export default StatisticAccordion

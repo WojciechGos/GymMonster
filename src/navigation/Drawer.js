@@ -7,18 +7,17 @@ import TrainingPlanCreator from "@screens/TrainingPlanCreator/TrainingPlanCreato
 import Statistic from "@screens/Statistic/Statistic"
 import Achievement from "@screens/Achievement/Achievement"
 
-import ExerciseAtlas from "@screens/ExerciseAtlas/ExerciseAtlas"
-import ExerciseBack from "@screens/ExerciseAtlasMusclePart/ExerciseBack"
+import StackAtlas from "./StackAtlas"
+
+import AtlasList from "@screens/AtlasList/AtlasList"
+import ExcerciseList from "@screens/ExcerciseList/ExcerciseList"
 
 import styles from "@utils/styles"
 import DrawerContentContainer from "../components/DrawerContent/DrawerContentContainer"
 import DrawerHeaderContainer from "@components/DrawerHeader/DrawerHeaderContainer"
 import ProgressForm from "@screens/ProgressForm/ProgressForm"
-// ;<Stack.Screen
-//     name="ProgressForm"
-//     component={ProgressForm}
-//     options={optionScreen}
-// />
+import ExcerciseDetails from "@screens/ExerciseDetails/ExcerciseDetails"
+
 const Drawer = createDrawerNavigator()
 
 export default function CustomDrawer(props) {
@@ -26,8 +25,11 @@ export default function CustomDrawer(props) {
         <Drawer.Navigator
             initialRouteName="Home"
             screenOptions={{
-                header: ({ navigation }) => (
-                    <DrawerHeaderContainer navigation={navigation} />
+                header: ({ navigation, route, options }) => (
+                    <DrawerHeaderContainer
+                        navigation={navigation}
+                        options={options}
+                    />
                 ),
                 headerStyle: styles.drawerHeader,
                 drawerStyle: styles.drawerStyle,
@@ -44,8 +46,25 @@ export default function CustomDrawer(props) {
                 name="Training Plan Creator"
                 component={TrainingPlanCreator}
             />
-            <Drawer.Screen name="Exercise Atlas" component={ExerciseAtlas} />
-            <Drawer.Screen name="Exercise Back" component={ExerciseBack} />
+            <Drawer.Screen
+                name="Excercise Details"
+                component={ExcerciseDetails}
+            />
+            <Drawer.Screen
+                name="Atlas List"
+                component={AtlasList}
+                options={{
+                    hideHeader: true,
+                }}
+            />
+            <Drawer.Screen
+                name="Excercise List"
+                component={ExcerciseList}
+                options={{
+                    hideHeader: true,
+                }}
+            />
+            {/* <Drawer.Screen name="Exercise Back" component={ExerciseBack} /> */}
             <Drawer.Screen name="Progress Form" component={ProgressForm} />
         </Drawer.Navigator>
     )
