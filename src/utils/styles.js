@@ -360,6 +360,11 @@ const styles = StyleSheet.create({
     },
     zapiszTrainingView: {
         alignItems: "flex-end",
+    },
+    containerChart: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
 export default styles
