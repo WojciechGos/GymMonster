@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 const ExcerciseListContainer = ({ navigation, route }) => {
     const name = route.params?.name
     const intent = route.params?.intent
-    console.log("name" + name)
+    console.log("name " + name)
     const [excercises, setExcercises] = useState([])
 
     useEffect(() => {
@@ -28,7 +28,6 @@ const ExcerciseListContainer = ({ navigation, route }) => {
     }, [name])
 
     const goToIntent = (item) => {
-        
         if(intent){
             navigation.navigate(intent, {data: {item}})
         }else{

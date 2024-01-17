@@ -6,9 +6,12 @@ import colors from "@utils/colors"
 
 const StatisticAccordion = ({ handlePress, data, route }) => {
     const theme = useTheme()
-    console.log('StatisticAccordion data', route.params?.data.item.name)
     return (
-        <ScrollView>
+            <View>
+                <Text style={styles.text}>StatisticAccordion:</Text>
+                <Text style={styles.text}>{route.params.data.item.title}</Text>                
+            </View>
+        /*<ScrollView>
             <List.Section key={0}>
                 {data.map((historicData) => {
                     if (historicData.name === route.params?.data.item.name) {
@@ -38,7 +41,7 @@ const StatisticAccordion = ({ handlePress, data, route }) => {
                     }
                 })}
             </List.Section>
-        </ScrollView>
+        </ScrollView>*/
     )
 }
 

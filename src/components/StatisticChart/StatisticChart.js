@@ -3,13 +3,12 @@ import { Text } from "react-native-paper"
 import styles from "@utils/styles";
 import { View } from "react-native";
 
-const StatisticChart = () => {
+const StatisticChart = ({ route }) => {
       return (
-        <View style={styles.wrapper}>
-          <Text style={styles.smallHeader}>
-              Ilość kroków
-          </Text>
-      </View>
+        <View>
+          <Text style={styles.text}>StatisticChart:</Text>
+          <Text style={styles.text}>{route.params.data.item.title}</Text>           
+        </View>
       );
 }
 

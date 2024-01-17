@@ -8,15 +8,21 @@ const optionScreen = {
     headerShown: false,
 }
 
-export default function StatisticTab(props) {
+export default function StatisticTab({ route }) {
     return (
-        <Tab.Navigator
-            initialRouteName="Feed"
-            activeColor="#e91e63"
-            barStyle={{ backgroundColor: 'tomato' }}
-        >
-            <Tab.Screen name="StatisticAccordion" component={StatisticAccordion} options={optionScreen} />
-            <Tab.Screen name="StatisticChart" component={StatisticChart} options={optionScreen} />
+        <Tab.Navigator swipeEnabled={true}>
+            <Tab.Screen 
+                name="StatisticAccordion" 
+                component={StatisticAccordion} 
+                options={optionScreen}
+                initialParams={route.params}
+            />
+            <Tab.Screen 
+                name="StatisticChart" 
+                component={StatisticChart} 
+                options={optionScreen}
+                initialParams={route.params}
+            />
         </Tab.Navigator>
     );
 }
