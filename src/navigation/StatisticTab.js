@@ -1,26 +1,36 @@
 import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation';
 import StatisticAccordion from '@screens/StatisticAccordion/StatisticAccordion';
 import StatisticChart from '@screens/StatisticChart/StatisticChart';
+import colors from '@utils/colors';
+import { useEffect, useState } from 'react';
 
 const Tab = createMaterialBottomTabNavigator();
 
-const optionScreen = {
-    headerShown: false,
-}
-
 export default function StatisticTab({ route }) {
+    console.log('StatisticTab item', route.params.data.item)
+    
     return (
-        <Tab.Navigator swipeEnabled={true}>
+        <Tab.Navigator 
+            swipeEnabled={true}
+            activeColor={colors.text}
+            barStyle={{ 
+                backgroundColor: colors.background
+            }}
+        >
             <Tab.Screen 
                 name="StatisticAccordion" 
                 component={StatisticAccordion} 
-                options={optionScreen}
+                options={{
+                    tabBarLabel: 'Accordion',
+                }}
                 initialParams={route.params}
             />
             <Tab.Screen 
                 name="StatisticChart" 
                 component={StatisticChart} 
-                options={optionScreen}
+                options={{
+                    tabBarLabel: 'Chart',
+                }}
                 initialParams={route.params}
             />
         </Tab.Navigator>

@@ -4,7 +4,7 @@ import excercisesHistoryListData from "@data/excercisesHistoryListData"
 
 const StatisticAccordionContainer = ({route}) => {
     const data = route.params?.data
-    console.log('Moja data', data)
+    console.log('StatisticAccordionContainer item', data.item)
 
     const [expanded, setExpanded] = useState(true)
     const handlePress = () => setExpanded(!expanded)

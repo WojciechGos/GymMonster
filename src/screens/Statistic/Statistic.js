@@ -6,6 +6,7 @@ import StatisticAccordionContainer from "../../components/StatisticAccordion/Sta
 import StatisticChartContainer from "../../components/StatisticChart/StatisticChartContainer"
 
 const Statistic = ({route}) => {
+    console.log('Statistic item', route.params.data.item)
     return (
         <View style={styles.containerNoCenter}>
             <StatisticAccordionContainer route={route} />

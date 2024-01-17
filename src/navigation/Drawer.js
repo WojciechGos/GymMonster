@@ -44,8 +44,7 @@ export default function CustomDrawer(props) {
 
             <Drawer.Screen 
                 name="Statistic" 
-                component={StatisticTab} 
-                initialParams={props}
+                component={StatisticTab}
             />
             <Drawer.Screen name="Achievement" component={Achievement} />
             <Drawer.Screen

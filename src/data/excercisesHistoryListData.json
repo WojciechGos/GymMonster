@@ -561,6 +561,50 @@
               "weight": 0
             }
           ]
+        },
+        {
+          "id": 25,
+          "date": "2023-04-06",
+          "name": "Overhead barbell press",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 8,
+              "weight": 90
+            },
+            {
+              "seria": 2,
+              "reps": 6,
+              "weight": 80
+            },
+            {
+              "seria": 3,
+              "reps": 6,
+              "weight": 80
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "date": "2023-04-07",
+          "name": "Overhead barbell press",
+          "series": [
+            {
+              "seria": 1,
+              "reps": 8,
+              "weight": 100
+            },
+            {
+              "seria": 2,
+              "reps": 6,
+              "weight": 80
+            },
+            {
+              "seria": 3,
+              "reps": 6,
+              "weight": 80
+            }
+          ]
         }
   ]
   
