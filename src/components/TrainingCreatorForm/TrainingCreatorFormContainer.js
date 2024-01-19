@@ -1,7 +1,14 @@
 import TrainingCreatorForm from "./TrainingCreatorForm"
 import * as FileSystem from "expo-file-system"
-
+import { FIRESTORE_DB } from "../../../firebaseConfig"
+import AsyncStorage from "@react-native-async-storage/async-storage"
 import { useEffect, useState } from "react"
+import {
+    addDoc,
+    collection,
+    serverTimestamp,
+    getDocs,
+} from "firebase/firestore"
 
 const TrainingCreatorFormContainer = ({ navigation, route }) => {
     const data = route.params?.data
@@ -25,10 +32,32 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
         }
     }
     const saveTraining = async () => {
-        const tmp = await FileSystem.readAsStringAsync(filePath)
-        console.log("tmp")
-        console.log(tmp)
+        const excercises = await FileSystem.readAsStringAsync(filePath)
 
+        console.log("excercises")
+        console.log(excercises)
+        const userData = await AsyncStorage.getItem("user")
+
+        // Parse the JSON data
+        const user = JSON.parse(userData)
+        console.log(user)
+
+        // try {
+        //     const docRef = await addDoc(collection(FIRESTORE_DB, "Plan"), {
+        //         userId: user.uid,
+        //         excercises: excercises
+        //     })
+        //     console.log( "ref: "+ docRef.id)
+        // } catch (error) {
+        //     console.error(error)
+        // }
+
+        const querySnapshot = await getDocs(collection(FIRESTORE_DB, "Plan"))
+        console.log('odpowiedz')
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`)
+            console.log(doc.data())
+        })
         // await clearFile()
     }
 

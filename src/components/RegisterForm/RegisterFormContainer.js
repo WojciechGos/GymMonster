@@ -1,8 +1,8 @@
 import RegisterForm from "./RegisterForm"
-import auth from "../../../firebaseAuth"
+import auth from "../../../firebaseConfig"
 import { useState } from "react"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-// import saveUserToAsyncStorage from "@utils/saveUserToAsyncStorage"
+import saveUserToAsyncStorage from "@utils/saveUserToAsyncStorage"
 
 const RegisterFormContainer = ({ navigation }) => {
     const [email, setEmail] = useState("")

@@ -1,8 +1,8 @@
 import LoginForm from "./LoginForm"
-import auth from "../../../firebaseAuth"
+import auth from "../../../firebaseConfig"
 import { useState } from "react"
 import { signInWithEmailAndPassword } from "firebase/auth"
-// import saveUserToAsyncStorage from "@utils/saveUserToAsyncStorage"
+import saveUserToAsyncStorage from "@utils/saveUserToAsyncStorage"
 
 const LoginFormContainer = ({ navigation }) => {
     const [email, setEmail] = useState("")
@@ -18,7 +18,7 @@ const LoginFormContainer = ({ navigation }) => {
                 password
             )
             console.log(response)
-            // saveUserToAsyncStorage(response)
+            saveUserToAsyncStorage(response)
             navigation.navigate("HomeStack")
         } catch (error) {
             // console.error(error)
