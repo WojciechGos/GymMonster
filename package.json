@@ -4,8 +4,8 @@
   "main": "node_modules/expo/AppEntry.js",
   "contributors": [
     "Wojciech Gos",
-    "Jan Grochowski",
-    "Yehor Shnyruk"
+    "Yehor Shnyruk",
+    "Jan Grochowski"
   ],
   "scripts": {
     "start": "expo start",
@@ -14,6 +14,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/drawer": "6.6.6",
     "@react-navigation/native": "6.1.9",
     "@react-navigation/native-stack": "6.9.17",
