@@ -4,16 +4,16 @@ import styles from "@utils/styles"
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import Icon from 'react-native-vector-icons/Feather';
 
-const Achievement = ()=>{
+const Achievement = (props) => {
     return (
         <View style={styles.containerNoCenter}>
             <View style={styles.avievementWrapper}>
                 <AnimatedCircularProgress
                     size={164}
                     width={5}
-                    tintColor="yellow"
+                    tintColor={`rgba(${Math.round(255 - (255 * (props.progress / 5)))}, ${Math.round(255 * (props.progress / 5))}, 0, 1)`}
                     rotation={0}
-                    fill={33}
+                    fill={props.progress*20}
                     backgroundColor="transparent"
                     lineCap="round">
                     {
@@ -27,97 +27,117 @@ const Achievement = ()=>{
                 </AnimatedCircularProgress>
                 <View style={styles.achievementHead}>
                     <Text style={styles.achievementHeadText}>
-                        Otworzyłeś 2 z 6 nagród
+                        Otworzyłeś {props.progress} z 5 nagród
                     </Text>
                 </View>
                 <View style={styles.achievementAchievementWrapper}>
                     <View style={styles.achievementAchievement}>
                         <View style={styles.achievementIconWrapper}>
-                            <Icon name='check-square' size={61} color="white" />
+                            {props.sumSquats < 1000 ? (
+                                <Icon name='square' size={61} color="white" />
+                            ) : (
+                                <Icon name='check-square' size={61} color="white" />
+                            )}
                         </View>
                         <View style={styles.achievementAchievementStatus}>
                             <Text style={styles.achievementFirstText}>
-                                Zrób 10000 przysiadów
+                                Zrób 1000 przysiadów
                             </Text>
                             <View style={{
-                                width: 228,
+                                width: props.widthSquats,
                                 borderWidth: 3,
-                                borderColor: '#A3F000'
-                            }}></View>
+                                borderColor: `rgba(${Math.round(255 - (255 * (props.widthSquats / 228)))}, ${Math.round(255 * (props.widthSquats / 228))}, 0, 1)`
+                            }} />
                             <Text style={styles.achievementSecondText}>
-                                1000/1000
+                                {props.sumSquats}/1000
                             </Text>
                         </View>
                     </View>
                     <View style={styles.achievementAchievement}>
                         <View style={styles.achievementIconWrapper}>
-                            <Icon name='square' size={61} color="white" />
+                        {props.sumPushups < 1000 ? (
+                                <Icon name='square' size={61} color="white" />
+                            ) : (
+                                <Icon name='check-square' size={61} color="white" />
+                            )}
                         </View>
                         <View style={styles.achievementAchievementStatus}>
                             <Text style={styles.achievementFirstText}>
-                                Zrób 10000 pompek
+                                Zrób 1000 pompek
                             </Text>
                             <View style={{
-                                width: 114,
+                                width: props.widthsPushups,
                                 borderWidth: 3,
-                                borderColor: '#F0AD00'
+                                borderColor: `rgba(${Math.round(255 - (255 * (props.widthsPushups / 228)))}, ${Math.round(255 * (props.widthsPushups / 228))}, 0, 1)`
                             }}></View>
                             <Text style={styles.achievementSecondText}>
-                                5000/10000
+                                {props.sumPushups}/1000
                             </Text>
                         </View>
                     </View>
                     <View style={styles.achievementAchievement}>
                         <View style={styles.achievementIconWrapper}>
-                            <Icon name='check-square' size={61} color="white" />
+                        {props.sumPullupsonabar < 1000 ? (
+                                <Icon name='square' size={61} color="white" />
+                            ) : (
+                                <Icon name='check-square' size={61} color="white" />
+                            )}
                         </View>
                         <View style={styles.achievementAchievementStatus}>
                             <Text style={styles.achievementFirstText}>
-                                Zrób 1000 podciągnięć
+                                Zrób 100 podciągnięć
                             </Text>
                             <View style={{
-                                width: 22.8,
+                                width: props.widthPullupsonabar,
                                 borderWidth: 3,
-                                borderColor: '#F02B00'
+                                borderColor: `rgba(${Math.round(255 - (255 * (props.widthPullupsonabar / 228)))}, ${Math.round(255 * (props.widthPullupsonabar / 228))}, 0, 1)`
                             }}></View>
                             <Text style={styles.achievementSecondText}>
-                                100/1000
+                                {props.sumPullupsonabar}/100
                             </Text>
                         </View>
                     </View>
                     <View style={styles.achievementAchievement}>
                         <View style={styles.achievementIconWrapper}>
-                            <Icon name='square' size={61} color="white" />
+                        {props.maxBenchpress < 100 ? (
+                                <Icon name='square' size={61} color="white" />
+                            ) : (
+                                <Icon name='check-square' size={61} color="white" />
+                            )}
                         </View>
                         <View style={styles.achievementAchievementStatus}>
                             <Text style={styles.achievementFirstText}>
-                                Zrób 500 min planki
+                                Podnieś 100 kg
                             </Text>
                             <View style={{
-                                width: 45.6,
+                                width: props.widthBenchpress,
                                 borderWidth: 3,
-                                borderColor: '#F06500'
+                                borderColor: `rgba(${Math.round(255 - (255 * (props.widthBenchpress / 228)))}, ${Math.round(255 * (props.widthBenchpress / 228))}, 0, 1)`
                             }}></View>
                             <Text style={styles.achievementSecondText}>
-                                100/500
+                                {props.maxBenchpress}/100
                             </Text>
                         </View>
                     </View>
                     <View style={styles.achievementAchievement}>
                         <View style={styles.achievementIconWrapper}>
-                            <Icon name='square' size={61} color="white" />
+                        {props.sumDays < 100 ? (
+                                <Icon name='square' size={61} color="white" />
+                            ) : (
+                                <Icon name='check-square' size={61} color="white" />
+                            )}
                         </View>
                         <View style={styles.achievementAchievementStatus}>
                             <Text style={styles.achievementFirstText}>
                                 Trenuj przez 100 dni
                             </Text>
                             <View style={{
-                                width: 182,
+                                width: props.widthDays,
                                 borderWidth: 3,
-                                borderColor: '#CFF000'
+                                borderColor: `rgba(${Math.round(255 - (255 * (props.widthDays / 228)))}, ${Math.round(255 * (props.widthDays / 228))}, 0, 1)`
                             }}></View>
                             <Text style={styles.achievementSecondText}>
-                                80/100
+                                {props.sumDays}/100
                             </Text>
                         </View>
                     </View>
