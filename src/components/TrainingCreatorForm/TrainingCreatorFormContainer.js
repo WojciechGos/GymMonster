@@ -21,7 +21,11 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
     const filePath = FileSystem.documentDirectory + "planCreator.json"
 
     const saveTraining = async () => {
-        const collectionRef = collection(FIRESTORE_DB, "plan")
+        const collectionPlanRef = collection(FIRESTORE_DB, "plan")
+        const collectionTrainingPlannedRef = collection(
+            FIRESTORE_DB,
+            "trainingPlanned"
+        )
 
         if (name.trim() === "") {
             alert("Nie podałeś nazwy planu treningowego!")
@@ -36,7 +40,7 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
         const jsonFile = await FileSystem.readAsStringAsync(filePath)
         const excercisesFromFile = JSON.parse(jsonFile)
         if (excercisesFromFile.length === 0) {
-            alert("Nie wybrałeś żadnego treningu!")
+            alert("Nie dodałes żadnego ćwiczenia z atlasu!")
             return
         }
 
@@ -49,24 +53,38 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
         console.log(user)
 
         try {
-            const docRef = await addDoc(collectionRef, {
+            const docRef = await addDoc(collectionPlanRef, {
                 userId: user.uid,
                 name: name,
                 excercises: excercisesFromFile,
             })
             console.log("ref: " + docRef.id)
+
+            console.log(selectedDays)
+            for (const date in selectedDays) {
+                const docTrainingPlannedRef = await addDoc(
+                    collectionTrainingPlannedRef,
+                    {
+                        userId: user.uid,
+                        date: date,
+                        name: name,
+                        excercises: excercisesFromFile,
+                    }
+                )
+                console.log(docTrainingPlannedRef.id)
+                console.log(`Date: ${date}`)
+            }
         } catch (error) {
             console.error(error)
         }
 
-      
         await clearVariables()
-        navigation.navigate('Home')
+        navigation.navigate("Home")
     }
 
-    const clearVariables = async ()=>{
+    const clearVariables = async () => {
         setSelectedDays({})
-        setName('')
+        setName("")
         await clearFile()
     }
 

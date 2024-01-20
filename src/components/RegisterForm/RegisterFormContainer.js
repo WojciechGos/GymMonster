@@ -18,7 +18,7 @@ const RegisterFormContainer = ({ navigation }) => {
                 password
             )
             console.log(response)
-            // saveUserToAsyncStorage(response)
+            saveUserToAsyncStorage(response)
             navigation.navigate("HomeStack")
 
         } catch (error) {
