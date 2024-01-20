@@ -2,7 +2,7 @@ import React from "react"
 import { View, Text } from "react-native"
 import styles from "../../utils/styles"
 import ExcerciseHeader from "@components/ExcerciseHeader/ExcerciseHeader"
-import { Video, ResizeMode } from 'expo-av';
+import YoutubePlayer from 'react-native-youtube-iframe';
 
 const ExcerciseDetails = ({ url, exerciseName, exerciseDescription }) => {
     const video = React.useRef(null);
@@ -11,19 +11,15 @@ const ExcerciseDetails = ({ url, exerciseName, exerciseDescription }) => {
         <View style={styles.containerExerciseDetailsOut}>
             <ExcerciseHeader title={exerciseName} />
             <View style={styles.containerExerciseDetails}>
-                <Video
-                    style={styles.containerVideo}
-                    source={{
-                        uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
-                    }}
-                    useNativeControls
-                    shouldPlay
-                    isLooping
-                    onLoadStart={() => console.log('on load start')}
-                    onLoad={() => console.log('on load')}
+                <YoutubePlayer
+                    height={238}
+                    play={true}
+                    videoId={url}
                 />
                 <View style={styles.containerVideoText}>
-
+                    <Text style={styles.containerVideoTextText}>
+                        {exerciseDescription}
+                    </Text>
                 </View>
             </View>
         </View>

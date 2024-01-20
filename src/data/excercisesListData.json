@@ -5,8 +5,8 @@
         "name": "Horizontal lift pull-up",
         "partName": "back",
         "partTitle": "Plecy",
-        "description": "",
-        "url": ""
+        "description": "'Ściąganie wyciągu poziomego' to ćwiczenie polegające na podciąganiu ciała do poziomej belki lub punktu zawieszenia, angażujące mięśnie pleców, ramion i mięśnie brzucha. Jest skutecznym treningiem do budowania siły górnej części ciała oraz sprzyjające poprawnej pracy łopatek.",
+        "url": "DKbT05OX47A"
     },
     {
         "id": 2,
@@ -14,8 +14,8 @@
         "name": "Overhead lift pull",
         "partName": "back",
         "partTitle": "Plecy",
-        "description": "",
-        "url": ""
+        "description": "'Ściąganie wyciągu górnego' to ćwiczenie siłowe, które angażuje głównie mięśnie ramion, barków oraz pleców. Polega na podnoszeniu ciężaru w górę nad głowę, wzmacniając jednocześnie górną część ciała.",
+        "url": "G28nyk0LMk0"
     },
     {
         "id": 3,
@@ -23,8 +23,8 @@
         "name": "Kettlebell rowing",
         "partName": "back",
         "partTitle": "Plecy",
-        "description": "",
-        "url": ""
+        "description": "Ćwiczenie wiosłowania z kettlebell angażuje mięśnie pleców. Polega na unoszeniu ciężaru ku górze, wzmacniając tym samym partie górne pleców.",
+        "url": "mILAOzSDdUY"
     },
     {
         "id": 4,
@@ -32,7 +32,7 @@
         "name": "Rowing",
         "partName": "back",
         "partTitle": "Plecy",
-        "description": "",
+        "description": "Ćwiczenie wiosłowania koncentruje się na wzmocnieniu mięśni pleców. Polega na unoszeniu ciężaru ku górze, rozwijając górną część pleców.",
         "url": ""
     },
     {
@@ -41,8 +41,8 @@
         "name": "Dead pull",
         "partName": "back",
         "partTitle": "Plecy",
-        "description": "",
-        "url": ""
+        "description": "Martwy ciąg to intensywne ćwiczenie pleców, gdzie ciężar jest unoszony z ziemi ku górze, aktywując mięśnie pleców, nóg i pośladków.",
+        "url": "f4KO7N0oyDg"
     },
     {
         "id": 6,
@@ -50,8 +50,8 @@
         "name": "Pull-ups on a bar",
         "partName": "back",
         "partTitle": "Plecy",
-        "description": "",
-        "url": ""
+        "description": "Podciąganie na drążku to skuteczne ćwiczenie wzmacniające mięśnie pleców. Polega na unoszeniu ciała, angażując głównie mięśnie pleców.",
+        "url": "xA7TGSSEvaw"
     },
     {
         "id": 7,
@@ -59,7 +59,7 @@
         "name": "Bench press",
         "partName": "chest",
         "partTitle": "Klatka",
-        "description": "",
+        "description": "Wyciskanie sztangi na płasko koncentruje się na rozwijaniu mięśni klatki piersiowej. Polega na pchaniu sztangi w górę na ławce poziomej.",
         "url": ""
     },
     {
@@ -68,8 +68,8 @@
         "name": "Incline bench press",
         "partName": "chest",
         "partTitle": "Klatka",
-        "description": "",
-        "url": ""
+        "description": "Wyciskanie sztangi skos skupia się na wzmacnianiu górnej części klatki piersiowej. Ćwiczenie polega na pchaniu sztangi w górę na ławce skośnej.",
+        "url": "SCVCLChPQFY"
     },
     {
         "id": 9,
@@ -77,8 +77,8 @@
         "name": "Dumbbell flyes",
         "partName": "chest",
         "partTitle": "Klatka",
-        "description": "",
-        "url": ""
+        "description": "Rozpiętki z hantlami to ćwiczenie izolujące mięśnie klatki piersiowej. Polega na rozkładaniu hantli na boki w pozycji leżącej.",
+        "url": "gasK_1fNVdk"
     },
     {
         "id": 10,
@@ -86,8 +86,8 @@
         "name": "Push-ups",
         "partName": "chest",
         "partTitle": "Klatka",
-        "description": "",
-        "url": ""
+        "description": "Pompki to klasyczne ćwiczenie wzmacniające mięśnie klatki piersiowej. Polega na pompowaniu ciała w górę i w dół.",
+        "url": "IODxDxX7oi4"
     },
     {
         "id": 11,
@@ -95,8 +95,8 @@
         "name": "Pullover",
         "partName": "chest",
         "partTitle": "Klatka",
-        "description": "",
-        "url": ""
+        "description": "Pullover to ćwiczenie, które angażuje mięśnie klatki piersiowej. Polega na unoszeniu ciężaru z pozycji leżącej.",
+        "url": "9z60i1gbp8o"
     },
     {
         "id": 12,
@@ -104,8 +104,8 @@
         "name": "Dumbbell bench press",
         "partName": "chest",
         "partTitle": "Klatka",
-        "description": "",
-        "url": ""
+        "description": "Wyciskanie hantli na ławce poziomej skupia się na rozwijaniu mięśni klatki piersiowej. Polega na pchaniu hantli w górę.",
+        "url": "X3YrlBmjWrY"
     },
     {
         "id": 13,
@@ -113,8 +113,8 @@
         "name": "Overhead barbell press",
         "partName": "shoulders",
         "partTitle": "Ramiona",
-        "description": "",
-        "url": ""
+        "description": "Wyciskanie sztangi nad głową to ćwiczenie wzmacniające mięśnie ramion. Polega na pchaniu sztangi w górę nad głowę.",
+        "url": "cGnhixvC8uA"
     },
     {
         "id": 14,
@@ -122,8 +122,8 @@
         "name": "Lateral raises",
         "partName": "shoulders",
         "partTitle": "Ramiona",
-        "description": "",
-        "url": ""
+        "description": "Unoszenie hantli bokiem koncentruje się na wzmacnianiu mięśni bocznych ramion. Polega na unoszeniu hantli na boki.",
+        "url": "xyK8UiC-BUw"
     },
     {
         "id": 15,
@@ -131,8 +131,8 @@
         "name": "Face pulls",
         "partName": "shoulders",
         "partTitle": "Ramiona",
-        "description": "",
-        "url": ""
+        "description": "Face pulls to ćwiczenie, które kieruje się na wzmacnianie mięśni ramion. Polega na pociąganiu linki w stronę twarzy.",
+        "url": "7nUMdDOEU5g"
     },
     {
         "id": 16,
@@ -140,8 +140,8 @@
         "name": "Overhead dumbbell press",
         "partName": "shoulders",
         "partTitle": "Ramiona",
-        "description": "",
-        "url": ""
+        "description": "Wyciskanie hantli nad głową to ćwiczenie angażujące mięśnie ramion. Polega na pchaniu hantli w górę nad głowę.",
+        "url": "M2rwvNhTOu0"
     },
     {
         "id": 17,
@@ -149,8 +149,8 @@
         "name": "Shoulder rotations",
         "partName": "shoulders",
         "partTitle": "Ramiona",
-        "description": "",
-        "url": ""
+        "description": "Rotacje ramion to ćwiczenie mobilności ramion, pomagające w utrzymaniu elastyczności i stabilności stawów.",
+        "url": "bE2z9rvCl5c"
     },
     {
         "id": 18,
@@ -158,8 +158,8 @@
         "name": "Arnold press",
         "partName": "shoulders",
         "partTitle": "Ramiona",
-        "description": "",
-        "url": ""
+        "description": "Arnold press to ćwiczenie, które kombinuje ruchy rotacyjne ramion z wyciskaniem hantli nad głową, angażując różne partie mięśni ramion.",
+        "url": "3ml7BH7mNwQ"
     },
     {
         "id": 19,
@@ -167,8 +167,8 @@
         "name": "Barbell curls",
         "partName": "arms",
         "partTitle": "Ręce",
-        "description": "",
-        "url": ""
+        "description": "Uginanie ramion ze sztangą koncentruje się na wzmacnianiu mięśni ramion. Polega na uginaniu ramion podczas trzymania sztangi.",
+        "url": "kwG2ipFRgfo"
     },
     {
         "id": 20,
@@ -176,8 +176,8 @@
         "name": "Dumbbell curls",
         "partName": "arms",
         "partTitle": "Ręce",
-        "description": "",
-        "url": ""
+        "description": "Uginanie ramion ze hantlami to ćwiczenie izolujące mięśnie ramion. Polega na uginaniu ramion podczas trzymania hantli.",
+        "url": "ykJmrZ5v0Oo"
     },
     {
         "id": 21,
@@ -185,8 +185,8 @@
         "name": "Tricep pushdown",
         "partName": "arms",
         "partTitle": "Ręce",
-        "description": "",
-        "url": ""
+        "description": "Wyciskanie sztangi łamaną koncentruje się na wzmacnianiu tricepsów. Polega na pchaniu sztangi w dół przy użyciu linki.",
+        "url": "2-LAMcpzODU"
     },
     {
         "id": 22,
@@ -194,8 +194,8 @@
         "name": "Tricep dips",
         "partName": "arms",
         "partTitle": "Ręce",
-        "description": "",
-        "url": ""
+        "description": "Prostowniki to ćwiczenie angażujące głównie tricepsy. Polega na opuszczaniu ciała w dół i podnoszeniu z powrotem.",
+        "url": "0326dy_-CzM"
     },
     {
         "id": 23,
@@ -203,8 +203,8 @@
         "name": "Hammer curls",
         "partName": "arms",
         "partTitle": "Ręce",
-        "description": "",
-        "url": ""
+        "description": "Młotki to ćwiczenie, które skupia się na wzmacnianiu mięśni ramion. Polega na uginaniu ramion podczas trzymania hantli jak młotków.",
+        "url": "zC3nLlEvin4"
     },
     {
         "id": 24,
@@ -212,8 +212,8 @@
         "name": "Single-arm dumbbell press",
         "partName": "arms",
         "partTitle": "Ręce",
-        "description": "",
-        "url": ""
+        "description": "Wyciskanie hantli jednorącz angażuje mięśnie ramion. Polega na pchanie hantla w górę jedną ręką.",
+        "url": "gC79JHUadz4"
     },
     {
         "id": 25,
@@ -221,8 +221,8 @@
         "name": "Crunches",
         "partName": "abs",
         "partTitle": "Brzuch",
-        "description": "",
-        "url": ""
+        "description": "Crunches to ćwiczenie skupiające się na wzmacnianiu mięśni brzucha. Polega na unoszeniu tułowia w górę z leżącej pozycji.",
+        "url": "Xyd_fa5zoEU"
     },
     {
         "id": 26,
@@ -230,8 +230,8 @@
         "name": "Plank",
         "partName": "abs",
         "partTitle": "Brzuch",
-        "description": "",
-        "url": ""
+        "description": "Plank to statyczne ćwiczenie wzmacniające mięśnie brzucha i core'u. Polega na utrzymaniu pozycji plank przez określony czas.",
+        "url": "Rhq4govSpAg"
     },
     {
         "id": 27,
@@ -239,8 +239,8 @@
         "name": "Russian twists",
         "partName": "abs",
         "partTitle": "Brzuch",
-        "description": "",
-        "url": ""
+        "description": "Russian twists to ćwiczenie skrętne, które angażuje mięśnie brzucha. Polega na obracaniu tułowia w lewo i w prawo.",
+        "url": "JyUqwkVpsi8"
     },
     {
         "id": 28,
@@ -248,8 +248,8 @@
         "name": "Leg raises",
         "partName": "abs",
         "partTitle": "Brzuch",
-        "description": "",
-        "url": ""
+        "description": "Leg raises to ćwiczenie koncentrujące się na mięśniach brzucha. Polega na unoszeniu nóg ku górze, utrzymując je prosto.",
+        "url": "JB2oyawG9KI"
     },
     {
         "id": 29,
@@ -257,8 +257,8 @@
         "name": "Mountain climbers",
         "partName": "abs",
         "partTitle": "Brzuch",
-        "description": "",
-        "url": ""
+        "description": "Mountain climbers to dynamiczne ćwiczenie, które angażuje mięśnie brzucha. Polega na naprzemiennym przyciąganiu kolan do klatki piersiowej.",
+        "url": "nmwgirgXLYM"
     },
     {
         "id": 30,
@@ -266,8 +266,8 @@
         "name": "Woodchoppers",
         "partName": "abs",
         "partTitle": "Brzuch",
-        "description": "",
-        "url": ""
+        "description": "Woodchoppers to ćwiczenie skrętne, które angażuje mięśnie brzucha. Polega na przeciąganiu rąk w dół z boku do przeciwległej strony.",
+        "url": "FA3S8CrSOTw"
     },
     {
         "id": 31,
@@ -275,8 +275,8 @@
         "name": "Squats",
         "partName": "legs",
         "partTitle": "Nogi",
-        "description": "",
-        "url": ""
+        "description": "Przysiady koncentrują się na wzmacnianiu mięśni nóg. Polega na schylaniu się w dół, trzymając prostą plecy.",
+        "url": "aclHkVaku9U"
     },
     {
         "id": 32,
@@ -284,8 +284,8 @@
         "name": "Lunges",
         "partName": "legs",
         "partTitle": "Nogi",
-        "description": "",
-        "url": ""
+        "description": "Wykroki to ćwiczenie angażujące mięśnie nóg. Polega na kroku w przód i opuszczaniu ciała w dół.",
+        "url": "QOVaHwm-Q6U"
     },
     {
         "id": 33,
@@ -293,8 +293,8 @@
         "name": "Deadlift",
         "partName": "legs",
         "partTitle": "Nogi",
-        "description": "",
-        "url": ""
+        "description": "Martwy ciąg to ćwiczenie, które skupia się na mięśniach nóg, pleców i pośladków. Polega na podnoszeniu ciężaru z ziemi.",
+        "url": "op9kVnSso6Q"
     },
     {
         "id": 34,
@@ -302,8 +302,8 @@
         "name": "Calf raises",
         "partName": "legs",
         "partTitle": "Nogi",
-        "description": "",
-        "url": ""
+        "description": "Wspięcia na palce koncentrują się na wzmacnianiu mięśni łydek. Polega na wznoszeniu się na palce stóp.",
+        "url": "-M4-G8p8fmc"
     },
     {
         "id": 35,
@@ -311,8 +311,8 @@
         "name": "Leg extensions",
         "partName": "legs",
         "partTitle": "Nogi",
-        "description": "",
-        "url": ""
+        "description": "Prostowanie nóg to ćwiczenie izolujące mięśnie przedniej strony uda. Polega na prostowaniu nóg przy użyciu maszyny.",
+        "url": "YyvSfVjQeL0"
     },
     {
         "id": 36,
@@ -320,7 +320,7 @@
         "name": "Leg curls",
         "partName": "legs",
         "partTitle": "Nogi",
-        "description": "",
-        "url": ""
+        "description": "Zginanie nóg skupia się na wzmacnianiu mięśni tylniej strony uda. Polega na zginaniu nóg przy użyciu maszyny.",
+        "url": "t9sTSr-JYSs"
     }
 ]

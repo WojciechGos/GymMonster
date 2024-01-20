@@ -372,16 +372,19 @@ const styles = StyleSheet.create({
         flex: 1
     },
     containerVideo: {
-        height: 210,
+        height: 208,
         backgroundColor: 'white',
         marginBottom: 30,
     },
     containerVideoText: {
-        backgroundColor: 'gray',
         flex: 1,
     },
     containerExerciseDetailsOut: {
         flex: 1
+    },
+    containerVideoTextText: {
+        fontSize: 20,
+        color: colors.text,
     }
 })
 export default styles
