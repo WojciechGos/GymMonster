@@ -3,13 +3,13 @@ import { Text } from "react-native-paper";
 import styles from "@utils/styles";
 import Header from "@components/Header/Header";
 
-const Pedometer = ({navigateToStatistics}) => {
+const Pedometer = ({navigateToStatistics, pastStepCount}) => {
   return (
       <View style={styles.homeComponentWrapper}>
           <Header title="Liczba kroków" navigation={navigateToStatistics} />
           <View style={styles.pedometerWrapper}>
               <View>
-                  <Text style={styles.h1}>11543</Text>
+                  <Text style={styles.h1}>{pastStepCount}</Text>
               </View>
               <View style={styles.progressWrapper}>
                   <Text style={styles.h3}>progres</Text>
