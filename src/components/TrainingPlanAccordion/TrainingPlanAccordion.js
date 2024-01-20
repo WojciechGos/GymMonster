@@ -11,6 +11,7 @@ const TrainingPlanAccordion = ({
     trainingData,
     updateExcercise,
     deleteExcercise,
+    goToCreator,
 }) => {
     const theme = useTheme()
     return (
@@ -39,7 +40,7 @@ const TrainingPlanAccordion = ({
                     </List.Accordion>
                 ))}
             </List.Section>
-            <GotoTrainingCreatorIcon />
+            <GotoTrainingCreatorIcon goToCreator={goToCreator} />
         </ScrollView>
     )
 }

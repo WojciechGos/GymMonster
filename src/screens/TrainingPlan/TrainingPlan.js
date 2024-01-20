@@ -4,10 +4,10 @@ import styles from "@utils/styles"
 import TrainingPlanAccordionContainer from "@components/TrainingPlanAccordion/TrainingPlanAccordionContainer"
 
 
-const TrainingPlan = () => {
+const TrainingPlan = ({navigation}) => {
     return (
         <View style={styles.containerNoCenter}>
-            <TrainingPlanAccordionContainer />
+            <TrainingPlanAccordionContainer navigation={navigation}/>
         </View>
     )
 }

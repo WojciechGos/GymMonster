@@ -13,11 +13,62 @@ import {
 const TrainingCreatorFormContainer = ({ navigation, route }) => {
     const data = route.params?.data
 
+    const [name, setName] = useState("")
     const [excercises, setExcercises] = useState([])
     const [renderState, setRenderState] = useState(true)
     const [oldExcercise, setOldExcercise] = useState({ name: "" })
     const [selectedDays, setSelectedDays] = useState({})
     const filePath = FileSystem.documentDirectory + "planCreator.json"
+
+    const saveTraining = async () => {
+        const collectionRef = collection(FIRESTORE_DB, "plan")
+
+        if (name.trim() === "") {
+            alert("Nie podałeś nazwy planu treningowego!")
+            return
+        }
+
+        if (Object.keys(selectedDays).length === 0) {
+            alert("Nie podałeś żadnej daty treningu!")
+            return
+        }
+
+        const jsonFile = await FileSystem.readAsStringAsync(filePath)
+        const excercisesFromFile = JSON.parse(jsonFile)
+        if (excercisesFromFile.length === 0) {
+            alert("Nie wybrałeś żadnego treningu!")
+            return
+        }
+
+        console.log("excercises")
+        console.log(excercisesFromFile)
+        const userData = await AsyncStorage.getItem("user")
+
+        // Parse the JSON data
+        const user = JSON.parse(userData)
+        console.log(user)
+
+        try {
+            const docRef = await addDoc(collectionRef, {
+                userId: user.uid,
+                name: name,
+                excercises: excercisesFromFile,
+            })
+            console.log("ref: " + docRef.id)
+        } catch (error) {
+            console.error(error)
+        }
+
+      
+        await clearVariables()
+        navigation.navigate('Home')
+    }
+
+    const clearVariables = async ()=>{
+        setSelectedDays({})
+        setName('')
+        await clearFile()
+    }
 
     const clearFile = async () => {
         console.log("clear")
@@ -30,35 +81,6 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
         } catch (error) {
             console.error("Error clearing file:", error)
         }
-    }
-    const saveTraining = async () => {
-        const excercises = await FileSystem.readAsStringAsync(filePath)
-
-        console.log("excercises")
-        console.log(excercises)
-        const userData = await AsyncStorage.getItem("user")
-
-        // Parse the JSON data
-        const user = JSON.parse(userData)
-        console.log(user)
-
-        // try {
-        //     const docRef = await addDoc(collection(FIRESTORE_DB, "Plan"), {
-        //         userId: user.uid,
-        //         excercises: excercises
-        //     })
-        //     console.log( "ref: "+ docRef.id)
-        // } catch (error) {
-        //     console.error(error)
-        // }
-
-        const querySnapshot = await getDocs(collection(FIRESTORE_DB, "Plan"))
-        console.log('odpowiedz')
-        querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data()}`)
-            console.log(doc.data())
-        })
-        // await clearFile()
     }
 
     const deleteExcercise = async (name) => {
@@ -188,6 +210,8 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
         deleteExcercise: deleteExcercise,
         selectedDays: selectedDays,
         setSelectedDays: setSelectedDays,
+        name: name,
+        setName: setName,
     }
     return <TrainingCreatorForm {...props} />
 }

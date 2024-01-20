@@ -13,6 +13,8 @@ const TrainingCreatorForm = ({
     deleteExcercise,
     selectedDays,
     setSelectedDays,
+    name, 
+    setName
     
 }) => {
     return (
@@ -25,6 +27,8 @@ const TrainingCreatorForm = ({
                 placeholder="Nazwa"
                 textColor={colors.text}
                 activeUnderlineColor={colors.primary}
+                value={name}
+                onChangeText={setName}
             />
             <Text variant="displayLarge" style={styles.h2}>
                 2. Wybierz ćwiczenia z atlasu
