@@ -36,11 +36,11 @@ export default function StackNavigation() {
                 component={CustomDrawer}
                 options={optionScreen}
             />
-            <Stack.Screen
+            {/* <Stack.Screen
                 name="Training"
                 component={Training}
                 options={optionScreen}
-            />
+            /> */}
 
         </Stack.Navigator>
     )

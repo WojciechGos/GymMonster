@@ -16,8 +16,9 @@ import styles from "@utils/styles"
 import DrawerContentContainer from "../components/DrawerContent/DrawerContentContainer"
 import DrawerHeaderContainer from "@components/DrawerHeader/DrawerHeaderContainer"
 import ProgressForm from "@screens/ProgressForm/ProgressForm"
+import Progress from "@screens/Progress/Progress"
 import ExcerciseDetails from "@screens/ExerciseDetails/ExcerciseDetails"
-
+import Training from "@screens/Training/Training"
 import StatisticTab from "./StatisticTab"
 
 const Drawer = createDrawerNavigator()
@@ -42,10 +43,7 @@ export default function CustomDrawer(props) {
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="Training Plan" component={TrainingPlan} />
 
-            <Drawer.Screen 
-                name="Statistic" 
-                component={StatisticTab}
-            />
+            <Drawer.Screen name="Statistic" component={StatisticTab} />
             <Drawer.Screen name="Achievement" component={Achievement} />
             <Drawer.Screen
                 name="Training Plan Creator"
@@ -63,6 +61,13 @@ export default function CustomDrawer(props) {
                 }}
             />
             <Drawer.Screen
+                name="Training"
+                component={Training}
+                options={{
+                    hideHeader: false,
+                }}
+            />
+            <Drawer.Screen
                 name="Excercise List"
                 component={ExcerciseList}
                 options={{
@@ -71,6 +76,7 @@ export default function CustomDrawer(props) {
             />
             {/* <Drawer.Screen name="Exercise Back" component={ExerciseBack} /> */}
             <Drawer.Screen name="Progress Form" component={ProgressForm} />
+            <Drawer.Screen name="Progress" component={Progress} />
         </Drawer.Navigator>
     )
 }

@@ -11,7 +11,7 @@ const DisplayTrainingContainer = ({ trainingData, date }) => {
       <View>
           {typeof trainingData !== "undefined" ? (
               typeof trainingData.excercises !== "undefined" ? (
-                  <DisplayTraining trainingData={trainingData} date={date}/>
+                  <DisplayTraining trainingData={trainingData} date={trainingData.date}/>
               ) : (
                   <DisplayNoTraining date={date} />
               )

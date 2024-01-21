@@ -79,6 +79,7 @@ const Training = ({ trainingData, handleSave, setExerciseData }) => {
                                                     }
                                                     placeholder="ciężar"
                                                     textColor={colors.text}
+                                                    keyboardType="numeric"
                                                     activeUnderlineColor={
                                                         colors.primary
                                                     }
