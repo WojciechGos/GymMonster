@@ -7,11 +7,11 @@ import colors from "@utils/colors"
 import GotoTrainingCreatorIcon from "./GotoTrainingCreatorIcon"
 
 const TrainingPlanAccordion = ({
-    handlePress,
     trainingData,
     updateExcercise,
     deleteExcercise,
     goToCreator,
+    addExcercise,
 }) => {
     const theme = useTheme()
     return (
@@ -28,7 +28,7 @@ const TrainingPlanAccordion = ({
                         {trainingSection.excercises.map((excercise) => (
                             <>
                                 <TrainingPlanAccordionItemContainer
-                                    key={excercise.id}
+                                    key={excercise.documentId}
                                     excerciseData={excercise}
                                     updateExcercise={updateExcercise}
                                     deleteExcercise={deleteExcercise}
@@ -36,11 +36,16 @@ const TrainingPlanAccordion = ({
                                 <Divider key={`${excercise.id}-divider`} />
                             </>
                         ))}
-                        <TrainingPlanAccordionItemAddExcercise />
+
+                        <TrainingPlanAccordionItemAddExcercise
+                            key={1} 
+                            addExcercise={addExcercise}
+                            documentId={trainingSection.documentId}
+                        />
                     </List.Accordion>
                 ))}
             </List.Section>
-            <GotoTrainingCreatorIcon goToCreator={goToCreator} />
+            <GotoTrainingCreatorIcon key={2} goToCreator={goToCreator} />
         </ScrollView>
     )
 }

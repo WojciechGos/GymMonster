@@ -51,7 +51,8 @@ const TrainingPlanAccordionEditItem = ({
                                         excerciseData.name,
                                         series,
                                         reps,
-                                        weight
+                                        weight,
+                                        excerciseData.documentId
                                     )
                                     showForm()
                                 }}
@@ -63,10 +64,15 @@ const TrainingPlanAccordionEditItem = ({
                                 />
                             </Pressable>
                         </View>
-                        <Pressable onPress={()=>{
-                            deleteExcercise(excerciseData.name)
-                            showForm()
-                        }} >
+                        <Pressable
+                            onPress={() => {
+                                deleteExcercise(
+                                    excerciseData.name,
+                                    excerciseData.documentId
+                                )
+                                showForm()
+                            }}
+                        >
                             <AntDesign
                                 name="delete"
                                 size={30}

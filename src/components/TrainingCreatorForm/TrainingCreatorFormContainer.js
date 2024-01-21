@@ -44,35 +44,35 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
             return
         }
 
-        console.log("excercises")
-        console.log(excercisesFromFile)
+        // console.log("excercises")
+        // console.log(excercisesFromFile)
         const userData = await AsyncStorage.getItem("user")
 
         // Parse the JSON data
         const user = JSON.parse(userData)
-        console.log(user)
+        // console.log(user)
 
         try {
             const docRef = await addDoc(collectionPlanRef, {
+                excercises: excercisesFromFile,
                 userId: user.uid,
                 name: name,
-                excercises: excercisesFromFile,
             })
-            console.log("ref: " + docRef.id)
+            // console.log("ref: " + docRef.id)
 
-            console.log(selectedDays)
+            // console.log(selectedDays)
             for (const date in selectedDays) {
                 const docTrainingPlannedRef = await addDoc(
                     collectionTrainingPlannedRef,
                     {
-                        userId: user.uid,
-                        date: date,
-                        name: name,
                         excercises: excercisesFromFile,
+                        userId: user.uid,
+                        name: name,
+                        date: date,
                     }
                 )
-                console.log(docTrainingPlannedRef.id)
-                console.log(`Date: ${date}`)
+                // console.log(docTrainingPlannedRef.id)
+                // console.log(`Date: ${date}`)
             }
         } catch (error) {
             console.error(error)
@@ -89,7 +89,7 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
     }
 
     const clearFile = async () => {
-        console.log("clear")
+        // console.log("clear")
         try {
             const initialData = []
             const initialJsonString = JSON.stringify(initialData)
@@ -102,14 +102,14 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
     }
 
     const deleteExcercise = async (name) => {
-        console.log("delete " + name)
+        // console.log("delete " + name)
         try {
             const existingData = await FileSystem.readAsStringAsync(filePath)
             const jsonData = JSON.parse(existingData)
-            console.log(jsonData)
+            // console.log(jsonData)
             const filteredData = jsonData.filter((item) => item.name !== name)
-            console.log("filtered")
-            console.log(filteredData)
+            // console.log("filtered")
+            // console.log(filteredData)
 
             const jsonString = JSON.stringify(filteredData)
             await FileSystem.writeAsStringAsync(filePath, jsonString)
@@ -121,7 +121,7 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
     }
 
     const updateExcercise = async (name, series, reps, weight) => {
-        console.log("update ................")
+        // console.log("update ................")
         try {
             const existingData = await FileSystem.readAsStringAsync(filePath)
             const jsonData = JSON.parse(existingData)
@@ -193,8 +193,8 @@ const TrainingCreatorFormContainer = ({ navigation, route }) => {
     const assignExcercisesFromFile = async () => {
         const existingData = await FileSystem.readAsStringAsync(filePath)
         const jsonData = JSON.parse(existingData)
-        console.log("")
-        console.log(jsonData)
+        // console.log("")
+        // console.log(jsonData)
         setExcercises(jsonData)
     }
 

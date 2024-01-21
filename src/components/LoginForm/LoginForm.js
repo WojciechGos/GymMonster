@@ -17,12 +17,13 @@ const LoginForm = ({
     return (
         <View>
             <Image source={logo} />
-        
+
             <View>
                 <Text style={styles.h3}>Email</Text>
                 <TextInput
                     style={styles.textInputForm}
                     placeholder="Wprowadź Email"
+                    keyboardType="email-address"
                     textColor={colors.text}
                     activeUnderlineColor={colors.primary}
                     value={email}

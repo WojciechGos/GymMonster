@@ -8,7 +8,7 @@ const HomeIncomingTrainingExcercise = ({excercise})=>{
                 {"\u2022"}
             </Text>
             <Text style={[styles.h4, styles.marginRight]}>
-                {excercise.name}
+                {excercise.title}
             </Text>
 
             <Text style={styles.h4}>
