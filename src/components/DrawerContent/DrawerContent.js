@@ -93,7 +93,7 @@ const CustomDrawer = ({ navigateToScreen, navigateToStatistic }) => {
             />
             <DrawerListItem
                 title="Zobacz postępy"
-                link="Training Plan Creator"
+                link="Progress"
                 handler={navigateToScreen}
                 icon={
                     <Entypo
