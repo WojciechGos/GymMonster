@@ -18,6 +18,8 @@ import DrawerHeaderContainer from "@components/DrawerHeader/DrawerHeaderContaine
 import ProgressForm from "@screens/ProgressForm/ProgressForm"
 import ExcerciseDetails from "@screens/ExerciseDetails/ExcerciseDetails"
 
+import StatisticTab from "./StatisticTab"
+
 const Drawer = createDrawerNavigator()
 
 export default function CustomDrawer(props) {
@@ -40,7 +42,10 @@ export default function CustomDrawer(props) {
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="Training Plan" component={TrainingPlan} />
 
-            <Drawer.Screen name="Statistic" component={Statistic} />
+            <Drawer.Screen 
+                name="Statistic" 
+                component={StatisticTab}
+            />
             <Drawer.Screen name="Achievement" component={Achievement} />
             <Drawer.Screen
                 name="Training Plan Creator"

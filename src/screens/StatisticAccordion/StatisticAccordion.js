@@ -5,12 +5,12 @@ import StatisticContainer from "@components/Statistic/StatisticContainer"
 import StatisticAccordionContainer from "../../components/StatisticAccordion/StatisticAccordionContainer"
 import StatisticChartContainer from "../../components/StatisticChart/StatisticChartContainer"
 
-const Statistic = ({route}) => {
-    console.log('Statistic item', route.params.data.item)
+const StatisticAccordion = ({ route }) => {
+    console.log('StatisticAccordion item', route.params.data.item)
     return (
         <View style={styles.containerNoCenter}>
-            <StatisticAccordionContainer route={route} />
+            <StatisticAccordionContainer route={route}/>
         </View>
     )
 }
-export default Statistic
+export default StatisticAccordion

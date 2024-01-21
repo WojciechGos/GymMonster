@@ -36,7 +36,7 @@ const ExcerciseListContainer = ({ navigation, route }) => {
             navigation.navigate("Excercise Details", { item })
         }
     }
-
+    
     const props = {
         goToIntent: goToIntent,
         excercises: excercises ? excercises : [],

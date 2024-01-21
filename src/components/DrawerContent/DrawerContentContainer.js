@@ -10,7 +10,7 @@ const DrawerContentContainer = ({navigation}) => {
     }
 
     const props = {
-        navigateToScreen:navigateToScreen,
+        navigateToScreen: navigateToScreen,
         navigateToStatistic: navigateToStatistic
     }
     

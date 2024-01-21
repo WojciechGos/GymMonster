@@ -363,6 +363,11 @@ const styles = StyleSheet.create({
     },
     editControlsWrapper :{
         justifyContent:"space-between"
+    },
+    containerChart: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
 export default styles
