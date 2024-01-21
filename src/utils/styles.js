@@ -365,6 +365,26 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    containerExerciseDetails: {
+        marginVertical: 30,
+        marginHorizontal: 10,
+        flex: 1
+    },
+    containerVideo: {
+        height: 208,
+        backgroundColor: 'white',
+        marginBottom: 30,
+    },
+    containerVideoText: {
+        flex: 1,
+    },
+    containerExerciseDetailsOut: {
+        flex: 1
+    },
+    containerVideoTextText: {
+        fontSize: 20,
+        color: colors.text,
     }
 })
 export default styles

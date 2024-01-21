@@ -219,23 +219,23 @@
         "series": [
           {
             "seria": 1,
-            "reps": 8,
-            "weight": 130
+            "reps": 50,
+            "weight": 0
           },
           {
             "seria": 2,
-            "reps": 8,
-            "weight": 120
+            "reps": 42,
+            "weight": 0
           },
           {
             "seria": 3,
-            "reps": 8,
-            "weight": 120
+            "reps": 42,
+            "weight": 0
           },
           {
             "seria": 4,
-            "reps": 8,
-            "weight": 120
+            "reps": 36,
+            "weight": 0
           }
         ]
       },
@@ -317,17 +317,17 @@
           "series": [
             {
               "seria": 1,
-              "reps": 15,
+              "reps": 40,
               "weight": 0
             },
             {
               "seria": 2,
-              "reps": 15,
+              "reps": 35,
               "weight": 0
             },
             {
               "seria": 3,
-              "reps": 15,
+              "reps": 35,
               "weight": 0
             }
           ]
