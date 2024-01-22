@@ -12,14 +12,14 @@ const PedometerContainer = ({ navigation }) => {
         setIsPedometerAvailable(String(isAvailable));
 
         if (isAvailable) {
-            // const end = new Date();
-            // const start = new Date();
-            // start.setDate(end.getDate() - 1);
+            const end = new Date();
+            const start = new Date();
+            start.setDate(end.getDate() - 1);
 
-            // const pastStepCountResult = await Pedometer.getStepCountAsync(start, end);
-            // if (pastStepCountResult) {
-            //     setPastStepCount(pastStepCountResult.steps);
-            // }
+            const pastStepCountResult = await Pedometer.getStepCountAsync(start, end);
+            if (pastStepCountResult) {
+                setPastStepCount(pastStepCountResult.steps);
+            }
 
             return Pedometer.watchStepCount(result => {
                 setCurrentStepCount(result.steps);
@@ -29,8 +29,8 @@ const PedometerContainer = ({ navigation }) => {
 
     useEffect(() => {
         const subscription = subscribe();
-        // return () => subscription && subscription.remove();
-        return () => subscription 
+        return () => subscription && subscription.remove();
+
     }, []);
 
     console.log('isPedometerAvailable',isPedometerAvailable);
@@ -43,7 +43,8 @@ const PedometerContainer = ({ navigation }) => {
     }
     const props = {
         navigateToStatistics: navigateToStatistics,
-        pastStepCount: pastStepCount
+        pastStepCount: pastStepCount,
+        currentStepCount: currentStepCount,
     }
     return <Pedometer_ {...props} />
 }

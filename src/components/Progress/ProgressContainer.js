@@ -1,18 +1,11 @@
 import Progress from "./Progress"
-import { useState } from "react"
-
-const data = [
-    {
-        date: "2023-10-20",
-        
-    }
-]
+import React from 'react';
 
 const ProgressContainer = () => {
+  
+    const photoUri = 'file:///data/user/0/host.exp.exponent/files/example.jpg';
 
-    [progressData, setProgressData] = useState([]);
+  return <Progress photoUri={photoUri} />;
+};
 
-    return <Progress />
-}
-
-export default ProgressContainer
+export default ProgressContainer;

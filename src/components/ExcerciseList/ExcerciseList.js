@@ -8,10 +8,11 @@ const ExcerciseList = ({ excercises, title, goToIntent }) => {
 
     return (
         <View style={styles.container}>
-            <ExcerciseHeader title={title} />
+           
             {excercises.map((item) => (
                 <Pressable key={item.id} onPress={() => goToIntent(item)}>
                     <View style={styles.spacing}>
+      
                         <Text style={styles.exercisesWriting}>
                             {item.title}
                         </Text>
