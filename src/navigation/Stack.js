@@ -5,6 +5,7 @@ import Home from '@screens/Home/Home'
 import Register from '@screens/Authenticate/Register'
 import Training from "@screens/Training/Training"
 import CustomDrawer from "./Drawer"
+import Camera from "@screens/Camera/Camera"
 
 
 const Stack = createNativeStackNavigator()
@@ -39,6 +40,11 @@ export default function StackNavigation() {
             <Stack.Screen
                 name="Training"
                 component={Training}
+                options={optionScreen}
+            />
+               <Stack.Screen
+                name="Camera"
+                component={Camera}
                 options={optionScreen}
             />
 

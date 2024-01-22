@@ -4,7 +4,7 @@ import ExcerciseDetailsContainer from "@components/ExcerciseDetails/ExcerciseDet
 
 const ExcerciseDetails = ({route}) => {
     return (
-        <View style={styles.container}>
+        <View style={styles.containerNoCenter}>
             <ExcerciseDetailsContainer route={route} />
         </View>
     )

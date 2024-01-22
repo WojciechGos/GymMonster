@@ -37,6 +37,19 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 10,
     },
+    textInputFormProgress: {
+        color: colors.text,
+        marginVertical: 5,
+        width: 300,
+        borderColor: colors.primary,
+        height: 30,
+        borderWidth: 2,
+        backgroundColor: colors.background,
+        
+        borderRadius: 5,
+        padding: 10,
+        
+    },
     textButton: {
         color: colors.text,
         fontSize: 20,
@@ -183,7 +196,7 @@ const styles = StyleSheet.create({
         height: 90,
     },
     exercisesWriting: {
-        marginVertical: 10,
+        marginVertical: 20,
         fontSize: 34,
         color: colors.text,
     },
@@ -365,6 +378,26 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    containerExerciseDetails: {
+        marginVertical: 30,
+        marginHorizontal: 10,
+        flex: 1
+    },
+    containerVideo: {
+        height: 208,
+        backgroundColor: 'white',
+        marginBottom: 30,
+    },
+    containerVideoText: {
+        flex: 1,
+    },
+    containerExerciseDetailsOut: {
+        flex: 1
+    },
+    containerVideoTextText: {
+        fontSize: 20,
+        color: colors.text,
     }
 })
 export default styles
