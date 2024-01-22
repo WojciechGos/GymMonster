@@ -4,11 +4,17 @@ import StatisticChart from '@screens/StatisticChart/StatisticChart';
 import colors from '@utils/colors';
 import { useEffect } from 'react';
 
+
 const Tab = createBottomTabNavigator();
 
-export default function StatisticTab({ route }) {
-    console.log('StatisticTab item', route.params.data);
-    const data = route.params?.data
+export default function StatisticTab({ route, navigation }) {
+    console.log("StatisticTab item", route.params.data)
+    const item = route.params?.data
+
+    useEffect(() => {
+        // You can update the route params dynamically here
+        navigation.setParams({ item: item })
+    }, [item]) // Update this dependency array based on when you want to update params
 
     return (
         <Tab.Navigator
@@ -26,7 +32,7 @@ export default function StatisticTab({ route }) {
                     tabBarLabel: "Accordion",
                     headerShown: false,
                 }}
-                initialParams={data}
+                initialParams={item}
             />
             <Tab.Screen
                 name="StatisticChart"
@@ -35,7 +41,7 @@ export default function StatisticTab({ route }) {
                     tabBarLabel: "Chart",
                     headerShown: false,
                 }}
-                initialParams={data}
+                initialParams={item}
             />
         </Tab.Navigator>
     )

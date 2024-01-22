@@ -1,0 +1,330 @@
+[
+    {
+        "id": 1,
+        "date": "2023-12-10",
+        "name": "Horizontal lift pull-up",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 10,
+                "weight": 100
+            },
+            {
+                "seria": 2,
+                "reps": 8,
+                "weight": 100
+            },
+            {
+                "seria": 3,
+                "reps": 8,
+                "weight": 100
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "date": "2023-08-22",
+        "title": "wyciskanie na ławce płaskiej",
+        "name": "Bench press",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 10,
+                "weight": 120
+            },
+            {
+                "seria": 2,
+                "reps": 10,
+                "weight": 120
+            },
+            {
+                "seria": 3,
+                "reps": 8,
+                "weight": 120
+            },
+            {
+                "seria": 4,
+                "reps": 4,
+                "weight": 120
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "date": "2023-06-15",
+        "title": "wyciskanie na ławce płaskiej",
+        "name": "Bench press",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 6,
+                "weight": 150
+            },
+            {
+                "seria": 2,
+                "reps": 6,
+                "weight": 130
+            },
+            {
+                "seria": 3,
+                "reps": 6,
+                "weight": 120
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "date": "2023-04-05",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "title": "wyciskanie na ławce płaskiej",
+        "name": "Bench press",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 8,
+                "weight": 80
+            },
+            {
+                "seria": 2,
+                "reps": 6,
+                "weight": 80
+            },
+            {
+                "seria": 3,
+                "reps": 6,
+                "weight": 80
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "date": "2023-02-18",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "title": "wyciskanie na ławce płaskiej",
+        "name": "Bench press",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 12,
+                "weight": 25
+            },
+            {
+                "seria": 2,
+                "reps": 12,
+                "weight": 25
+            },
+            {
+                "seria": 3,
+                "reps": 12,
+                "weight": 25
+            },
+            {
+                "seria": 4,
+                "reps": 12,
+                "weight": 25
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "date": "2022-12-30",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "name": "Leg curls",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 8,
+                "weight": 80
+            },
+            {
+                "seria": 2,
+                "reps": 8,
+                "weight": 80
+            },
+            {
+                "seria": 3,
+                "reps": 10,
+                "weight": 80
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "date": "2022-10-14",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "name": "Incline bench press",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 8,
+                "weight": 110
+            },
+            {
+                "seria": 2,
+                "reps": 8,
+                "weight": 100
+            },
+            {
+                "seria": 3,
+                "reps": 8,
+                "weight": 100
+            },
+            {
+                "seria": 4,
+                "reps": 7,
+                "weight": 100
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "date": "2022-08-07",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "name": "Lateral raises",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 12,
+                "weight": 15
+            },
+            {
+                "seria": 2,
+                "reps": 12,
+                "weight": 15
+            },
+            {
+                "seria": 3,
+                "reps": 12,
+                "weight": 15
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "date": "2022-06-02",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "name": "Tricep dips",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 15,
+                "weight": 25
+            },
+            {
+                "seria": 2,
+                "reps": 15,
+                "weight": 25
+            },
+            {
+                "seria": 3,
+                "reps": 15,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "date": "2022-04-23",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "name": "Squats",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 50,
+                "weight": 0
+            },
+            {
+                "seria": 2,
+                "reps": 42,
+                "weight": 0
+            },
+            {
+                "seria": 3,
+                "reps": 42,
+                "weight": 0
+            },
+            {
+                "seria": 4,
+                "reps": 36,
+                "weight": 0
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "date": "2022-02-12",
+        "name": "Pull-ups on a bar",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 10,
+                "weight": 20
+            },
+            {
+                "seria": 2,
+                "reps": 10,
+                "weight": 20
+            },
+            {
+                "seria": 3,
+                "reps": 10,
+                "weight": 18
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "date": "2021-12-05",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "name": "Dumbbell bench press",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 12,
+                "weight": 90
+            },
+            {
+                "seria": 2,
+                "reps": 12,
+                "weight": 95
+            },
+            {
+                "seria": 3,
+                "reps": 12,
+                "weight": 100
+            },
+            {
+                "seria": 4,
+                "reps": 12,
+                "weight": 105
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "date": "2021-09-26",
+        "userId": "uNLzWawgIlMHTA0jRQlpX9PCaZ62",
+        "name": "Hammer curls",
+        "series": [
+            {
+                "seria": 1,
+                "reps": 12,
+                "weight": 20
+            },
+            {
+                "seria": 2,
+                "reps": 12,
+                "weight": 22
+            },
+            {
+                "seria": 3,
+                "reps": 12,
+                "weight": 24
+            }
+        ]
+    }
+]

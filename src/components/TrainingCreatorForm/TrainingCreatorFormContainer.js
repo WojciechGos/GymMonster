@@ -11,7 +11,7 @@ import {
 } from "firebase/firestore"
 
 const TrainingCreatorFormContainer = ({ navigation, route }) => {
-    const data = route.params?.data
+    const data = route.params?.data 
 
     const [name, setName] = useState("")
     const [excercises, setExcercises] = useState([])

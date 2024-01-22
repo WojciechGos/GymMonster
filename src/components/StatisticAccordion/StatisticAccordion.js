@@ -6,11 +6,14 @@ import colors from "@utils/colors"
 
 const StatisticAccordion = ({ data }) => {
     const theme = useTheme()
+    console.log("data")
+    console.log(data) 
     return (
         <ScrollView>
             <List.Section key={0}>
-                {data.map((historicData) => {
-                    ;<List.Accordion
+                {data.map((historicData) => (
+   
+                    <List.Accordion
                         key={historicData.id}
                         title={historicData.date}
                         titleStyle={styles.h2}
@@ -31,7 +34,7 @@ const StatisticAccordion = ({ data }) => {
                             ))}
                         </View>
                     </List.Accordion>
-                })}
+                ))}
             </List.Section>
         </ScrollView>
     )

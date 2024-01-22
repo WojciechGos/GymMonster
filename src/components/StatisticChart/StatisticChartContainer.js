@@ -2,7 +2,7 @@ import StatisticChart from "./StatisticChart"
 import excercisesHistoryListData from "@data/excercisesHistoryListData"
 
 const StatisticChartContainer = ({ route }) => {
-    const data = route.params?.data
+    const data = route.params?.item
 
     const maxWeights = () => {
         return excercisesHistoryListData
