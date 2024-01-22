@@ -1,28 +1,20 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import StatisticAccordion from '@screens/StatisticAccordion/StatisticAccordion';
-import StatisticChart from '@screens/StatisticChart/StatisticChart';
-import colors from '@utils/colors';
-import { useEffect } from 'react';
+import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation"
+import StatisticAccordion from "@screens/StatisticAccordion/StatisticAccordion"
+import StatisticChart from "@screens/StatisticChart/StatisticChart"
+import colors from "@utils/colors"
+import { useEffect, useState } from "react"
 
+const Tab = createMaterialBottomTabNavigator()
 
-const Tab = createBottomTabNavigator();
-
-export default function StatisticTab({ route, navigation }) {
-    console.log("StatisticTab item", route.params.data)
-    const item = route.params?.data
-
-    useEffect(() => {
-        // You can update the route params dynamically here
-        navigation.setParams({ item: item })
-    }, [item]) // Update this dependency array based on when you want to update params
+export default function StatisticTab({ route }) {
+    console.log("StatisticTab item", route.params.data.item)
 
     return (
         <Tab.Navigator
-            screenOptions={{
-                tabBarStyle: {
-                    backgroundColor: colors.background,
-                },
-                tabBarActiveTintColor: "white",
+            swipeEnabled={true}
+            activeColor={colors.text}
+            barStyle={{
+                backgroundColor: colors.background,
             }}
         >
             <Tab.Screen
@@ -30,18 +22,16 @@ export default function StatisticTab({ route, navigation }) {
                 component={StatisticAccordion}
                 options={{
                     tabBarLabel: "Accordion",
-                    headerShown: false,
                 }}
-                initialParams={item}
+                initialParams={route.params}
             />
             <Tab.Screen
                 name="StatisticChart"
                 component={StatisticChart}
                 options={{
                     tabBarLabel: "Chart",
-                    headerShown: false,
                 }}
-                initialParams={item}
+                initialParams={route.params}
             />
         </Tab.Navigator>
     )
