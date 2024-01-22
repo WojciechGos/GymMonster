@@ -12,13 +12,13 @@ const LoginFormContainer = ({ navigation }) => {
 
     const authenticate = async () => {
         try {
-            // const response = await signInWithEmailAndPassword(
-            //     auth,
-            //     email,
-            //     password
-            // )
-            // console.log(response)
-            // saveUserToAsyncStorage(response)
+            const response = await signInWithEmailAndPassword(
+                auth,
+                email,
+                password
+            )
+            console.log(response)
+            saveUserToAsyncStorage(response)
             navigation.navigate("HomeStack")
         } catch (error) {
             // console.error(error)
