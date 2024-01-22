@@ -17,7 +17,8 @@ const ProgressForm = ({goToProgress, goToCamera}) => {
             </Text>
             <TextInput 
                 style={styles.textInputFormProgress}  
-              
+                textColor={colors.text} 
+                
                 keyboardType="numeric"
             />
         </View>

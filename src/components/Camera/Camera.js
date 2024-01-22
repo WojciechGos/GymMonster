@@ -24,7 +24,7 @@ export default function Cam({goToProgressForm}) {
     if (cameraRef) {
       try {
         const { uri } = await cameraRef.takePictureAsync();
-        const projectFolder = `${FileSystem.documentDirectory}public/photos/`;
+        const projectFolder = `${FileSystem.documentDirectory}`;
         const fileName = `photo_${Date.now()}.jpg`;
         const newUri = `${projectFolder}${fileName}`;
 
