@@ -6,91 +6,83 @@ import colors from "@utils/styles"
 import ButtonWithoutMargin from "@components/ButtonWithoutMargin/ButtonWithoutMargin"
 import ButtonWithCam from "@components/ButtonWithCam/ButtonWithCam";
 
-const ProgressForm = ({goToProgress}) => {
+const ProgressForm = ({goToProgress, goToCamera}) => {
     return (
       
-    <View style={styles.container}>
-    
-        <Text style={styles.smallHeader}>
-            Formularz wymiarów
-        </Text>
-
-            <View >
-                <Text></Text>
+        <View>
+        
+        <View >
+            <Text style={styles.h4} >
+                Obwód klatki piersiowej
+            </Text>
+            <TextInput 
+                style={styles.textInputFormProgress}  
               
-                <Text style={styles.h4} >
-                    Obwód klatki piersiowej                        </Text>
-                <TextInput
-                    style={styles.textInputForm2}
-                    
-                    textColor={colors.text}
-                    activeUnderlineColor={colors.primary}
+                keyboardType="numeric"
+            />
+        </View>
+
+
+        <View >
+            <Text style={styles.h4} >
+            Obwód brzucha
+            </Text>
+            <TextInput 
+                style={styles.textInputFormProgress} 
+                textColor={colors.text} 
+                              
+                keyboardType="numeric"
                 />
-            </View>
-            <View >
-                <Text style={styles.h4} >
-                    Obwód brzucha                                       </Text>
-                <TextInput
-                    style={styles.textInputForm2}
-                   
-                    textColor={colors.text}
-                    secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
-            </View>
-
-            <View >
-                <Text style={styles.h4} >
-                    Obwód ramimenia                                  </Text>
-                <TextInput
-                    style={styles.textInputForm2}
-                   
-                    textColor={colors.text}
-                    secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
-            </View>
-
-            <View >
-                <Text style={styles.h4} >
-                    Obwód przedramienia                           </Text>
-                <TextInput
-                    style={styles.textInputForm2}
-                   
-                    textColor={colors.text}
-                    secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
-            </View>
-
-            <View >
-                <Text style={styles.h4} >
-                    Obwód uda                                              </Text>
-                <TextInput
-                    style={styles.textInputForm2}
-                    
-                    textColor={colors.text}
-                    secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
-            </View>
-
-            <View >
-                <Text style={styles.h4} >
-                    Obwód łydki                                            </Text>
-                <TextInput
-                    style={styles.textInputForm2}
-                    
-                    textColor={colors.text}
-                    secureTextEntry={true}
-                    activeUnderlineColor={colors.primary} />
-                    <Text></Text>
-            </View>
-
-            <View style={styles.spacing2}>
-                <ButtonWithoutMargin name='Zapisz' handler={goToProgress}  />
-                <Text>                             </Text>
-                <ButtonWithCam handler={goToProgress} />
-            </View>
+        </View>
+        <View >
+            <Text style={styles.h4} >
+            Obwód ramienia
+            </Text>
+            <TextInput 
+                style={styles.textInputFormProgress} 
+                textColor={colors.text}
+                keyboardType="numeric"
+                />
 
         </View>
+        <View >
+            <Text style={styles.h4} >
+            Obwód przedramienia
+            </Text>
+            <TextInput 
+                style={styles.textInputFormProgress} 
+                textColor={colors.text}
+                keyboardType="numeric"
+                />
+        </View>
+        <View >
+            <Text style={styles.h4} >
+            Obwód uda
+            </Text>
+            <TextInput 
+                style={styles.textInputFormProgress}  
+                textColor={colors.text}
+                keyboardType="numeric"
+                />
+        </View>
+        <View >
+            <Text style={styles.h4} >
+            Obwód łydki
+            </Text>
+            <TextInput 
+                style={styles.textInputFormProgress}
+                textColor={colors.text} 
+                keyboardType="numeric"
+                />
+        </View>
+
+        <View style={styles.loginForgotPasswordWrapper}>
+                <ButtonWithoutMargin name='Zapisz' handler={goToProgress}  /> 
+                <ButtonWithCam handler={goToCamera}/>
+            </View>
+    </View>
     )
+    
 }
 
 export default ProgressForm
