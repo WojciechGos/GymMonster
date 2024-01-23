@@ -1,23 +1,18 @@
 import StatisticChart from "./StatisticChart"
-import excercisesHistoryListData from "@data/excercisesHistoryListData"
 
-const StatisticChartContainer = ({ route }) => {
-    const data = route.params?.data
-
-    const maxWeights = () => {
-        return excercisesHistoryListData
-            .filter((historyExercise) => historyExercise.name === data.item.name)
-            .map((matchingExercise) =>
-                Math.max(...matchingExercise.series.map((serie) => serie.weight))
-            );
-    }
-    console.log('maxWeights ' + maxWeights())
+const StatisticChartContainer = ({ route, navigation }) => {
+    const data = route.params.data
+    const maxWeights = data
+        .map((matchingExercise) =>
+            Math.max(...matchingExercise.series.map((serie) => serie.weight))
+        );
 
     const props = {
-        data: excercisesHistoryListData,
+        data: data,
         maxWeights: maxWeights,
-        route: route,
+        navigation: navigation
     }
+
     return <StatisticChart {...props} />
 }
 

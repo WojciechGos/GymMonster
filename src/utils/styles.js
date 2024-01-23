@@ -398,6 +398,24 @@ const styles = StyleSheet.create({
     containerVideoTextText: {
         fontSize: 20,
         color: colors.text,
+    },
+    chartButton: {
+        height: 50,
+        backgroundColor: 'white',
+        width: 150,
+        borderRadius: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderColor: '#E0E0E0',
+        borderWidth: 5,
+    },
+    chartButtonWrapper: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 100,
+    },
+    chartButtonText: {
+        fontSize: 20
     }
 })
 export default styles

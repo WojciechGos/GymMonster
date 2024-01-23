@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text } from "react-native-paper"
 import styles from "@utils/styles";
-import { View, Dimensions } from "react-native";
+import { View, Dimensions, Pressable } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 
-const StatisticChart = ({ data, route, maxWeights}) => {
-  const dataMax = maxWeights();
+const StatisticChart = ({ data, navigation, maxWeights }) => {
+  const dataMax = maxWeights;
   const labels = dataMax.map((value, index) => index + 1);
 
   return (
@@ -44,7 +44,14 @@ const StatisticChart = ({ data, route, maxWeights}) => {
           borderRadius: 16
         }}
       />
-      </View>
+      <Pressable style={styles.chartButtonWrapper} onPress={() => navigation.goBack()}>
+        <View style={styles.chartButton}>
+          <Text style={styles.chartButtonText}>
+            Powrócić
+          </Text>
+        </View>
+      </Pressable>
+    </View>
   );
 }
 

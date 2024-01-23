@@ -16,7 +16,6 @@
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/drawer": "6.6.6",
-    "@react-navigation/material-bottom-tabs": "^5.3.19",
     "@react-navigation/native": "6.1.9",
     "@react-navigation/native-stack": "6.9.17",
     "@shopify/react-native-skia": "0.1.196",
@@ -25,6 +24,7 @@
     "expo": "~49.0.8",
     "expo-av": "~13.4.1",
     "expo-camera": "~13.4.4",
+    "expo-file-system": "~15.4.5",
     "expo-media-library": "~15.4.1",
     "expo-sensors": "~12.3.0",
     "expo-sharing": "~11.5.0",
@@ -45,8 +45,7 @@
     "react-native-webview": "^13.6.4",
     "react-native-youtube-iframe": "^2.3.0",
     "victory": "^36.7.0",
-    "victory-native": "^40.0.3",
-    "expo-file-system": "~15.4.5"
+    "victory-native": "^40.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

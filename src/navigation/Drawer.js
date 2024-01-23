@@ -18,6 +18,8 @@ import DrawerHeaderContainer from "@components/DrawerHeader/DrawerHeaderContaine
 import ProgressForm from "@screens/ProgressForm/ProgressForm"
 import Progress from "@screens/Progress/Progress"
 import ExcerciseDetails from "@screens/ExerciseDetails/ExcerciseDetails"
+import StatisticAccordion from "@screens/StatisticAccordion/StatisticAccordion"
+import StatisticChart from "@screens/StatisticChart/StatisticChart"
 
 import StatisticTab from "./StatisticTab"
 
@@ -45,7 +47,11 @@ export default function CustomDrawer(props) {
 
             <Drawer.Screen 
                 name="Statistic" 
-                component={StatisticTab}
+                component={StatisticAccordion}
+            />
+            <Drawer.Screen 
+                name="StatisticChart" 
+                component={StatisticChart}
             />
             <Drawer.Screen name="Achievement" component={Achievement} />
             <Drawer.Screen

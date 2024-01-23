@@ -5,7 +5,7 @@ import { View, ScrollView, TextInput, Pressable } from "react-native";
 import colors from '@utils/colors';
 import Button from "@components/Button/Button";
 
-const Training = ({ trainingData, handleSave, setExerciseData }) => {
+const Training = ({ trainingData, handleSave, handleRepsChange }) => {
 
     return (
         <View style={styles.containerNoCenter}>
@@ -39,23 +39,14 @@ const Training = ({ trainingData, handleSave, setExerciseData }) => {
                                                         placeholder="powtórzenia"
                                                         textColor={colors.text}
                                                         activeUnderlineColor={colors.primary}
-                                                        onChangeText={(reps) => setExerciseData(prevData => ({
-                                                            ...prevData,
-                                                            [item.name]: {
-                                                                ...prevData[item.name],
-                                                                [`seria${i}`]: {
-                                                                    repetitions: reps,
-                                                                    weight: prevData[item.name]?.[`seria${i}`]?.weight || ''
-                                                                }
-                                                            }
-                                                        }))}
+                                                        onChangeText={(reps) => handleRepsChange(reps, item, i)}
                                                     />
                                                     <TextInput
                                                         style={styles.textInputForm3}
                                                         placeholder="ciężar"
                                                         textColor={colors.text}
                                                         activeUnderlineColor={colors.primary}
-                                                        onChangeText={(weight) => setExerciseData(prevData => ({
+                                                        onChangeText={{/*(weight) => setExerciseData(prevData => ({
                                                             ...prevData,
                                                             [item.name]: {
                                                                 ...prevData[item.name],
@@ -65,7 +56,7 @@ const Training = ({ trainingData, handleSave, setExerciseData }) => {
                                                                     repetitions: prevData[item.name]?.[`seria${i}`]?.repetitions || ''
                                                                 }
                                                             }
-                                                        }))}
+                                                        }))*/}}
                                                     />
                                                 </View>
                                             );
