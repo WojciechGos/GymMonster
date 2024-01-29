@@ -5,11 +5,11 @@ import StatisticContainer from "@components/Statistic/StatisticContainer"
 import StatisticAccordionContainer from "../../components/StatisticAccordion/StatisticAccordionContainer"
 import StatisticChartContainer from "../../components/StatisticChart/StatisticChartContainer"
 
-const StatisticChart = ({ route }) => {
-    // console.log('StatisticChart item', route.params.item)
+const StatisticChart = ({ route, navigation }) => {
+    console.log('StatisticChart item', route.params.data.item)
     return (
         <View style={styles.container}>
-            <StatisticChartContainer route={route}/>
+            <StatisticChartContainer route={route} navigation={navigation}/>
         </View>
     )
 }

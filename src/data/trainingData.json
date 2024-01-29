@@ -5,32 +5,28 @@
     "excercises": [
       {
         "id": 3,
-        "title": "wyciskanie na ławce płaskiej",
-        "name": "Bench press",
+        "name": "Wyciskanie sztangi na płasko",
         "series": 3,
         "reps": 8,
         "weight": 100
       },
       {
         "id": 4,
-        "title": "Wyciskanie sztangi skos",
-        "name": "Incline bench press",
+        "name": "Wyciskanie sztangi skos",
         "series": 3,
         "reps": 12,
         "weight": 60
       },
       {
         "id": 5,
-        "title": "Rozpiętki",
-        "name": "Dumbbell flyes",
+        "name": "Rozpiętki",
         "series": 4,
         "reps": 16,
         "weight": 20
       },
       {
         "id": 6,
-        "title": "Wyciskanie hantli na ławce poziomej",
-        "name": "Dumbbell bench press",
+        "name": "Wyciskanie hantli na ławce poziomej",
         "series": 5,
         "reps": 5,
         "weight": 60
@@ -43,32 +39,28 @@
     "excercises": [
       {
         "id": 7,
-        "title": "Podciąganie na drążku",
-        "name": "Pull-ups on a bar",
+        "name": "Podciąganie na drążku",
         "series": 3,
         "reps": 8,
         "weight": 20
       },
       {
         "id": 8,
-        "title": "Wiosłowanie",
-        "name": "Rowing",
+        "name": "Wiosłowanie",
         "series": 3,
         "reps": 12,
         "weight": 60
       },
       {
         "id": 9,
-        "title": "Martwy ciąg",
-        "name": "Dead pull",
+        "name": "Wiosłowanie kettlem",
         "series": 4,
         "reps": 16,
         "weight": 20
       },
       {
         "id": 10,
-        "title": "Wiosłowanie kettlem",
-        "name": "Kettlebell rowing",
+        "name": "Ściąganie wyciągu górnego",
         "series": 5,
         "reps": 5,
         "weight": 60
@@ -81,32 +73,28 @@
     "excercises": [
       {
         "id": 11,
-        "title": "Przysiady",
-        "name": "Squats",
+        "name": "Podciąganie na drążku",
         "series": 3,
         "reps": 8,
         "weight": 20
       },
       {
         "id": 12,
-        "title": "Wykroki",
-        "name": "Lunges",
+        "name": "Wiosłowanie",
         "series": 3,
         "reps": 12,
         "weight": 60
       },
       {
         "id": 13,
-        "title": "Wspięcia na palce",
-        "name": "Calf raises",
+        "name": "Wiosłowanie kettlem",
         "series": 4,
         "reps": 16,
         "weight": 20
       },
       {
         "id": 14,
-        "title": "Prostowanie nóg",
-        "name": "Leg extensions",
+        "name": "Ściąganie wyciągu górnego",
         "series": 5,
         "reps": 5,
         "weight": 60
