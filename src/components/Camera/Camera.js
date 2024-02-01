@@ -9,6 +9,7 @@ export default function Cam({goToProgressForm}) {
   const [type, setType] = useState(Camera.Constants.Type.back);
   const [permission, requestPermission] = Camera.useCameraPermissions();
   const [photoUri, setPhotoUri] = useState(null);
+  const [currentPhoto, setCurrentPhoto] = useState(null);
 
   let cameraRef = useRef();
 
@@ -38,6 +39,7 @@ export default function Cam({goToProgressForm}) {
         console.log('Zdjęcie zapisane w folderze:', projectFolder);
 
         setPhotoUri(newUri);
+        setCurrentPhoto(newUri);
       } catch (error) {
         console.error('Błąd podczas robienia zdjęcia:', error);
       }
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
   },
   previewImage: {
     width: 350,
-    height: 680,
+    height: 580,
   },
   buttonContainer: {
     flexDirection: 'row',
