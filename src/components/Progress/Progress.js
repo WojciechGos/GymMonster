@@ -3,7 +3,7 @@ import { View, ScrollView, Image } from "react-native"
 import { Text, List } from "react-native-paper"
 import styles from "@utils/styles"
 
-const Progress = ({ data }) => {
+const Progress = ({ data, currentPhoto }) => {
 
     return (
         <View>
@@ -23,7 +23,7 @@ const Progress = ({ data }) => {
                             <View style={{ margin: 10, flexDirection: 'row' }}>
                                 <View style={{marginRight: 10}}>
                                     <Text style={styles.text}>
-                                        Obwod klatki piersiowej: {item.chestGirth}
+                                        Owod klatki piersiowej: {item.chestGirth}
                                     </Text>
                                     <Text style={styles.text}>
                                         Obwod brzucha: {item.abdominalGirth}
@@ -41,10 +41,12 @@ const Progress = ({ data }) => {
                                         Obwod lydki: {item.calfGirth}
                                     </Text>
                                 </View>
+                                {currentPhoto && (
                                 <Image
-                                    source={require('src/images/progress.jpg')}
+                                    source={{ uri: currentPhoto }}
                                     style={{ width: 170, height: 133 }}
                                 />
+                                )}
                             </View>
                         </List.Accordion>
                     )
