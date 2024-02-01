@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Camera } from 'expo-camera';
 import { Button, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as FileSystem from 'expo-file-system';
-import { shareAsync } from 'expo-sharing';
 import * as MediaLibrary from 'expo-media-library';
 
 export default function Cam({goToProgressForm}) {
@@ -40,6 +39,8 @@ export default function Cam({goToProgressForm}) {
 
         setPhotoUri(newUri);
         setCurrentPhoto(newUri);
+        await MediaLibrary.saveToLibraryAsync(newUri);
+
       } catch (error) {
         console.error('Błąd podczas robienia zdjęcia:', error);
       }
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   },
   previewImage: {
     width: 350,
-    height: 580,
+    height: 610,
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -110,3 +111,4 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
+

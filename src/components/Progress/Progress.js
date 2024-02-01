@@ -41,12 +41,10 @@ const Progress = ({ data, currentPhoto }) => {
                                         Obwod lydki: {item.calfGirth}
                                     </Text>
                                 </View>
-                                {currentPhoto && (
                                 <Image
-                                    source={{ uri: currentPhoto }}
+                                    source={require('src/images/progress.jpg')}
                                     style={{ width: 170, height: 133 }}
                                 />
-                                )}
                             </View>
                         </List.Accordion>
                     )
