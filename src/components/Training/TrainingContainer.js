@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import Training from "./Training"
-import trainingData from '@data/trainingData'
+// import trainingData from '@data/trainingData'
 
-const TrainingContainer = ()=>{
+const TrainingContainer = ({route})=>{
+    const training = route.params?.trainingData
+    console.log("training   mmmmmmmmmmmmmmm")
+    console.log(training)
+ 
     const handleSave = () => {
         console.log('Saved Data:', exerciseData);
     };
@@ -13,7 +17,7 @@ const TrainingContainer = ()=>{
         setExerciseData: setExerciseData,
         exerciseData: exerciseData,
         handleSave: handleSave,
-        trainingData: trainingData[0]
+        trainingData: training,
     }
 
     return <Training {...props}/>

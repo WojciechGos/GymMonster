@@ -30,6 +30,7 @@ const PedometerContainer = ({ navigation }) => {
     useEffect(() => {
         const subscription = subscribe();
         return () => subscription && subscription.remove();
+
     }, []);
 
     console.log('isPedometerAvailable',isPedometerAvailable);
@@ -42,7 +43,8 @@ const PedometerContainer = ({ navigation }) => {
     }
     const props = {
         navigateToStatistics: navigateToStatistics,
-        pastStepCount: pastStepCount
+        pastStepCount: pastStepCount,
+        currentStepCount: currentStepCount,
     }
     return <Pedometer_ {...props} />
 }

@@ -6,7 +6,13 @@ import TrainingPlanAccordionItemAddExcercise from "@components/TrainingPlanCreat
 import colors from "@utils/colors"
 import GotoTrainingCreatorIcon from "./GotoTrainingCreatorIcon"
 
-const TrainingPlanAccordion = ({  handlePress, trainingData }) => {
+const TrainingPlanAccordion = ({
+    trainingData,
+    updateExcercise,
+    deleteExcercise,
+    goToCreator,
+    addExcercise,
+}) => {
     const theme = useTheme()
     return (
         <ScrollView>
@@ -18,27 +24,28 @@ const TrainingPlanAccordion = ({  handlePress, trainingData }) => {
                         style={styles.accordion}
                         theme={{ colors: { primary: "#DFDFDF" } }}
                         titleStyle={styles.h3}
-                        // icon={({ expanded }) => (
-                        //     <Text style={[{ color: "#DFDFDF" }]}>
-                        //         {expanded ? "▼" : "▶"}
-                        //     </Text>
-                        // )}
                     >
-                        {console.log(trainingSection)}
                         {trainingSection.excercises.map((excercise) => (
                             <>
                                 <TrainingPlanAccordionItemContainer
-                                    key={excercise.id}
+                                    key={excercise.documentId}
                                     excerciseData={excercise}
+                                    updateExcercise={updateExcercise}
+                                    deleteExcercise={deleteExcercise}
                                 />
                                 <Divider key={`${excercise.id}-divider`} />
                             </>
                         ))}
-                        <TrainingPlanAccordionItemAddExcercise />
+
+                        <TrainingPlanAccordionItemAddExcercise
+                            key={1} 
+                            addExcercise={addExcercise}
+                            documentId={trainingSection.documentId}
+                        />
                     </List.Accordion>
                 ))}
             </List.Section>
-            <GotoTrainingCreatorIcon />
+            <GotoTrainingCreatorIcon key={2} goToCreator={goToCreator} />
         </ScrollView>
     )
 }

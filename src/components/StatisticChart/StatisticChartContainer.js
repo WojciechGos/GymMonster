@@ -6,12 +6,16 @@ const StatisticChartContainer = ({ route }) => {
 
     const maxWeights = () => {
         return excercisesHistoryListData
-            .filter((historyExercise) => historyExercise.name === data.item.name)
+            .filter(
+                (historyExercise) => historyExercise.name === data.item.name
+            )
             .map((matchingExercise) =>
-                Math.max(...matchingExercise.series.map((serie) => serie.weight))
-            );
+                Math.max(
+                    ...matchingExercise.series.map((serie) => serie.weight)
+                )
+            )
     }
-    console.log('maxWeights ' + maxWeights())
+    console.log("maxWeights " + maxWeights())
 
     const props = {
         data: excercisesHistoryListData,

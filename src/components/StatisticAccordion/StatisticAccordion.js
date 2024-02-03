@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 import { Text, List, Divider, useTheme } from "react-native-paper"
-import { View, ScrollView } from 'react-native';
-import styles from "@utils/styles";
+import { View, ScrollView } from "react-native"
+import styles from "@utils/styles"
 import colors from "@utils/colors"
 
 const StatisticAccordion = ({ handlePress, data, route }) => {
@@ -24,16 +24,21 @@ const StatisticAccordion = ({ handlePress, data, route }) => {
                                         {route.params?.data.item.title}:
                                     </Text>
                                     {historicData.series.map((seria) => (
-                                        <Text style={styles.h4} key={seria.seria}>
-                                            Seria {seria.seria}: {seria.reps} {seria.weight === 0 ? null : `po ${seria.weight}kg`}
+                                        <Text
+                                            style={styles.h4}
+                                            key={seria.seria}
+                                        >
+                                            Seria {seria.seria}: {seria.reps}{" "}
+                                            {seria.weight === 0
+                                                ? null
+                                                : `po ${seria.weight}kg`}
                                         </Text>
                                     ))}
                                 </View>
                             </List.Accordion>
-                        );
-                    }
-                    else {
-                        return null;
+                        )
+                    } else {
+                        return null
                     }
                 })}
             </List.Section>

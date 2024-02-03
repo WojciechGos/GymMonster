@@ -1,8 +1,7 @@
 import DatePicker from "./DatePicker"
 import { useState } from "react"
 
-const DatePickerContainer = () => {
-    const [selectedDays, setSelectedDays] = useState({})
+const DatePickerContainer = ({ selectedDays, setSelectedDays }) => {
 
     const handleDayPress = (day) => {
         // Check if the day is already selected
@@ -28,7 +27,7 @@ const DatePickerContainer = () => {
 
     const props = {
         handleDayPress: handleDayPress,
-        selectedDays: selectedDays
+        selectedDays: selectedDays,
     }
     return <DatePicker {...props} />
 }

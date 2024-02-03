@@ -1,32 +1,65 @@
-import { useEffect, useState } from "react";
-import CalendarDataDisplay from "./CalendarDataDisplay";
-import trainingData from "@data/trainingData.json";
-import trainingPlanData from "@data/trainingPlanData.json";
+import { useEffect, useState } from "react"
+import CalendarDataDisplay from "./CalendarDataDisplay"
+import trainingData from "@data/trainingData.json"
+import trainingPlanData from "@data/trainingPlanData.json"
+
+import { FIRESTORE_DB } from "../../../../firebaseConfig"
+import AsyncStorage from "@react-native-async-storage/async-storage"
+import {
+    collection,
+    getDocs,
+    query,
+    where,
+    onSnapshot,
+} from "firebase/firestore"
 
 const CalendarDataDisplayContainer = ({ selectedDay }) => {
-  const [training, setTraining] = useState({});
-  useEffect(() => {
-    const swapWithAxios = () => {
-      // console.log(data)
-      const trainingInGivenDate = trainingPlanData.find(
-        (item) => item.date == selectedDay
-      );
-    //   console.log(trainingData[trainingInGivenDate.trainingId]);
-      if (trainingInGivenDate) {
-        setTraining(trainingData[trainingInGivenDate.trainingId]);
-      } else setTraining("");
-    //   console.log(trainingInGivenDate);
-    };
-    // console.log(selectedDay);
-    swapWithAxios();
-  }, [selectedDay]);
+    const [training, setTraining] = useState({})
+    useEffect(() => {
+        const getTrainingFromGivenDate = async () => {
 
-  const props = {
-    trainingData: training,
-    selectedDay: selectedDay
-  };
+            const collectionRef = collection(FIRESTORE_DB, "trainingPlanned")
 
-  return <CalendarDataDisplay {...props} />;
-};
+            const userData = await AsyncStorage.getItem("user")
+            const user = JSON.parse(userData)
 
-export default CalendarDataDisplayContainer;
+            const q = query(
+                collectionRef,
+                where("userId", "==", user.uid),
+                where("date", "==", selectedDay)
+            )
+            try {
+                const unsubscribe = onSnapshot(q, (querySnapshot) => {
+
+                  if (querySnapshot.docs.length === 1){
+
+                    setTraining(querySnapshot.docs[0].data())
+                  }else{
+                    setTraining("")
+                  }
+                   
+                })
+
+                // if (trainingInGivenDate !== "null") {
+                //     console.log("///////////////////////////////////")
+                  
+                // } else setTraining("")
+
+                return () => unsubscribe() // Unsubscribe when component unmounts
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        getTrainingFromGivenDate()
+    }, [selectedDay])
+
+    const props = {
+        trainingData: training,
+        selectedDay: selectedDay,
+    }
+
+    return <CalendarDataDisplay {...props} />
+}
+
+export default CalendarDataDisplayContainer

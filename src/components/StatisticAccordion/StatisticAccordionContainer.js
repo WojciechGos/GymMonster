@@ -1,10 +1,10 @@
 import StatisticAccordion from "./StatisticAccordion"
 import { useState } from "react"
-import excercisesHistoryListData from "@data/excercisesHistoryListData" 
+import excercisesHistoryListData from "@data/excercisesHistoryListData"
 
-const StatisticAccordionContainer = ({route}) => {
+const StatisticAccordionContainer = ({ route }) => {
     const data = route.params?.data
-    console.log('StatisticAccordionContainer item', data.item)
+    console.log("StatisticAccordionContainer item", data.item)
 
     const [expanded, setExpanded] = useState(true)
     const handlePress = () => setExpanded(!expanded)
