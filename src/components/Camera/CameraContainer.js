@@ -1,14 +1,16 @@
 import Camera from "./Camera"
 
-const CameraContainer = ({ navigation }) => {
+const CameraContainer = ({ navigation, route }) => {
    
-    const goToProgressForm = () =>{
-        navigation.navigate('Progress Form')
+    const data = route.params?.data
+
+    const goToProgress = () => {
+        navigation.navigate("Progress")
     }
 
     const props = {
-        goToProgressForm: goToProgressForm,
-     
+        goToProgress: goToProgress,
+        data:data
     }
     
     return <Camera {...props} />
