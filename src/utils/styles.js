@@ -374,6 +374,9 @@ const styles = StyleSheet.create({
     zapiszTrainingView: {
         alignItems: "flex-end",
     },
+    editControlsWrapper :{
+        justifyContent:"space-between"
+    },
     containerChart: {
         flex: 1,
         justifyContent: 'center',

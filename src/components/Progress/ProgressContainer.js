@@ -2,63 +2,76 @@ import Progress from "./Progress"
 
 import { useState, useEffect } from "react"
 
-const data = [
-    {
-        date: "2023-10-20",
-        image: "3.jpg",
-        chestGirth: 105,
-        abdominalGirth: 80,
-        armGirth: 38,
-        forearmGirth: 25,
-        thighGirth: 44,
-        calfGirth: 30,
-    },
-    {
-        date: "2023-09-17",
-        image: "2.jpg",
-        chestGirth: 103,
-        abdominalGirth: 81,
-        armGirth: 38,
-        forearmGirth: 24,
-        thighGirth: 41,
-        calfGirth: 29,
-    },
-    {
-        date: "2023-08-12",
-        image: "1.jpg",
-        chestGirth: 103,
-        abdominalGirth: 80,
-        armGirth: 37,
-        forearmGirth: 24,
-        thighGirth: 41,
-        calfGirth: 29,
-    }
-]
+import { FIRESTORE_DB } from "../../../firebaseConfig"
+import AsyncStorage from "@react-native-async-storage/async-storage"
+import {
+    collection,
+    query,
+    where,
+    onSnapshot,
+    updateDoc,
+    doc,
+    getDocs,
+    orderBy
+} from "firebase/firestore" 
 
 const ProgressContainer = ({ navigation }) => {
-    [progressData, setProgressData] = useState(data);
+    [progressData, setProgressData] = useState(null)
+    const collectionRef = collection(FIRESTORE_DB, "dimensions")
 
-    useEffect(() => {
-        setProgressData(data);
-    }, [data])
-    
-    const props = {
-        data: progressData
+    const getProgressData = async () => {
+        const userData = await AsyncStorage.getItem("user")
+        const user = JSON.parse(userData)
+        // console.log(user.uid)
+
+        const arr = []
+
+        const q = query(
+            collectionRef,
+            where("userId", "==", user.uid),
+              orderBy("date"),
+        )
+        try {
+            const unsubscribe = onSnapshot(q, (querySnapshot) => {
+                const newDataList = []
+                // Return the closest plan
+                const response = querySnapshot.forEach(element => {
+                     newDataList.push(element.data())
+                });
+                console.log("response")
+                console.log(newDataList)
+                setProgressData(newDataList)
+            })
+            return () => unsubscribe() 
+            // const querySnapshot = await getDocs(q)
+            // console.log("snap")
+
+            // if (querySnapshot.empty) {
+            //     return
+            // }
+            // const newDataList = []
+
+            // // Return the closest plan
+            // const response = querySnapshot.forEach(element => {
+            //      newDataList.push(element.data())
+            // });
+            // console.log("response")
+            // console.log(newDataList)
+            // setProgressData(newDataList)
+        } catch (error) {
+            console.error("Error fetching closest plan:", error)
+        }
     }
 
-    return <Progress {...props}/>
+    useEffect(() => {
+        getProgressData()
+    }, [])
+
+    const props = {
+        data: progressData,
+    }
+
+    return <Progress {...props} />
 }
 
 export default ProgressContainer
-
-// import React from 'react';
-
-// const ProgressContainer = () => {
-  
-//     const photoUri = 'file:///data/user/0/host.exp.exponent/files/example.jpg';
-
-//   return <Progress photoUri={photoUri} />;
-// };
-
-// export default ProgressContainer;
-

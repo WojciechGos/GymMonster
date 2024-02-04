@@ -5,7 +5,8 @@ import styles from "@utils/styles"
 import colors from "@utils/colors"
 import { Pressable, View } from "react-native"
 
-const TrainingPlanAccordionItemAddExcercise = ({ addExcercise }) => {
+const TrainingPlanAccordionItemAddExcercise = ({ addExcercise, documentId }) => {
+
     return (
         <List.Item
             key={0}
@@ -15,7 +16,7 @@ const TrainingPlanAccordionItemAddExcercise = ({ addExcercise }) => {
                 </View>
             )}
             right={() => (
-                <Pressable onPress={() => addExcercise()}>
+                <Pressable onPress={() => addExcercise(documentId)}>
                     <Entypo name="plus" size={24} color={colors.text} />
                 </Pressable>
             )}

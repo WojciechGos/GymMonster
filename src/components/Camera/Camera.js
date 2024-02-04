@@ -1,114 +1,150 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Camera } from 'expo-camera';
-import { Button, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import * as FileSystem from 'expo-file-system';
-import * as MediaLibrary from 'expo-media-library';
+import React, { useState, useEffect, useRef } from "react"
+import { Camera, CameraType } from "expo-camera"
+import {
+    Button,
+    Image,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from "react-native"
+import * as FileSystem from "expo-file-system"
 
-export default function Cam({goToProgressForm}) {
-  const [type, setType] = useState(Camera.Constants.Type.back);
-  const [permission, requestPermission] = Camera.useCameraPermissions();
-  const [photoUri, setPhotoUri] = useState(null);
-  const [currentPhoto, setCurrentPhoto] = useState(null);
 
-  let cameraRef = useRef();
 
-  function toggleCameraType() {
-    setType((current) =>
-      current === Camera.Constants.Type.back
-        ? Camera.Constants.Type.front
-        : Camera.Constants.Type.back
-    );
-  }
+export default function Cam({ goToProgress }) {
+    const [type, setType] = useState(CameraType.back)
+    const [permission, requestPermission] = Camera.useCameraPermissions()
+    const [photoName, setPhotoName] = useState('')
 
-  async function takePicture() {
-    if (cameraRef) {
-      try {
-        const { uri } = await cameraRef.takePictureAsync();
-        const projectFolder = `${FileSystem.documentDirectory}`;
-        const fileName = `photo_${Date.now()}.jpg`;
-        const newUri = `${projectFolder}${fileName}`;
+    console.log(permission)
 
-        await FileSystem.makeDirectoryAsync(projectFolder, { intermediates: true });
+    const [photoUri, setPhotoUri] = useState(null)
 
-        await FileSystem.moveAsync({
-          from: uri,
-          to: newUri,
-        });
+    let cameraRef = useRef()
 
-        console.log('Zdjęcie zapisane w folderze:', projectFolder);
+    useEffect(() => {
+        const askForPermission = async () => {
+            const { status } = await Camera.requestCameraPermissionsAsync()
+            setHasPermission(status === "granted")
+        }
+        askForPermission()
+    }, [])
 
-        setPhotoUri(newUri);
-        setCurrentPhoto(newUri);
-        await MediaLibrary.saveToLibraryAsync(newUri);
-
-      } catch (error) {
-        console.error('Błąd podczas robienia zdjęcia:', error);
-      }
+    function toggleCameraType() {
+        setType((current) =>
+            current === Camera.Constants.Type.back
+                ? Camera.Constants.Type.front
+                : Camera.Constants.Type.back
+        )
     }
-  }
 
-  
-  const savePhoto = async () => {
-    try {
-      if (photoUri) {
-        await MediaLibrary.saveToLibraryAsync(photoUri);
-        setPhotoUri(null);
-        goToProgress();
-      }
-    } catch (error) {
-      console.error('Błąd:', error);
+
+
+
+    async function takePicture() {
+        if (cameraRef) {
+            try {
+                const { uri } = await cameraRef.takePictureAsync()
+                // const projectFolder = `${FileSystem.documentDirectory}`
+                const fileName = `photo_${Date.now()}.jpg`
+                // const newUri = `${projectFolder}${fileName}`
+                setPhotoName(fileName)
+
+                const folderName = "photos" // Name of the folder
+                const folderUri = `${FileSystem.documentDirectory}${folderName}`
+                const fileUri = `${folderUri}/${fileName}`
+
+                const folderExists = await FileSystem.getInfoAsync(folderUri)
+                if (!folderExists.exists) {
+                    await FileSystem.makeDirectoryAsync(folderUri, {
+                        intermediates: true,
+                    })
+                }
+
+                 await FileSystem.copyAsync({
+                     from: uri,
+                     to: fileUri,
+                 })
+
+                console.log(uri)
+                // await FileSystem.writeAsStringAsync(fileUri, uri)
+                console.log("Zdjęcie zapisane w folderze:", fileUri)
+
+                setPhotoUri(uri)
+
+                // await MediaLibrary.saveToLibraryAsync(newUri)
+            } catch (error) {
+                console.error("Błąd podczas robienia zdjęcia:", error)
+            }
+        }
     }
-  }
-  
+    
 
-  return (
-    <View style={styles.container}>
-      <Camera style={styles.camera} type={type} ref={(ref) => (cameraRef = ref)}>
-      </Camera>
-      {photoUri ? (
-        <Image source={{ uri: photoUri }} style={styles.previewImage} resizeMode="cover" />
-      ) : (
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={toggleCameraType}>
-            <Text style={styles.text}>Odwróć kamerkę</Text>
-          </TouchableOpacity>
-          <Button onPress={takePicture} title="Zrób zdjęcie i zapisz" />
+
+    return (
+        <View style={styles.container}>
+            <Camera
+                style={styles.camera}
+                type={type}
+                ref={(ref) => (cameraRef = ref)}
+            />
+            {photoUri ? (
+                <Image
+                    source={{ uri: photoUri }}
+                    style={styles.previewImage}
+                    resizeMode="cover"
+                />
+            ) : (
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={toggleCameraType}
+                    >
+                        <Text style={styles.text}>Odwróć kamerkę</Text>
+                    </TouchableOpacity>
+                    <Button
+                        onPress={takePicture}
+                        title="Zrób zdjęcie i zapisz"
+                    />
+                </View>
+            )}
+            {photoUri && (
+                <View style={styles.buttonContainer}>
+                    <Button
+                        title="zapisz"
+                        onPress={() => goToProgress(photoName)}
+                    />
+                </View>
+            )}
         </View>
-      )}
-      {photoUri && (
-        <View style={styles.buttonContainer}>
-          <Button title="Powrót" onPress={() => goToProgressForm()} />
-        </View>
-      )}
-    </View>
-  );
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  camera: {
-    flex: 1,
-  },
-  previewImage: {
-    width: 350,
-    height: 610,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 16,
-    backgroundColor: '#16151A',
-  },
-  button: {
-    alignSelf: 'flex-end',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
-  },
-});
-
+    container: {
+        flex: 1,
+    },
+    camera: {
+        flex: 1,
+    },
+    previewImage: {
+        width: 350,
+        height: 610,
+    },
+    buttonContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        padding: 16,
+        backgroundColor: "#16151A",
+    },
+    button: {
+        alignSelf: "flex-end",
+        alignItems: "center",
+    },
+    text: {
+        fontSize: 24,
+        fontWeight: "bold",
+        color: "white",
+    },
+})

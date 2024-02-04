@@ -1,105 +1,116 @@
 [
-    {
-      "id": 0,
-      "name": "push",
-      "excercises": [
-        {
-          "id": 3,
-          "name": "wyciskanie na ławce płaskiej",
-          "series": 3,
-          "reps": 8,
-          "weight": 100
-        },
-        {
-          "id": 4,
-          "name": "wyciskanie na ławce skośniej",
-          "series": 3,
-          "reps": 12,
-          "weight": 60
-        },
-        {
-          "id": 5,
-          "name": "rozpiętki",
-          "series": 4,
-          "reps": 16,
-          "weight": 20
-        },
-        {
-          "id": 6,
-          "name": "wyciskanie żołnierskie",
-          "series": 5,
-          "reps": 5,
-          "weight": 60
-        }
-      ]
-    },
-    {
-      "id": 1,
-      "name": "pull",
-      "excercises": [
-        {
-          "id": 7,
-          "name": "podciąganie",
-          "series": 3,
-          "reps": 8,
-          "weight": 20
-        },
-        {
-          "id": 8,
-          "name": "wiosłowanie w opadzie",
-          "series": 3,
-          "reps": 12,
-          "weight": 60
-        },
-        {
-          "id": 9,
-          "name": "power wiosło",
-          "series": 4,
-          "reps": 16,
-          "weight": 20
-        },
-        {
-          "id": 10,
-          "name": "wyciąg górny",
-          "series": 5,
-          "reps": 5,
-          "weight": 60
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "legs",
-      "excercises": [
-        {
-          "id": 11,
-          "name": "podciąganie",
-          "series": 3,
-          "reps": 8,
-          "weight": 20
-        },
-        {
-          "id": 12,
-          "name": "wiosłowanie w opadzie",
-          "series": 3,
-          "reps": 12,
-          "weight": 60
-        },
-        {
-          "id": 13,
-          "name": "power wiosło",
-          "series": 4,
-          "reps": 16,
-          "weight": 20
-        },
-        {
-          "id": 14,
-          "name": "wyciąg górny",
-          "series": 5,
-          "reps": 5,
-          "weight": 60
-        }
-      ]
-    }
-  ]
-  
+  {
+    "id": 0,
+    "name": "push",
+    "excercises": [
+      {
+        "id": 3,
+        "title": "wyciskanie na ławce płaskiej",
+        "name": "Bench press",
+        "series": 3,
+        "reps": 8,
+        "weight": 100
+      },
+      {
+        "id": 4,
+        "title": "Wyciskanie sztangi skos",
+        "name": "Incline bench press",
+        "series": 3,
+        "reps": 12,
+        "weight": 60
+      },
+      {
+        "id": 5,
+        "title": "Rozpiętki",
+        "name": "Dumbbell flyes",
+        "series": 4,
+        "reps": 16,
+        "weight": 20
+      },
+      {
+        "id": 6,
+        "title": "Wyciskanie hantli na ławce poziomej",
+        "name": "Dumbbell bench press",
+        "series": 5,
+        "reps": 5,
+        "weight": 60
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "pull",
+    "excercises": [
+      {
+        "id": 7,
+        "title": "Podciąganie na drążku",
+        "name": "Pull-ups on a bar",
+        "series": 3,
+        "reps": 8,
+        "weight": 20
+      },
+      {
+        "id": 8,
+        "title": "Wiosłowanie",
+        "name": "Rowing",
+        "series": 3,
+        "reps": 12,
+        "weight": 60
+      },
+      {
+        "id": 9,
+        "title": "Martwy ciąg",
+        "name": "Dead pull",
+        "series": 4,
+        "reps": 16,
+        "weight": 20
+      },
+      {
+        "id": 10,
+        "title": "Wiosłowanie kettlem",
+        "name": "Kettlebell rowing",
+        "series": 5,
+        "reps": 5,
+        "weight": 60
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "legs",
+    "excercises": [
+      {
+        "id": 11,
+        "title": "Przysiady",
+        "name": "Squats",
+        "series": 3,
+        "reps": 8,
+        "weight": 20
+      },
+      {
+        "id": 12,
+        "title": "Wykroki",
+        "name": "Lunges",
+        "series": 3,
+        "reps": 12,
+        "weight": 60
+      },
+      {
+        "id": 13,
+        "title": "Wspięcia na palce",
+        "name": "Calf raises",
+        "series": 4,
+        "reps": 16,
+        "weight": 20
+      },
+      {
+        "id": 14,
+        "title": "Prostowanie nóg",
+        "name": "Leg extensions",
+        "series": 5,
+        "reps": 5,
+        "weight": 60
+      }
+    ]
+  }
+]

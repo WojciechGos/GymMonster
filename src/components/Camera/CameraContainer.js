@@ -1,16 +1,21 @@
 import Camera from "./Camera"
+import saveDimension from "@utils/saveDimension"
 
-const CameraContainer = ({ navigation }) => {
-   
-    const goToProgressForm = () =>{
-        navigation.navigate('Progress Form')
+const CameraContainer = ({ navigation, route }) => {
+    const data = route.params?.data
+
+    const goToProgress = async (photoName) => {
+        console.log(photoName)
+        await saveDimension({ ...data, photoName: photoName })
+
+        navigation.navigate("Progress")
     }
 
     const props = {
-        goToProgressForm: goToProgressForm,
-     
+        goToProgress: goToProgress,
+        data: data,
     }
-    
+
     return <Camera {...props} />
 }
 

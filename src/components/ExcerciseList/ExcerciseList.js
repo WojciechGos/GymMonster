@@ -4,7 +4,7 @@ import styles from "@utils/styles"
 import ExcerciseHeader from "@components/ExcerciseHeader/ExcerciseHeader"
 
 const ExcerciseList = ({ excercises, title, goToIntent }) => {
-    console.log('excercises' + excercises.map(item => item.title))
+    // console.log('excercises' + excercises.map(item => item.title))
 
     return (
         <View style={styles.container}>

@@ -1,12 +1,14 @@
 import ProgressForm from "./ProgressForm"
+import saveDimension from "@utils/saveDimension"
 
 const ProgressFormContainer = ({ navigation }) => {
    
-    const goToProgress = () =>{
+    const goToProgress = async (data) =>{
+        await saveDimension(data)
         navigation.navigate('Progress')
     }
-    const goToCamera = () =>{
-        navigation.navigate('Camera')
+    const goToCamera = (data) =>{
+        navigation.navigate('Camera', {data:data})
     }
 
 

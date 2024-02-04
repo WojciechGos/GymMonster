@@ -5,7 +5,7 @@ import styles from "@utils/styles"
 const TrainingPlanAccordionItemContent = ({ excerciseData }) => {
     return (
         <View style={styles.trainingListContentWrapper}>
-            <Text style={styles.h4}>{excerciseData.name}:</Text>
+            <Text style={styles.h4}>{excerciseData.title}:</Text>
             <View style={styles.trainingListContentWrapper}>
                 <Text style={styles.h4}>
                     {"\u2022"} {excerciseData.series} serie
