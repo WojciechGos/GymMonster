@@ -16,6 +16,7 @@ import {
 
 const TrainingPlanAccordionContainer = ({ navigation, route }) => {
     const excerciseRequest = route.params?.data
+    console.log(excerciseRequest)
     const additional = route.params?.additional // in this case document ID
 
     const [oldExcercise, setOldExcercise] = useState({ name: "" })
@@ -40,7 +41,7 @@ const TrainingPlanAccordionContainer = ({ navigation, route }) => {
             )
 
             if (exerciseIndex !== -1) {
-                // Update the specific exercise
+                // Update the specific exercise 
                 data.excercises[exerciseIndex].series = series
                 data.excercises[exerciseIndex].reps = reps
                 data.excercises[exerciseIndex].weight = weight
@@ -94,7 +95,14 @@ const TrainingPlanAccordionContainer = ({ navigation, route }) => {
             const docSnap = await getDoc(docRef)
             const data = docSnap.data()
 
-            data.excercises.push(excerciseRequest)
+            data.excercises.push({
+                id: excerciseRequest.item.name,
+                name: excerciseRequest.item.name,
+                reps: 0,
+                series: 0,
+                weight: 0,
+                title: excerciseRequest.item.title
+            })
 
             await updateDoc(docRef, {
                 excercises: data.excercises,
@@ -109,9 +117,9 @@ const TrainingPlanAccordionContainer = ({ navigation, route }) => {
     useEffect(() => {
         const handleAddExcercise = async () => {
             if (excerciseRequest) {
-                if (oldExcercise.name !== data.item.name) {
-                    setOldExcercise(data.item)
-                    addExcerciseToDatabase(excerciseRequest)
+                if (oldExcercise.name !== excerciseRequest.item.name) {
+                    setOldExcercise(excerciseRequest.item)
+                    addExcerciseToDatabase()
                 }
             }
         }
@@ -140,6 +148,8 @@ const TrainingPlanAccordionContainer = ({ navigation, route }) => {
                         dataWithId.excercises = exercisesWithId
                         updatedArr.push(dataWithId)
                     })
+                    console.log("updatedArr")
+                    console.log(updatedArr) 
                     setTrainingData(updatedArr)
                 })
 

@@ -15,6 +15,7 @@ import * as FileSystem from "expo-file-system"
 export default function Cam({ goToProgress }) {
     const [type, setType] = useState(CameraType.back)
     const [permission, requestPermission] = Camera.useCameraPermissions()
+    const [photoName, setPhotoName] = useState('')
 
     console.log(permission)
 
@@ -48,6 +49,7 @@ export default function Cam({ goToProgress }) {
                 // const projectFolder = `${FileSystem.documentDirectory}`
                 const fileName = `photo_${Date.now()}.jpg`
                 // const newUri = `${projectFolder}${fileName}`
+                setPhotoName(fileName)
 
                 const folderName = "photos" // Name of the folder
                 const folderUri = `${FileSystem.documentDirectory}${folderName}`
@@ -60,9 +62,13 @@ export default function Cam({ goToProgress }) {
                     })
                 }
 
-                await FileSystem.writeAsStringAsync(fileUri, uri, {
-                    encoding: FileSystem.EncodingType.Base64,
-                })
+                 await FileSystem.copyAsync({
+                     from: uri,
+                     to: fileUri,
+                 })
+
+                console.log(uri)
+                // await FileSystem.writeAsStringAsync(fileUri, uri)
                 console.log("Zdjęcie zapisane w folderze:", fileUri)
 
                 setPhotoUri(uri)
@@ -74,6 +80,7 @@ export default function Cam({ goToProgress }) {
         }
     }
     
+
 
     return (
         <View style={styles.container}>
@@ -105,8 +112,8 @@ export default function Cam({ goToProgress }) {
             {photoUri && (
                 <View style={styles.buttonContainer}>
                     <Button
-                        title="Przejdź do progresu"
-                        onPress={() => goToProgress()}
+                        title="zapisz"
+                        onPress={() => goToProgress(photoName)}
                     />
                 </View>
             )}

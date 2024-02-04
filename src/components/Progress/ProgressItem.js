@@ -12,19 +12,35 @@ const ProgresItem = ({ item }) => {
             const folderName = "photos" // Name of the folder
             const folderUri = `${FileSystem.documentDirectory}${folderName}`
             const fileUri = `${folderUri}/${item.photoName}`
+            // console.log("fileUri")
+            // console.log(fileUri)
 
+            if(!item.photoName)
+                return 
             const imageData = await FileSystem.readAsStringAsync(fileUri, {
                 encoding: FileSystem.EncodingType.Base64,
             })
+            //    const fileContents = await FileSystem.readAsStringAsync(
+            //        imageData
+            //    )
+            // const imageData = await FileSystem.readAsStringAsync(fileUri)
 
-            setImageUri(`data:image/jpeg;base64,${imageData}`)
+            console.log(imageData)
+            
+            
+            setImageUri(`data:image/jpg;base64,${imageData}`)
+            // setImageUri(imageData)
+            // setImageUri(
+            //     "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FGymMonster-421c4212-5985-4dc3-97cf-73735b14614a/Camera/440d80a6-00dc-490b-bf6f-0e2f512d4613.jpg"
+            // )
+
         } catch (error) {
             console.error("Error loading image:", error)
         }
     }
 
     useEffect(() => {
-        readImage()
+        readImage() 
     }, [])
 
     return (
@@ -44,10 +60,19 @@ const ProgresItem = ({ item }) => {
                 <Text style={styles.text}>Obwod lydki: {item.calfGirth}</Text>
             </View>
             {imageUri !== null ? (
-                <Image
-                    source={{ uri: imageUri }}
-                    style={{ width: 170, height: 133 }}
-                />
+                <>
+       
+                    <Image
+                        source={{
+                            uri: imageUri,
+                        }}
+                        onError={(error) => {
+                            // console.log(error.message)
+                            // console.error(error)
+                        }}
+                        style={{ width: 170, height: 133 }}
+                    />
+                </>
             ) : (
                 <Text style={styles.h2}>No Image Available</Text>
             )}
