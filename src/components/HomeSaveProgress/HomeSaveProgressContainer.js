@@ -1,13 +1,13 @@
 import HomeSaveProgress from "./HomeSaveProgress"
 
-const HomeSaveProgressContainer = ({navigate}) => {
+const HomeSaveProgressContainer = ({ navigation }) => {
     const navigateToSaveProgress = () => {
-        console.log("navigateToSaveProgress")
+        navigation.navigate("Progress Form")
     }
     const props = {
         navigateToSaveProgress: navigateToSaveProgress,
     }
-    return <HomeSaveProgress {...props}/>
+    return <HomeSaveProgress {...props} />
 }
 
 export default HomeSaveProgressContainer

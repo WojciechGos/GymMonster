@@ -11,8 +11,8 @@ const Home = ({navigation})=>{
     return (
         <ScrollView style={styles.containerNoCenter}>
             <PedometerContainer navigation={navigation} />
-            <HomeIncommingTrainingContainer navigation={navigation}/>
-            <HomeSaveProgressContainer />
+            <HomeIncommingTrainingContainer navigation={navigation} />
+            <HomeSaveProgressContainer navigation={navigation} />
             <MyCalendarContainer />
         </ScrollView>
     )
