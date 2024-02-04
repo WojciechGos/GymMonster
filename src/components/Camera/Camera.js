@@ -67,7 +67,7 @@ export default function Cam({ goToProgress }) {
                      to: fileUri,
                  })
 
-                console.log(uri)
+                // console.log(uri)
                 // await FileSystem.writeAsStringAsync(fileUri, uri)
                 console.log("Zdjęcie zapisane w folderze:", fileUri)
 

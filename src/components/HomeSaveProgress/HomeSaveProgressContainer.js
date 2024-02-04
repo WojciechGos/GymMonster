@@ -1,6 +1,6 @@
 import HomeSaveProgress from "./HomeSaveProgress"
 
-const HomeSaveProgressContainer = () => {
+const HomeSaveProgressContainer = ({navigate}) => {
     const navigateToSaveProgress = () => {
         console.log("navigateToSaveProgress")
     }

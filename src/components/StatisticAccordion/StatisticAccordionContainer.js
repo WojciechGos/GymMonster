@@ -15,8 +15,7 @@ const StatisticAccordionContainer = ({route, navigation}) => {
     const handlePress = () => setExpanded(!expanded)
 
     useEffect(() => {
-
-        const tmp = async ()=>{
+        const tmp = async () => {
             const collectionPlanRef = collection(FIRESTORE_DB, "plan")
             const collectionTrainingPlannedRef = collection(
                 FIRESTORE_DB,
@@ -24,7 +23,7 @@ const StatisticAccordionContainer = ({route, navigation}) => {
             )
         }
 
-        const fetchTrainingHistory = async ( ) => {
+        const fetchTrainingHistory = async () => {
             const trainingHistoryCollection = collection(
                 FIRESTORE_DB,
                 "trainingHistoric"
@@ -35,13 +34,13 @@ const StatisticAccordionContainer = ({route, navigation}) => {
             // const user = JSON.parse(userData)
 
             // Create a query to get documents where userId matches and name is equal to item.name
-            
+
             // console.log(user.uid)
             // console.log(item.name)
             const q = query(
                 trainingHistoryCollection,
                 // where("userId", "==", user.uid),
-                where("name", "==", name ),
+                where("name", "==", name)
                 // orderBy("date", "desc") // You can adjust the ordering based on your needs
             )
 
@@ -52,22 +51,20 @@ const StatisticAccordionContainer = ({route, navigation}) => {
                 querySnapshot.forEach((doc) => {
                     // Assuming each document has a data() method to get its data
                     const data = doc.data()
-                    historyData.push(data) 
+                    historyData.push(data)
                 })
                 setHistory(historyData)
                 console.log("histrory ")
                 console.log(history)
-                
             } catch (error) {
                 console.error("Error fetching training history:", error)
-
             }
         }
         fetchTrainingHistory()
 
-        console.log('useEffect')
+        console.log("useEffect")
         // console.log("StatisticAccordionContainer item", item)
-    }, [data])
+    }, [name])
 
     const props = {
         expanded: expanded,

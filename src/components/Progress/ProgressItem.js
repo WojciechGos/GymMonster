@@ -25,7 +25,7 @@ const ProgresItem = ({ item }) => {
             //    )
             // const imageData = await FileSystem.readAsStringAsync(fileUri)
 
-            console.log(imageData)
+            // console.log(imageData)
             
             
             setImageUri(`data:image/jpg;base64,${imageData}`)
