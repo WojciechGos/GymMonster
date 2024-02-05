@@ -5,7 +5,7 @@ import styles from "@utils/styles"
 import colors from "@utils/colors"
 import Button from "@components/Button/Button"
 
-const ForgotPasswordForm = ({ authenticate })=>{
+const ForgotPasswordForm = ({ authenticate, email, setEmail })=>{
     return (
 
         <View>
@@ -20,23 +20,14 @@ const ForgotPasswordForm = ({ authenticate })=>{
                 placeholder="Wprowadź Email"
                 textColor={colors.text}
                 activeUnderlineColor={colors.primary}
+                value={email}
+                onChangeText={setEmail}
             />
             </View>
 
-            <View >
-                <Text style={styles.h3} >
-                    Kod
-                </Text>
-                <TextInput
-                    style={styles.textInputForm}
-                    placeholder="Wprowadź otrzymany kod"
-                    textColor={colors.text}
-                    activeUnderlineColor={colors.primary}
-                />
-            </View>
 
             <View style={styles.loginForgotPasswordWrapper}>
-                <Button name='Wyślij' handler={authenticate} />
+                <Button name='Wyślij' handler={()=>authenticate(email)} />
             </View>
 
         </View>
