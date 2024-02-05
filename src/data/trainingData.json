@@ -5,31 +5,17 @@
     "excercises": [
       {
         "id": 3,
-        "name": "Wyciskanie sztangi na płasko",
-        "series": 3,
-        "reps": 8,
+        "name": "Ściąganie wyciągu poziomego",
+        "series": 1,
+        "reps": 5,
         "weight": 100
       },
       {
         "id": 4,
-        "name": "Wyciskanie sztangi skos",
+        "name": "Pullover",
         "series": 3,
-        "reps": 12,
-        "weight": 60
-      },
-      {
-        "id": 5,
-        "name": "Rozpiętki",
-        "series": 4,
-        "reps": 16,
-        "weight": 20
-      },
-      {
-        "id": 6,
-        "name": "Wyciskanie hantli na ławce poziomej",
-        "series": 5,
-        "reps": 5,
-        "weight": 60
+        "reps": 8,
+        "weight": 50
       }
     ]
   },
