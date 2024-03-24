@@ -4,11 +4,11 @@ Welcome to the Gym App! This React Native application allows users to create and
 
 ## Features
 
-- ** Training Plan Creation: ** Users can create personalized training plans tailored to their fitness goals, including exercises, sets, reps, and rest intervals.
+- **Training Plan Creation:** Users can create personalized training plans tailored to their fitness goals, including exercises, sets, reps, and rest intervals.
 
-- ** Workout Scheduling: ** Users can schedule workouts on specific dates, ensuring they stay on track with their training regimen.
+- **Workout Scheduling:** Users can schedule workouts on specific dates, ensuring they stay on track with their training regimen.
 
-- ** Exercise Library: ** Access a comprehensive library of exercises with descriptions and demonstration videos to help users perform exercises correctly.
+- **Exercise Library:** Access a comprehensive library of exercises with descriptions and demonstration videos to help users perform exercises correctly.
 
 ## Installation
 
